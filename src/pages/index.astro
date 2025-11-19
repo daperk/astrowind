@@ -13,7 +13,7 @@ import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'SleepUpgradeHub — Science-Backed Sleep Optimization Guides & Tools',
   ignoreTitleTemplate: true,
 };
 ---
@@ -22,81 +22,81 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
+    tagline="Sleep Optimization Made Simple"
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Explore Sleep Guides',
+        href: '/blog',
+        icon: 'tabler:moon-stars',
       },
-      { text: 'Learn more', href: '#features' },
+      {
+        text: 'Best Sleep Tools',
+        href: '/category/sleep-tools',
+      },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero-sleep.webp', alt: 'Woman Sleeping Peacefully in a Dark Cozy Bedroom' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro 5.0</span> + Tailwind CSS
+      Upgrade Your Sleep with <span class="text-brand">Science-Backed Tools</span> & Proven Rest Strategies
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 5.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages &
-      Blogs.
+      Discover the best sleep optimization products, expert guides, and bedroom upgrades to help you fall asleep faster,
+      sleep deeper, and wake up restored.
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+  <Note
+    title="Our Philosophy:"
+    description="Simple, science-backed changes to your bedroom, routine, and tools can radically improve your sleep—without overwhelm or hype."
+  />
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023 and 2024."
+    tagline="Why SleepUpgradeHub?"
+    title="What you get when you optimize your sleep with us"
+    subtitle="We combine sleep science, product research, and real-world testing to help you create a bedroom and routine that actually supports deep, restorative sleep."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Science-Based Guidance',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+          'Clear explanations of sleep science, circadian rhythm, light exposure, and habits—so you know why each tip works.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Curated Sleep Tools',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'We highlight lamps, masks, noise devices, trackers, and supplements that truly help, not just what is trending.',
+        icon: 'tabler:moon-stars',
       },
       {
-        title: 'Best Practices',
+        title: 'Bedroom Optimization',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'From blackout curtains to ideal humidity, we break down how to turn your room into a true sleep sanctuary.',
+        icon: 'tabler:home',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Actionable Checklists',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Simple step-by-step checklists so you can upgrade your sleep in days, not months of random trial and error.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'SEO-Friendly, Fast Site',
+        description:
+          'Built on Astro + Tailwind, the site loads fast and feels clean—which also helps your brain relax while reading.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Always Evolving',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
-      },
-      {
-        title: 'Open to new ideas and contributions',
-        description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'We continuously review new tools, studies, and methods so your sleep setup can improve with the latest knowledge.',
+        icon: 'tabler:refresh',
       },
     ]}
   />
@@ -105,37 +105,39 @@ const metadata = {
 
   <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline="Sleep Environment"
+    title="Start by upgrading the space where you sleep"
     items={[
       {
-        title: 'Built on top of Astro 5.0',
+        title: 'Light Control',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Learn how blue light, screen glow, and streetlights affect melatonin—and how to use red light and blackout solutions.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Noise & Soundscape',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+          'Discover when silence helps and when white noise, pink noise, or nature sounds are better for maintaining deep sleep.',
       },
       {
-        title: 'Cross-browser compatibility',
+        title: 'Temperature & Air Quality',
         description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Dial in your bedroom temperature, airflow, and humidity to reduce night sweats, dry throat, and restless tossing.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: '~/assets/images/environment.webp',
+      alt: 'Sleep Optimization Tools',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Your bedroom should work with your biology, not against it.
+      </h3>
+      Small environment upgrades often create the biggest, fastest improvements in your sleep quality.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
     </Fragment>
   </Content>
 
@@ -143,36 +145,42 @@ const metadata = {
 
   <Content
     isAfterContent
+    tagline="Tools & Supplements"
+    title="Use sleep tools intelligently—not desperately"
     items={[
       {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
+        title: 'Smart Sleep Gadgets',
+        description:
+          'We review tracking rings, bands, and devices from a practical angle: do they help you change habits or just show numbers?',
       },
       {
-        title: 'Multiple layout possibilities',
+        title: 'Low-EMF & Gentle Tech',
         description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
+          'We highlight products designed to reduce EMF exposure at night, keeping your sleep as calm and clean as possible.',
       },
       {
-        title: 'Fully responsive design',
+        title: 'Natural Aids & Supplements',
         description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
+          'From magnesium to L-theanine, we break down what the research says, ideal doses, and how to avoid overdoing it.',
       },
       {
-        title: 'Integration of media',
+        title: 'No-Hype Recommendations',
         description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
+          'You get honest pros, cons, and use-cases, so you invest only in tools that truly match your sleep problems.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
+      src: '~/assets/images/tools-supplements.webp',
+      alt: 'Sleep gadgets and natural supplements',
     }}
   >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
+    <Fragment slot="content">
+      Use tools to support your biology, not replace it. The right product, used the right way, can accelerate your
+      sleep upgrade.
+    </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
     </Fragment>
   </Content>
 
@@ -181,219 +189,217 @@ const metadata = {
   <Content
     isReversed
     isAfterContent
+    tagline="Habits & Routines"
+    title="Lock in a routine that your body recognizes as 'time to sleep'"
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'Evening Wind-Down',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'Create a repeatable pre-sleep ritual that lowers cortisol, quiets your mind, and signals your body that it is safe to rest.',
       },
       {
-        title: 'Continuous improvement',
+        title: 'Screen & Light Hygiene',
         description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
+          'Get practical strategies to reduce stimulating inputs—without needing to quit your phone cold-turkey overnight.',
       },
       {
-        title: 'Time and resource efficiency',
+        title: 'Flexible for Real Life',
         description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
+          'We design routines that work for parents, night-shift workers, entrepreneurs, and anyone with a non-perfect schedule.',
       },
       {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+        title: 'Track What Actually Matters',
+        description:
+          'Focus on a few key metrics—like sleep latency, deep sleep, and morning energy—instead of obsessing over every graph.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
+      src: '~/assets/images/habits-routines.webp',
+      alt: 'Calm evening routine for better sleep',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">
+      Sustainable routines beat extreme hacks. We help you build sleep habits that fit your life and last.
+    </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
     </Fragment>
   </Content>
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="How SleepUpgradeHub helps you improve your nights"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Identify your main sleep problem</span>',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Is it falling asleep, staying asleep, waking up too early, or feeling tired even after 8 hours? Start by naming it.',
+        icon: 'tabler:question-mark',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: <span class="font-medium">Read the focused guides</span>',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Dive into our targeted articles on environment, tools, and habits that are specific to your sleep challenge.',
+        icon: 'tabler:book',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Upgrade one variable at a time</span>',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Follow our checklists to adjust light, sound, temperature, or routines—without overwhelming yourself.',
+        icon: 'tabler:adjustments-alt',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Step 4: <span class="font-medium">Track & refine</span>',
+        description:
+          'Use simple tracking (or a sleep device if you like) to see what works, then double down on the most effective changes.',
+        icon: 'tabler:chart-line',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: '~/assets/images/steps.webp',
+      alt: 'Steps to improve your sleep',
     }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+    title="What we cover inside SleepUpgradeHub"
+    subtitle="Explore every layer of great sleep—from your bedroom setup to your night routine and the tools that support you."
+    tagline="Sleep Topics"
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Sleep Environment',
+        description: 'Light, noise, temperature, and air quality tweaks that support deeper, uninterrupted sleep.',
+        icon: 'tabler:home',
       },
       {
-        title: 'Heros',
+        title: 'Sleep Tools & Gadgets',
+        description: 'Reviews of masks, lamps, white-noise machines, trackers, and low-EMF devices that actually help.',
+        icon: 'tabler:bulb',
+      },
+      {
+        title: 'Supplements & Natural Aids',
+        description: 'Evidence-based breakdowns of magnesium, L-theanine, herbs, and other supports for calmer nights.',
+        icon: 'tabler:pill',
+      },
+      {
+        title: 'Routines & Habits',
+        description: 'Night routines, pre-sleep rituals, and wake-up habits that sync your body clock and mind.',
+        icon: 'tabler:calendar',
+      },
+      {
+        title: 'Sleep for Busy People',
+        description: 'Guides tailored for entrepreneurs, parents, shift workers, and anyone with a non-ideal schedule.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Sleep & Mental Health',
+        description: 'How stress, anxiety, and overthinking impact your nights—and tools to calm the mind before bed.',
+        icon: 'tabler:microphone',
+      },
+      {
+        title: 'Data & Tracking',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+          'Simple ways to use sleep data without obsessing, so numbers work for you instead of stressing you out.',
+        icon: 'tabler:chart-bar',
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
+        title: 'Mattresses & Bedding',
+        description: 'Understanding firmness, pillows, and materials so your bed truly supports your body and spine.',
+        icon: 'tabler:layout-grid',
       },
       {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+        title: 'Travel & Jet Lag',
+        description: 'Sleep strategies and packing lists to stay rested across time zones and while traveling.',
+        icon: 'tabler:plane',
       },
     ]}
   />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
-      },
-    ]}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
-    </Fragment>
-  </CallToAction>
+  <Fragment slot="bg">
+    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+  </Fragment>
 </Layout>
+
+<!-- HighlightedPosts Widget ******* -->
+
+<BlogLatestPosts
+  title="Latest guides from the SleepUpgradeHub blog"
+  information={`Read our newest articles on sleep optimization, sleep tools, and practical routines.
+                        Each post is designed to help you make one clear upgrade to your nights—without needing a full life overhaul.
+                `}
+/>
+
+<!-- FAQs Widget ******************* -->
+
+<FAQs
+  title="Sleep Optimization FAQs"
+  subtitle="Quick answers to common questions about improving sleep quality, tools, and routines."
+  tagline="FAQs"
+  classes={{ container: 'max-w-6xl' }}
+  items={[
+    {
+      title: 'Where should I start if my sleep is a mess?',
+      description:
+        'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
+    },
+    {
+      title: 'Do I really need gadgets to sleep better?',
+      description:
+        'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
+    },
+    {
+      title: 'Which supplements are best for sleep?',
+      description:
+        'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
+    },
+    {
+      title: 'How long until I notice better sleep?',
+      description:
+        'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
+    },
+    {
+      title: 'Can I improve sleep if I work late or do night shifts?',
+      description:
+        'Yes, but you need a more intentional routine: strong light exposure at your “morning,” strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
+    },
+    {
+      title: 'Is bad sleep really that big of a deal?',
+      description:
+        'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
+    },
+  ]}
+/>
+
+<!-- Stats Widget ****************** -->
+
+<Stats
+  stats={[
+    { title: 'Sleep Guides Published', amount: '48+' },
+    { title: 'Hours of Research', amount: '320+' },
+    { title: 'Tools & Products Reviewed', amount: '75+' },
+    { title: 'Average Time to First Upgrade', amount: '7 days' },
+  ]}
+/>
+
+<!-- CallToAction Widget *********** -->
+
+<CallToAction
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Start Your Sleep Upgrade',
+      href: '/blog',
+      icon: 'tabler:moon-stars',
+    },
+  ]}
+>
+  <Fragment slot="title"> Ready to finally wake up rested? </Fragment>
+
+  <Fragment slot="subtitle">
+    Begin with one guide, one change, and one night. Explore our sleep optimization articles and take your first step
+    toward deeper, calmer rest.
+  </Fragment>
+</CallToAction>
