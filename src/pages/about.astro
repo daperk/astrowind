@@ -1,13 +1,14 @@
 ---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About SleepUpgradeHub — Science-Backed Sleep Optimization',
+  description: 'Learn about SleepUpgradeHub\'s mission to help you sleep better through research-backed guides, honest product reviews, and practical sleep optimization strategies.',
 };
 ---
 
@@ -15,214 +16,221 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
+    tagline="About SleepUpgradeHub"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: '~/assets/images/hero-sleep.webp',
+      alt: 'Peaceful bedroom environment optimized for sleep',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      We Help You <span class="text-brand">Sleep Better</span> Through Science, Not Hype
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      SleepUpgradeHub was created to cut through the noise and deliver evidence-based sleep optimization strategies that actually work. We combine sleep science, rigorous product testing, and real-world experience to help you transform your sleep quality.
     </Fragment>
   </Hero>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    id="mission"
+    tagline="Our Mission"
+    title="Making Great Sleep Accessible to Everyone"
+    items={[
+      {
+        title: 'Evidence-Based Approach',
+        description:
+          'Every recommendation is grounded in sleep science research, not marketing hype or affiliate commission incentives.',
+      },
+      {
+        title: 'Honest Reviews',
+        description:
+          'We test sleep tools, gadgets, and supplements ourselves and share both the pros and cons—no sugar-coating.',
+      },
+      {
+        title: 'Practical Guidance',
+        description:
+          'Our guides focus on actionable steps you can implement immediately, with realistic expectations for results.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/environment.webp',
+      alt: 'Sleep research and optimization',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Why We Started SleepUpgradeHub
+      </h3>
+      After years of struggling with inconsistent sleep and sifting through contradictory advice, we realized there was a gap: most sleep content was either too academic or too superficial. We created SleepUpgradeHub to bridge that gap with trustworthy, science-backed, and practical sleep optimization resources.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
+    </Fragment>
+  </Content>
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Our Impact"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Sleep Guides Published', amount: '48+' },
+      { title: 'Hours of Research', amount: '320+' },
+      { title: 'Tools & Products Reviewed', amount: '75+' },
+      { title: 'Readers Helped Monthly', amount: '12K+' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Features2 Widget ************** -->
 
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+  <Features2
+    title="What Makes Us Different"
+    subtitle="We're not just another sleep blog—we're your research team and testing lab, dedicated to finding what actually works."
     columns={3}
-    isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'No Sponsored Reviews',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'We maintain editorial independence. Product recommendations are based solely on research and testing, not affiliate earnings.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Interior Design',
+        title: 'Science First',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Every article references peer-reviewed sleep research and established circadian biology principles.',
+        icon: 'tabler:brain',
       },
       {
-        title: 'Photography',
+        title: 'Real-World Testing',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'We personally test sleep tools and track results over weeks, not just days, to assess true effectiveness.',
+        icon: 'tabler:test-pipe',
+      },
+      {
+        title: 'Actionable Checklists',
+        description:
+          'No vague advice—every guide includes specific steps, recommended products, and expected timelines for results.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Regular Updates',
+        description:
+          'We continuously update our content as new research emerges and new sleep technologies become available.',
+        icon: 'tabler:refresh',
+      },
+      {
+        title: 'Community-Focused',
+        description:
+          'We listen to reader feedback and create content based on real questions and challenges from our community.',
+        icon: 'tabler:users',
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Content Widget **************** -->
 
-  <Features3
-    columns={3}
+  <Content
+    isReversed
     isAfterContent={true}
+    tagline="Our Approach"
+    title="How We Create Our Sleep Optimization Guides"
     items={[
       {
-        title: 'E-commerce',
+        title: 'Research Phase',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'We review scientific literature, sleep studies, and expert recommendations to understand what the data says.',
       },
       {
-        title: 'Blog',
+        title: 'Testing Phase',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'We personally test recommended tools, techniques, and supplements over multiple weeks to validate effectiveness.',
       },
       {
-        title: 'Business',
+        title: 'Documentation Phase',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'We document our findings, create actionable guides, and share both successful strategies and things that didn\'t work.',
       },
       {
-        title: 'Branding',
+        title: 'Update Phase',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'We revisit and update our content quarterly as new research emerges or new products enter the market.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: '~/assets/images/tools-supplements.webp',
+      alt: 'Sleep optimization research and testing process',
     }}
-  />
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Rigorous Process, Reliable Results
+      </h3>
+      We don't publish content just to publish content. Every guide goes through our four-phase process to ensure you're getting reliable, tested, and actionable sleep optimization strategies.
+    </Fragment>
 
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
-    items={[
-      {
-        title: 'Customer-centric approach',
-        description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
-      },
-      {
-        title: 'Constant Improvement',
-        description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
-      },
-      {
-        title: 'Ethical Practices',
-        description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
-    isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
-      },
-      {
-        title: 'Positive customer feedback and reviews',
-        description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
-      },
-      {
-        title: 'Awards and recognition as industry experts',
-        description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
-      },
-    ]}
-  />
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
+    </Fragment>
+  </Content>
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
-    items={[
-      {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
-      },
-      {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
-      },
-      {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
-      },
-      {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Who SleepUpgradeHub Is For"
+    tagline="Our Community"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Busy Professionals',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'Entrepreneurs, executives, and high-performers who need to maximize sleep quality in limited hours.',
+        icon: 'tabler:briefcase',
       },
       {
-        title: 'Call us',
+        title: 'Parents & Caregivers',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'People managing interrupted sleep schedules who want to optimize whatever rest they can get.',
+        icon: 'tabler:home-heart',
+      },
+      {
+        title: 'Night Shift Workers',
+        description:
+          'Those with non-traditional schedules who need specialized strategies for circadian alignment.',
+        icon: 'tabler:moon-stars',
+      },
+      {
+        title: 'Biohackers & Optimizers',
+        description:
+          'People who track metrics and want evidence-based strategies to improve deep sleep and recovery.',
+        icon: 'tabler:chart-line',
       },
     ]}
   />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Sleep Guides',
+        href: '/blog',
+        icon: 'tabler:book',
+      },
+      {
+        text: 'Contact Us',
+        href: '/contact',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Transform Your Sleep?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Start with our most popular guides or reach out with specific questions about your sleep challenges. We're here to help you sleep better, naturally.
+    </Fragment>
+  </CallToAction>
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import Schema from '~/components/common/Schema.astro';
 
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
@@ -14,8 +15,37 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'SleepUpgradeHub — Science-Backed Sleep Optimization Guides & Tools',
+  description: 'Discover science-backed sleep optimization guides, honest product reviews, and proven strategies to fall asleep faster, sleep deeper, and wake up restored.',
   ignoreTitleTemplate: true,
 };
+
+// FAQ data for schema.org structured data
+const faqItems = [
+  {
+    question: 'Where should I start if my sleep is a mess?',
+    answer: 'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
+  },
+  {
+    question: 'Do I really need gadgets to sleep better?',
+    answer: 'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
+  },
+  {
+    question: 'Which supplements are best for sleep?',
+    answer: 'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
+  },
+  {
+    question: 'How long until I notice better sleep?',
+    answer: 'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
+  },
+  {
+    question: 'Can I improve sleep if I work late or do night shifts?',
+    answer: 'Yes, but you need a more intentional routine: strong light exposure at your "morning," strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
+  },
+  {
+    question: 'Is bad sleep really that big of a deal?',
+    answer: 'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
+  },
+];
 ---
 
 <Layout metadata={metadata}>
@@ -403,3 +433,6 @@ const metadata = {
     toward deeper, calmer rest.
   </Fragment>
 </CallToAction>
+
+<!-- FAQ Schema for rich snippets in search results -->
+<Schema type="faqpage" faqs={faqItems} />

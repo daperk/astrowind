@@ -5,19 +5,20 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contact',
+  title: 'Contact SleepUpgradeHub — Get in Touch',
+  description: 'Have questions about sleep optimization, product recommendations, or our guides? Contact the SleepUpgradeHub team. We typically respond within 24-48 hours.',
 };
 ---
 
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's Connect!" />
+  <HeroText tagline="Contact" title="Get in Touch with SleepUpgradeHub" />
 
   <ContactUs
     id="form"
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Send us a message"
+    subtitle="Have questions about sleep optimization, product recommendations, or specific sleep challenges? We're here to help. For common questions, check our FAQ section on the homepage first - you might find your answer immediately!"
     inputs={[
       {
         type: 'text',
@@ -31,48 +32,42 @@ const metadata = {
       },
     ]}
     textarea={{
-      label: 'Message',
+      label: 'Your Message',
+      placeholder: 'Tell us about your sleep challenge or question...',
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'By submitting this form, you agree to our Privacy Policy and acknowledge that your information will be used solely to respond to your inquiry.',
     }}
-    description="Our support team typically responds within 24 business hours."
+    description="We typically respond within 24-48 hours during business days."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="How We Can Help"
     items={[
       {
-        title: 'General support',
-        description: `Chat with us for inquiries related to account management, website navigation, payment issues, accessing purchased templates or general questions about the website's functionality.`,
+        title: 'Sleep Optimization Questions',
+        description: 'Questions about improving your sleep quality, implementing our guides, or troubleshooting specific sleep issues.',
+        icon: 'tabler:moon-stars',
       },
       {
-        title: 'Contact sales',
+        title: 'Product Recommendations',
         description:
-          'Chat with us for questions about purchases, customization options, licensing for commercial use, inquiries about specific template, etc.',
+          'Need personalized advice on sleep tools, supplements, or bedroom equipment based on your specific situation.',
+        icon: 'tabler:bulb',
       },
       {
-        title: 'Technical support',
+        title: 'Content Suggestions',
         description:
-          'Chat with us when facing issues like template installation, problems editing difficulties, compatibility issues with software or download errors, or other technical challenges related to using the templates.',
+          'Suggestions for topics you would like us to cover, research you would like us to review, or products you would like us to test.',
+        icon: 'tabler:message-dots',
       },
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@support.com',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
+        title: 'Partnership Inquiries',
+        description: 'For brands, researchers, or organizations interested in collaborating with SleepUpgradeHub.',
+        icon: 'tabler:users',
       },
     ]}
   />
