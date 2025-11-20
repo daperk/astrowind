@@ -2,10 +2,9 @@
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 
 import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
+import ModernCard from '~/components/blog/ModernCard.astro';
+import Sidebar from '~/components/blog/Sidebar.astro';
 import Pagination from '~/components/blog/Pagination.astro';
-// import PostTags from "~/components/blog/Tags.astro";
 
 import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
 
@@ -20,11 +19,22 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
-// const allCategories = await findCategories();
-// const allTags = await findTags();
+// Get simplified categories for sidebar
+const topCategories = [
+  { title: 'Sleep Environment', slug: 'sleep-environment', count: 0 },
+  { title: 'Sleep Tools', slug: 'sleep-tools', count: 0 },
+  { title: 'Habits & Routines', slug: 'habits', count: 0 },
+  { title: 'Supplements', slug: 'supplements', count: 0 },
+  { title: 'Sleep Trackers', slug: 'sleep-trackers', count: 0 },
+  { title: 'White Noise', slug: 'white-noise', count: 0 },
+];
+
+// Get popular posts (last 5 for sidebar)
+const popularPosts = page.data.slice(0, 5);
 
 const metadata = {
-  title: `Blog${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `Sleep Optimization Guides${currentPage > 1 ? ` — Page ${currentPage}` : ''} — SleepUpgradeHub`,
+  description: 'Science-backed sleep guides, product reviews, and optimization strategies. Learn how to fall asleep faster, sleep deeper, and wake up restored.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,
     follow: blogListRobots?.follow,
@@ -36,17 +46,53 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline
-      subtitle="A statically generated blog example with news, tutorials, resources and other interesting content related to AstroWind"
-    >
-      The Blog
-    </Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
-    <!--
-      <PostTags tags={allCategories} class="mb-2" title="Search by Categories:" isCategory />
-      <PostTags tags={allTags}  title="Search by Tags:" />
-    -->
+  <!-- Hero Header -->
+  <section class="bg-gradient-to-br from-brand-primary via-brand-primary to-brand-accent-light py-16 md:py-20 lg:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center text-white">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+          Sleep Optimization Guides
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+          Science-backed guides, honest product reviews, and practical strategies to help you sleep better naturally.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12 md:py-16 lg:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        <!-- Main Content Area -->
+        <div class="lg:col-span-8">
+          {currentPage === 1 && page.data.length > 0 && (
+            <!-- Featured Post -->
+            <ModernCard post={page.data[0]} featured={true} />
+          )}
+
+          <!-- Grid of Posts -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {page.data.slice(currentPage === 1 ? 1 : 0).map((post) => (
+              <ModernCard post={post} />
+            ))}
+          </div>
+
+          <!-- Pagination -->
+          {(page.url.prev || page.url.next) && (
+            <div class="mt-12">
+              <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+            </div>
+          )}
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-24">
+            <Sidebar popularPosts={popularPosts} categories={topCategories} />
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>

@@ -1,10 +1,11 @@
 ---
 import type { InferGetStaticPropsType, GetStaticPaths } from 'astro';
 import { blogCategoryRobots, getStaticPathsBlogCategory } from '~/utils/blog';
+import { Icon } from 'astro-icon/components';
 
 import Layout from '~/layouts/PageLayout.astro';
-import BlogList from '~/components/blog/List.astro';
-import Headline from '~/components/blog/Headline.astro';
+import ModernCard from '~/components/blog/ModernCard.astro';
+import Sidebar from '~/components/blog/Sidebar.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 
 export const prerender = true;
@@ -19,8 +20,22 @@ const { page, category } = Astro.props as Props;
 
 const currentPage = page.currentPage ?? 1;
 
+// Get simplified categories for sidebar
+const topCategories = [
+  { title: 'Sleep Environment', slug: 'sleep-environment', count: 0 },
+  { title: 'Sleep Tools', slug: 'sleep-tools', count: 0 },
+  { title: 'Habits & Routines', slug: 'habits', count: 0 },
+  { title: 'Supplements', slug: 'supplements', count: 0 },
+  { title: 'Sleep Trackers', slug: 'sleep-trackers', count: 0 },
+  { title: 'White Noise', slug: 'white-noise', count: 0 },
+];
+
+// Get recent posts for sidebar
+const popularPosts = page.data.slice(0, 5);
+
 const metadata = {
-  title: `Category '${category.title}' ${currentPage > 1 ? ` — Page ${currentPage}` : ''}`,
+  title: `${category.title} — Sleep Optimization Guides — SleepUpgradeHub ${currentPage > 1 ? ` (Page ${currentPage})` : ''}`,
+  description: `Browse all ${category.title} guides and articles on SleepUpgradeHub. Science-backed sleep optimization strategies to help you sleep better.`,
   robots: {
     index: blogCategoryRobots?.index,
     follow: blogCategoryRobots?.follow,
@@ -29,9 +44,52 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-4 md:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
-    <Headline>{category.title}</Headline>
-    <BlogList posts={page.data} />
-    <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+  <!-- Category Hero -->
+  <section class="bg-gradient-to-br from-brand-primary via-brand-primary to-brand-accent-light py-16 md:py-20 lg:py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl text-center text-white">
+        <div class="mb-4 inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur rounded-full text-sm font-medium">
+          <Icon name="tabler:folder" class="w-4 h-4" />
+          Category
+        </div>
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+          {category.title}
+        </h1>
+        <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+          Explore our collection of sleep guides and articles in this category
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <section class="py-12 md:py-16 lg:py-20">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        <!-- Main Content Area -->
+        <div class="lg:col-span-8">
+          <!-- Grid of Posts -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+            {page.data.map((post) => (
+              <ModernCard post={post} />
+            ))}
+          </div>
+
+          <!-- Pagination -->
+          {(page.url.prev || page.url.next) && (
+            <div class="mt-12">
+              <Pagination prevUrl={page.url.prev} nextUrl={page.url.next} />
+            </div>
+          )}
+        </div>
+
+        <!-- Sidebar -->
+        <div class="lg:col-span-4">
+          <div class="lg:sticky lg:top-24">
+            <Sidebar popularPosts={popularPosts} categories={topCategories} />
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </Layout>
