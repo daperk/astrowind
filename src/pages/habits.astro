@@ -1,0 +1,202 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Features from '~/components/widgets/Features.astro';
+import Schema from '~/components/common/Schema.astro';
+
+const metadata = {
+  title: 'Sleep Habits & Routines — Build Better Sleep Patterns — SleepUpgradeHub',
+  description: 'Learn how to build sustainable sleep habits and bedtime routines that work. Science-backed strategies for consistent, restorative sleep every night.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+// FAQ data for schema
+const faqItems = [
+  {
+    question: 'How long does it take to build a new sleep habit?',
+    answer: 'Most sleep habits take 2-4 weeks to feel natural and 6-8 weeks to become fully automatic. Consistency is more important than perfection—missing one night does not reset your progress. Start with one small change and build from there.',
+  },
+  {
+    question: 'What is the most important sleep habit to start with?',
+    answer: 'A consistent sleep and wake time is the foundation of good sleep. Going to bed and waking up at the same time every day (even weekends) helps regulate your circadian rhythm and makes all other sleep improvements more effective.',
+  },
+  {
+    question: 'Do I need a long bedtime routine to sleep well?',
+    answer: 'No. Even a simple 15-20 minute wind-down routine can significantly improve your sleep. The key is consistency and including calming activities that signal to your body it is time to sleep: dimming lights, reducing screen time, and doing something relaxing.',
+  },
+  {
+    question: 'Can I improve my sleep habits if I work night shifts?',
+    answer: 'Yes, but you need adapted strategies. Focus on creating a consistent schedule around your work hours, use blackout curtains and sleep masks, get bright light exposure at your "morning," and maintain the same sleep duration even if the timing is different.',
+  },
+  {
+    question: 'What should I do if I cannot fall asleep after 20 minutes?',
+    answer: 'Get out of bed and do a quiet, non-stimulating activity in dim light until you feel sleepy again. This prevents your brain from associating your bed with frustration and wakefulness. Avoid screens, bright lights, and anything too engaging.',
+  },
+];
+---
+
+<!-- FAQ Schema for SEO -->
+<Schema type="faqpage" faqs={faqItems} />
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <Hero
+    tagline="Sleep Habits & Routines"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Browse Habit Guides',
+        href: '/category/habits',
+        icon: 'tabler:calendar',
+      },
+      {
+        text: 'View All Guides',
+        href: '/blog',
+      },
+    ]}
+    image={{ src: '~/assets/images/habits-routines.webp', alt: 'Person with healthy evening sleep routine' }}
+  >
+    <Fragment slot="title">
+      Build <span class="text-brand">Sleep Habits</span> That Last
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Learn how to create sustainable bedtime routines, break bad sleep patterns, and build habits that support deep, restorative sleep—without overwhelm or perfection.
+    </Fragment>
+  </Hero>
+
+  <!-- Intro Content -->
+  <Content
+    id="intro"
+    tagline="Why Habits Matter"
+    title="Sustainable routines beat extreme hacks"
+    items={[
+      {
+        title: 'Consistency Over Intensity',
+        description:
+          'A simple routine you do every night is more powerful than an elaborate ritual you do occasionally. Start small and build gradually.',
+      },
+      {
+        title: 'Work With Your Biology',
+        description:
+          'Your body craves predictability. Consistent sleep and wake times help regulate your circadian rhythm and improve sleep quality naturally.',
+      },
+      {
+        title: 'Flexible, Not Rigid',
+        description:
+          'Life is not perfect. Our habit-building strategies work for parents, shift workers, travelers, and anyone with a non-ideal schedule.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/environment.webp',
+      alt: 'Calm evening environment for better sleep habits',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Habits are the foundation of great sleep
+      </h3>
+      No amount of expensive gadgets or supplements can compensate for inconsistent sleep habits. But the good news? Small, sustainable changes often create the biggest improvements in how you sleep.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Core Habit Principles -->
+  <Features
+    id="principles"
+    tagline="Core Principles"
+    title="The 6 Pillars of Sustainable Sleep Habits"
+    subtitle="Focus on these foundational habits before adding complexity"
+    items={[
+      {
+        title: 'Consistent Sleep Schedule',
+        description:
+          'Same bedtime and wake time every day (including weekends). This single habit has the biggest impact on sleep quality.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Wind-Down Routine',
+        description:
+          'A 30-60 minute pre-sleep ritual that signals your body it is time to rest: dim lights, calm activities, no screens.',
+        icon: 'tabler:moon',
+      },
+      {
+        title: 'Light Exposure Timing',
+        description:
+          'Bright light in the morning, dim light in the evening. This strengthens your natural circadian rhythm.',
+        icon: 'tabler:sun',
+      },
+      {
+        title: 'Strategic Caffeine Use',
+        description:
+          'No caffeine after 2 PM (or 8 hours before bed). Caffeine has a 5-6 hour half-life and can disrupt deep sleep even if you fall asleep fine.',
+        icon: 'tabler:coffee',
+      },
+      {
+        title: 'Movement & Exercise',
+        description:
+          'Regular physical activity improves sleep quality, but avoid intense exercise within 3 hours of bedtime.',
+        icon: 'tabler:run',
+      },
+      {
+        title: 'Bed = Sleep Only',
+        description:
+          'Train your brain to associate your bed with sleep, not work, scrolling, or stress. Get out of bed if you cannot sleep after 20 minutes.',
+        icon: 'tabler:bed',
+      },
+    ]}
+  />
+
+  <!-- Featured Articles -->
+  <BlogLatestPosts
+    title="Latest Habit & Routine Guides"
+    information="Practical, step-by-step guides for building better sleep habits that fit your real life."
+    postIds={[]}
+  />
+
+  <!-- FAQs -->
+  <FAQs
+    title="Sleep Habits FAQs"
+    subtitle="Common questions about building and maintaining better sleep routines"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={faqItems.map(item => ({
+      title: item.question,
+      description: item.answer,
+    }))}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Building Better Habits',
+        href: '/category/habits',
+        icon: 'tabler:checklist',
+      },
+      {
+        text: 'View All Sleep Guides',
+        href: '/blog',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Transform Your Sleep Habits?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Start with one small change tonight. Browse our habit-building guides to create a sleep routine that actually works for your life.
+    </Fragment>
+  </CallToAction>
+</Layout>

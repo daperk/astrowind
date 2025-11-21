@@ -1,0 +1,218 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Schema from '~/components/common/Schema.astro';
+
+const metadata = {
+  title: 'Sleep Tools & Gadgets — Reviews & Recommendations — SleepUpgradeHub',
+  description: 'Discover the best sleep tools, trackers, white noise machines, and bedroom gadgets. Honest reviews and science-backed recommendations to help you sleep better.',
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+// FAQ data for schema
+const faqItems = [
+  {
+    question: 'What sleep tools actually work?',
+    answer: 'The most effective sleep tools are those that address specific sleep challenges: blackout curtains for light control, white noise machines for sound masking, sleep trackers for habit awareness, and temperature-regulating bedding. We test and review each tool based on scientific research and real-world effectiveness.',
+  },
+  {
+    question: 'Do I need expensive gadgets to sleep better?',
+    answer: 'No. Many effective sleep improvements come from free habit changes and low-cost solutions like blackout curtains, earplugs, or a box fan. High-tech sleep trackers and smart devices can provide helpful data but are not essential for most people to improve their sleep quality.',
+  },
+  {
+    question: 'What should I look for in a sleep tracker?',
+    answer: 'Look for accurate heart rate monitoring, sleep stage detection, minimal disruption (comfortable to wear), good battery life, and actionable insights rather than just data. The best tracker is one you will actually use consistently.',
+  },
+  {
+    question: 'Are white noise machines worth it?',
+    answer: 'For many people, yes. White noise machines help mask disruptive sounds, create consistent audio environments, and can significantly improve sleep quality for light sleepers or those in noisy environments. Even a simple fan can work as an effective white noise source.',
+  },
+  {
+    question: 'How do I choose the right sleep tools for me?',
+    answer: 'Start by identifying your specific sleep challenge (falling asleep, staying asleep, waking too early, poor sleep quality). Then choose tools that directly address that issue. We provide detailed buying guides for each category to help you make informed decisions.',
+  },
+];
+---
+
+<!-- FAQ Schema for SEO -->
+<Schema type="faqpage" faqs={faqItems} />
+
+<Layout metadata={metadata}>
+  <!-- Hero -->
+  <Hero
+    tagline="Sleep Tools & Gadgets"
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Browse All Tools',
+        href: '/category/sleep-tools',
+        icon: 'tabler:bulb',
+      },
+      {
+        text: 'Read Reviews',
+        href: '/blog',
+      },
+    ]}
+    image={{ src: '~/assets/images/tools-supplements.webp', alt: 'Sleep optimization tools and gadgets' }}
+  >
+    <Fragment slot="title">
+      The Best <span class="text-brand">Sleep Tools & Gadgets</span> for Better Rest
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Honest reviews and science-backed recommendations for sleep trackers, white noise machines, smart lights, and bedroom optimization tools that actually work.
+    </Fragment>
+  </Hero>
+
+  <!-- Overview -->
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
+    <div class="mb-12 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
+        Sleep Tools That Make a Real Difference
+      </h2>
+      <p class="text-xl text-muted dark:text-slate-400 max-w-3xl mx-auto">
+        We test, review, and recommend sleep optimization tools based on scientific research and real-world effectiveness—not marketing hype or affiliate commissions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured Articles -->
+  <BlogLatestPosts
+    title="Latest Sleep Tool Reviews & Guides"
+    information="Explore our in-depth reviews, buying guides, and comparison articles for sleep optimization tools and bedroom gadgets."
+    postIds={[]}
+  />
+
+  <!-- Tool Categories -->
+  <Features2
+    title="Sleep Tool Categories"
+    subtitle="Browse our comprehensive guides for every type of sleep optimization tool"
+    tagline="Categories"
+    columns={3}
+    items={[
+      {
+        title: 'Sleep Trackers',
+        description: 'Rings, bands, and devices that monitor your sleep stages, heart rate, and recovery.',
+        icon: 'tabler:activity',
+        callToAction: {
+          text: 'View Trackers',
+          href: '/category/sleep-trackers',
+        },
+      },
+      {
+        title: 'White Noise Machines',
+        description: 'Sound masking devices, fans, and apps to create optimal audio environments for sleep.',
+        icon: 'tabler:volume',
+        callToAction: {
+          text: 'View Machines',
+          href: '/category/white-noise',
+        },
+      },
+      {
+        title: 'Smart Lighting',
+        description: 'Red light bulbs, sunrise alarms, and circadian-friendly lighting solutions.',
+        icon: 'tabler:bulb',
+        callToAction: {
+          text: 'View Lighting',
+          href: '/category/lighting',
+        },
+      },
+      {
+        title: 'Mattresses & Bedding',
+        description: 'Temperature-regulating sheets, supportive pillows, and mattress recommendations.',
+        icon: 'tabler:layout-grid',
+        callToAction: {
+          text: 'View Bedding',
+          href: '/category/bedding',
+        },
+      },
+      {
+        title: 'Air Quality Tools',
+        description: 'Humidifiers, air purifiers, and fans for optimal bedroom temperature and air.',
+        icon: 'tabler:wind',
+        callToAction: {
+          text: 'View Tools',
+          href: '/category/sleep-environment',
+        },
+      },
+      {
+        title: 'Sleep Supplements',
+        description: 'Magnesium, L-theanine, melatonin, and other evidence-based sleep aids.',
+        icon: 'tabler:pill',
+        callToAction: {
+          text: 'View Supplements',
+          href: '/category/supplements',
+        },
+      },
+    ]}
+  />
+
+  <!-- Recommended Tools Section (Commented out for future use) -->
+  <!--
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-7xl bg-gray-50 dark:bg-slate-900/50">
+    <div class="mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-center">
+        Recommended Sleep Tools
+      </h2>
+      <p class="text-xl text-muted dark:text-slate-400 max-w-3xl mx-auto text-center">
+        Our top picks based on extensive testing and research
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      Add product cards here when ready
+      Each card should include:
+      - Product image
+      - Product name
+      - Brief description
+      - Key features
+      - Price range
+      - Affiliate link button
+      - Our rating/review summary
+    </div>
+  </section>
+  -->
+
+  <!-- FAQs -->
+  <FAQs
+    title="Sleep Tools FAQs"
+    subtitle="Common questions about sleep optimization tools and gadgets"
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={faqItems.map(item => ({
+      title: item.question,
+      description: item.answer,
+    }))}
+  />
+
+  <!-- CTA -->
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore Sleep Guides',
+        href: '/blog',
+        icon: 'tabler:book',
+      },
+      {
+        text: 'View All Categories',
+        href: '/category/sleep-tools',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Ready to Upgrade Your Sleep Setup?
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Browse our comprehensive guides and reviews to find the perfect sleep optimization tools for your needs.
+    </Fragment>
+  </CallToAction>
+</Layout>

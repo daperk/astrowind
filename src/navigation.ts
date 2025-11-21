@@ -13,23 +13,12 @@ export const headerData = {
       ],
     },
     {
-      text: 'Topics',
-      links: [
-        { text: 'Fall Asleep Faster', href: getPermalink('fall-asleep', 'tag') },
-        { text: 'Deep Sleep', href: getPermalink('deep-sleep', 'tag') },
-        { text: 'Morning Energy', href: getPermalink('energy', 'tag') },
-        { text: 'Bedroom Setup', href: getPermalink('bedroom', 'tag') },
-        { text: 'Sleep for Busy People', href: getPermalink('busy', 'tag') },
-      ],
+      text: 'Tools',
+      href: getPermalink('/tools'),
     },
     {
-      text: 'Tools',
-      links: [
-        { text: 'Sleep Trackers', href: getPermalink('sleep-trackers', 'category') },
-        { text: 'White Noise Machines', href: getPermalink('white-noise', 'category') },
-        { text: 'Lighting & Lamps', href: getPermalink('lighting', 'category') },
-        { text: 'Mattresses & Bedding', href: getPermalink('bedding', 'category') },
-      ],
+      text: 'Habits',
+      href: getPermalink('/habits'),
     },
     {
       text: 'About',
@@ -41,27 +30,30 @@ export const headerData = {
     },
   ],
 
-  actions: [], // no more Download nonsense
+  actions: [],
 };
 
 export const footerData = {
   links: [
     {
-      title: 'Sleep Guides',
+      title: 'Categories',
       links: [
-        { text: 'All Guides', href: getBlogPermalink() },
         { text: 'Sleep Environment', href: getPermalink('sleep-environment', 'category') },
         { text: 'Sleep Tools', href: getPermalink('sleep-tools', 'category') },
         { text: 'Habits & Routines', href: getPermalink('habits', 'category') },
-      ],
-    },
-    {
-      title: 'Tools & Products',
-      links: [
         { text: 'Sleep Trackers', href: getPermalink('sleep-trackers', 'category') },
         { text: 'White Noise Machines', href: getPermalink('white-noise', 'category') },
         { text: 'Lighting & Lamps', href: getPermalink('lighting', 'category') },
         { text: 'Mattresses & Bedding', href: getPermalink('bedding', 'category') },
+      ],
+    },
+    {
+      title: 'Resources',
+      links: [
+        { text: 'All Guides', href: getBlogPermalink() },
+        { text: 'Tools Hub', href: getPermalink('/tools') },
+        { text: 'Habits Hub', href: getPermalink('/habits') },
+        { text: 'Supplements', href: getPermalink('supplements', 'category') },
       ],
     },
     {
