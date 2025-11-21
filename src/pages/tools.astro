@@ -1,11 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Features2 from '~/components/widgets/Features2.astro';
+import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Schema from '~/components/common/Schema.astro';
+// import ProductRecommendations from '~/components/widgets/ProductRecommendations.astro';
 
 const metadata = {
   title: 'Sleep Tools & Gadgets — Reviews & Recommendations — SleepUpgradeHub',
@@ -72,16 +73,42 @@ const faqItems = [
   </Hero>
 
   <!-- Overview -->
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
-    <div class="mb-12 text-center">
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">
-        Sleep Tools That Make a Real Difference
-      </h2>
-      <p class="text-xl text-muted dark:text-slate-400 max-w-3xl mx-auto">
-        We test, review, and recommend sleep optimization tools based on scientific research and real-world effectiveness—not marketing hype or affiliate commissions.
-      </p>
-    </div>
-  </section>
+  <Content
+    tagline="Why Trust Our Reviews"
+    title="Sleep Tools That Make a Real Difference"
+    items={[
+      {
+        title: 'Science-Backed Testing',
+        description:
+          'Every tool we review is tested against published sleep research and real-world effectiveness data.',
+      },
+      {
+        title: 'Honest Recommendations',
+        description:
+          'We prioritize your sleep quality over affiliate commissions. If a product does not work, we tell you.',
+      },
+      {
+        title: 'Practical Use Cases',
+        description:
+          'We test tools in real bedrooms for real people—parents, shift workers, light sleepers, and everyone in between.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/tools-supplements.webp',
+      alt: 'Sleep optimization tools and gadgets',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Cutting through the noise
+      </h3>
+      The sleep gadget market is full of marketing hype and pseudoscience. We test, review, and recommend only the tools that deliver measurable sleep improvements based on scientific principles.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
+    </Fragment>
+  </Content>
 
   <!-- Featured Articles -->
   <BlogLatestPosts
@@ -90,94 +117,45 @@ const faqItems = [
     postIds={[]}
   />
 
-  <!-- Tool Categories -->
-  <Features2
-    title="Sleep Tool Categories"
-    subtitle="Browse our comprehensive guides for every type of sleep optimization tool"
-    tagline="Categories"
+  <!-- Product Recommendations (Commented out - enable when products are ready) -->
+  <!--
+  <ProductRecommendations
+    title="Recommended Sleep Tools"
+    description="Our top picks based on extensive testing and research"
+    tagline="Top Picks"
     columns={3}
-    items={[
+    products={[
       {
-        title: 'Sleep Trackers',
-        description: 'Rings, bands, and devices that monitor your sleep stages, heart rate, and recovery.',
-        icon: 'tabler:activity',
-        callToAction: {
-          text: 'View Trackers',
-          href: '/category/sleep-trackers',
-        },
+        name: 'Oura Ring Gen 3',
+        description: 'The most accurate sleep tracking ring with detailed sleep stage analysis and recovery metrics.',
+        image: '/images/products/oura-ring.jpg',
+        price: '$299',
+        rating: 4.5,
+        badge: 'Best Overall',
+        features: [
+          'Accurate sleep stage detection',
+          '7-day battery life',
+          'Comfortable to wear all night',
+        ],
+        affiliateLink: 'https://example.com/oura-ring',
       },
       {
-        title: 'White Noise Machines',
-        description: 'Sound masking devices, fans, and apps to create optimal audio environments for sleep.',
-        icon: 'tabler:volume',
-        callToAction: {
-          text: 'View Machines',
-          href: '/category/white-noise',
-        },
+        name: 'LectroFan White Noise Machine',
+        description: 'Compact, powerful white noise machine with 20 unique non-looping sounds.',
+        image: '/images/products/lectrofan.jpg',
+        price: '$49.95',
+        rating: 4.8,
+        badge: 'Budget Pick',
+        features: [
+          '20 non-looping sounds',
+          'Compact and travel-friendly',
+          'Precise volume control',
+        ],
+        affiliateLink: 'https://example.com/lectrofan',
       },
-      {
-        title: 'Smart Lighting',
-        description: 'Red light bulbs, sunrise alarms, and circadian-friendly lighting solutions.',
-        icon: 'tabler:bulb',
-        callToAction: {
-          text: 'View Lighting',
-          href: '/category/lighting',
-        },
-      },
-      {
-        title: 'Mattresses & Bedding',
-        description: 'Temperature-regulating sheets, supportive pillows, and mattress recommendations.',
-        icon: 'tabler:layout-grid',
-        callToAction: {
-          text: 'View Bedding',
-          href: '/category/bedding',
-        },
-      },
-      {
-        title: 'Air Quality Tools',
-        description: 'Humidifiers, air purifiers, and fans for optimal bedroom temperature and air.',
-        icon: 'tabler:wind',
-        callToAction: {
-          text: 'View Tools',
-          href: '/category/sleep-environment',
-        },
-      },
-      {
-        title: 'Sleep Supplements',
-        description: 'Magnesium, L-theanine, melatonin, and other evidence-based sleep aids.',
-        icon: 'tabler:pill',
-        callToAction: {
-          text: 'View Supplements',
-          href: '/category/supplements',
-        },
-      },
+      // Add more products as needed
     ]}
   />
-
-  <!-- Recommended Tools Section (Commented out for future use) -->
-  <!--
-  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-7xl bg-gray-50 dark:bg-slate-900/50">
-    <div class="mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4 text-center">
-        Recommended Sleep Tools
-      </h2>
-      <p class="text-xl text-muted dark:text-slate-400 max-w-3xl mx-auto text-center">
-        Our top picks based on extensive testing and research
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      Add product cards here when ready
-      Each card should include:
-      - Product image
-      - Product name
-      - Brief description
-      - Key features
-      - Price range
-      - Affiliate link button
-      - Our rating/review summary
-    </div>
-  </section>
   -->
 
   <!-- FAQs -->
@@ -197,13 +175,13 @@ const faqItems = [
     actions={[
       {
         variant: 'primary',
-        text: 'Explore Sleep Guides',
-        href: '/blog',
+        text: 'Browse All Tool Guides',
+        href: '/category/sleep-tools',
         icon: 'tabler:book',
       },
       {
-        text: 'View All Categories',
-        href: '/category/sleep-tools',
+        text: 'View All Sleep Guides',
+        href: '/blog',
       },
     ]}
   >

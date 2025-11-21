@@ -7,6 +7,7 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Features from '~/components/widgets/Features.astro';
 import Schema from '~/components/common/Schema.astro';
+// import ProductRecommendations from '~/components/widgets/ProductRecommendations.astro';
 
 const metadata = {
   title: 'Sleep Habits & Routines — Build Better Sleep Patterns — SleepUpgradeHub',
@@ -163,6 +164,47 @@ const faqItems = [
     information="Practical, step-by-step guides for building better sleep habits that fit your real life."
     postIds={[]}
   />
+
+  <!-- Product Recommendations (Commented out - enable when products are ready) -->
+  <!--
+  <ProductRecommendations
+    title="Recommended Sleep Habit Tools"
+    description="Products that help build and maintain better sleep habits"
+    tagline="Top Picks"
+    columns={3}
+    products={[
+      {
+        name: 'Philips SmartSleep Wake-Up Light',
+        description: 'Sunrise alarm clock that helps regulate your circadian rhythm with gradual light and sound.',
+        image: '/images/products/philips-wake-up-light.jpg',
+        price: '$99.99',
+        rating: 4.6,
+        badge: 'Best for Routine',
+        features: [
+          'Gradual sunrise simulation',
+          '20 brightness settings',
+          'FM radio and natural sounds',
+        ],
+        affiliateLink: 'https://example.com/philips-wake-up-light',
+      },
+      {
+        name: 'Manta Sleep Mask',
+        description: 'Zero-pressure blackout mask that blocks 100% of light for consistent sleep schedules.',
+        image: '/images/products/manta-mask.jpg',
+        price: '$35',
+        rating: 4.7,
+        badge: 'Budget Pick',
+        features: [
+          'Complete blackout',
+          'Zero eye pressure',
+          'Adjustable eye cups',
+        ],
+        affiliateLink: 'https://example.com/manta-mask',
+      },
+      // Add more habit-building products as needed
+    ]}
+  />
+  -->
 
   <!-- FAQs -->
   <FAQs
