@@ -15,7 +15,8 @@ import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'SleepUpgradeHub — Science-Backed Sleep Optimization Guides & Tools',
-  description: 'Discover science-backed sleep optimization guides, honest product reviews, and proven strategies to fall asleep faster, sleep deeper, and wake up restored.',
+  description:
+    'Discover science-backed sleep optimization guides, honest product reviews, and proven strategies to fall asleep faster, sleep deeper, and wake up restored.',
   ignoreTitleTemplate: true,
 };
 
@@ -23,27 +24,33 @@ const metadata = {
 const faqItems = [
   {
     question: 'Where should I start if my sleep is a mess?',
-    answer: 'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
+    answer:
+      'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
   },
   {
     question: 'Do I really need gadgets to sleep better?',
-    answer: 'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
+    answer:
+      'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
   },
   {
     question: 'Which supplements are best for sleep?',
-    answer: 'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
+    answer:
+      'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
   },
   {
     question: 'How long until I notice better sleep?',
-    answer: 'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
+    answer:
+      'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
   },
   {
     question: 'Can I improve sleep if I work late or do night shifts?',
-    answer: 'Yes, but you need a more intentional routine: strong light exposure at your "morning," strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
+    answer:
+      'Yes, but you need a more intentional routine: strong light exposure at your "morning," strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
   },
   {
     question: 'Is bad sleep really that big of a deal?',
-    answer: 'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
+    answer:
+      'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
   },
 ];
 ---
@@ -52,7 +59,7 @@ const faqItems = [
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="Sleep Optimization Made Simple" 
+    tagline="Sleep Optimization Made Simple"
     actions={[
       {
         variant: 'primary',
@@ -351,88 +358,88 @@ const faqItems = [
   <Fragment slot="bg">
     <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
   </Fragment>
-</Layout>
 
-<!-- HighlightedPosts Widget ******* -->
+  <!-- HighlightedPosts Widget ******* -->
 
-<BlogLatestPosts
-  title="Latest guides from the SleepUpgradeHub blog"
-  information={`Read our newest articles on sleep optimization, sleep tools, and practical routines.
+  <BlogLatestPosts
+    title="Latest guides from the SleepUpgradeHub blog"
+    information={`Read our newest articles on sleep optimization, sleep tools, and practical routines.
                         Each post is designed to help you make one clear upgrade to your nights—without needing a full life overhaul.
                 `}
-/>
+  />
 
-<!-- FAQs Widget ******************* -->
+  <!-- FAQs Widget ******************* -->
 
-<FAQs
-  title="Sleep Optimization FAQs"
-  subtitle="Quick answers to common questions about improving sleep quality, tools, and routines."
-  tagline="FAQs"
-  classes={{ container: 'max-w-6xl' }}
-  items={[
-    {
-      title: 'Where should I start if my sleep is a mess?',
-      description:
-        'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
-    },
-    {
-      title: 'Do I really need gadgets to sleep better?',
-      description:
-        'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
-    },
-    {
-      title: 'Which supplements are best for sleep?',
-      description:
-        'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
-    },
-    {
-      title: 'How long until I notice better sleep?',
-      description:
-        'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
-    },
-    {
-      title: 'Can I improve sleep if I work late or do night shifts?',
-      description:
-        'Yes, but you need a more intentional routine: strong light exposure at your “morning,” strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
-    },
-    {
-      title: 'Is bad sleep really that big of a deal?',
-      description:
-        'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
-    },
-  ]}
-/>
+  <FAQs
+    title="Sleep Optimization FAQs"
+    subtitle="Quick answers to common questions about improving sleep quality, tools, and routines."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Where should I start if my sleep is a mess?',
+        description:
+          'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
+      },
+      {
+        title: 'Do I really need gadgets to sleep better?',
+        description:
+          'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
+      },
+      {
+        title: 'Which supplements are best for sleep?',
+        description:
+          'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
+      },
+      {
+        title: 'How long until I notice better sleep?',
+        description:
+          'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
+      },
+      {
+        title: 'Can I improve sleep if I work late or do night shifts?',
+        description:
+          'Yes, but you need a more intentional routine: strong light exposure at your “morning,” strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
+      },
+      {
+        title: 'Is bad sleep really that big of a deal?',
+        description:
+          'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
+      },
+    ]}
+  />
 
-<!-- Stats Widget ****************** -->
+  <!-- Stats Widget ****************** -->
 
-<Stats
-  stats={[
-    { title: 'Sleep Guides Published', amount: '48+' },
-    { title: 'Hours of Research', amount: '320+' },
-    { title: 'Tools & Products Reviewed', amount: '75+' },
-    { title: 'Average Time to First Upgrade', amount: '7 days' },
-  ]}
-/>
+  <Stats
+    stats={[
+      { title: 'Sleep Guides Published', amount: '48+' },
+      { title: 'Hours of Research', amount: '320+' },
+      { title: 'Tools & Products Reviewed', amount: '75+' },
+      { title: 'Average Time to First Upgrade', amount: '7 days' },
+    ]}
+  />
 
-<!-- CallToAction Widget *********** -->
+  <!-- CallToAction Widget *********** -->
 
-<CallToAction
-  actions={[
-    {
-      variant: 'primary',
-      text: 'Start Your Sleep Upgrade',
-      href: '/blog',
-      icon: 'tabler:moon-stars',
-    },
-  ]}
->
-  <Fragment slot="title"> Ready to finally wake up rested? </Fragment>
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Start Your Sleep Upgrade',
+        href: '/blog',
+        icon: 'tabler:moon-stars',
+      },
+    ]}
+  >
+    <Fragment slot="title"> Ready to finally wake up rested? </Fragment>
 
-  <Fragment slot="subtitle">
-    Begin with one guide, one change, and one night. Explore our sleep optimization articles and take your first step
-    toward deeper, calmer rest.
-  </Fragment>
-</CallToAction>
+    <Fragment slot="subtitle">
+      Begin with one guide, one change, and one night. Explore our sleep optimization articles and take your first step
+      toward deeper, calmer rest.
+    </Fragment>
+  </CallToAction>
 
-<!-- FAQ Schema for rich snippets in search results -->
-<Schema type="faqpage" faqs={faqItems} />
+  <!-- FAQ Schema for rich snippets in search results -->
+  <Schema type="faqpage" faqs={faqItems} />
+</Layout>

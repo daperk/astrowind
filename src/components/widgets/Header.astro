@@ -93,7 +93,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             class:list={[
               'px-1.5 py-1.5 hover:text-primary dark:hover:text-accent-dark',
               { 'aw-link-active': '/blog' === currentPath },
-            ]}>Guides</a>
+            ]}>Guides</a
+          >
         </li>
         <li>
           <a
@@ -101,7 +102,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             class:list={[
               'px-1.5 py-1.5 hover:text-primary dark:hover:text-accent-dark',
               { 'aw-link-active': '/category/sleep-tools' === currentPath },
-            ]}>Tools</a>
+            ]}>Tools</a
+          >
         </li>
         <li>
           <a
@@ -109,7 +111,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             class:list={[
               'px-1.5 py-1.5 hover:text-primary dark:hover:text-accent-dark',
               { 'aw-link-active': '/category/habits' === currentPath },
-            ]}>Habits</a>
+            ]}>Habits</a
+          >
         </li>
         <li>
           <a
@@ -117,7 +120,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             class:list={[
               'px-1.5 py-1.5 hover:text-primary dark:hover:text-accent-dark',
               { 'aw-link-active': '/about' === currentPath },
-            ]}>About</a>
+            ]}>About</a
+          >
         </li>
         <li>
           <a
@@ -125,7 +129,8 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
             class:list={[
               'px-1.5 py-1.5 hover:text-primary dark:hover:text-accent-dark',
               { 'aw-link-active': '/contact' === currentPath },
-            ]}>Contact</a>
+            ]}>Contact</a
+          >
         </li>
       </ul>
     </nav>
@@ -138,24 +143,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
       ]}
     >
       <div class="flex items-center">
-        {
-          showToggleTheme && (
-            <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block text-primary dark:text-accent-dark" />
-          )
-        }
-
-        {
-          showRssFeed && (
-            <a
-              class="text-muted dark:text-gray-400 hover:text-primary dark:hover:text-accent-dark rounded-lg text-sm p-2.5 inline-flex items-center"
-              aria-label="RSS Feed"
-              href={getAsset('/rss.xml')}
-            >
-              <Icon name="tabler:rss" class="w-5 h-5" />
-            </a>
-          )
-        }
-
         {
           actions?.length ? (
             <span class="ml-4">
