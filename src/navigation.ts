@@ -43,8 +43,7 @@ export const footerData = {
         { text: 'Habits & Routines', href: getPermalink('habits', 'category') },
         { text: 'Sleep Trackers', href: getPermalink('sleep-trackers', 'category') },
         { text: 'White Noise Machines', href: getPermalink('white-noise', 'category') },
-        { text: 'Lighting & Lamps', href: getPermalink('lighting', 'category') },
-        { text: 'Mattresses & Bedding', href: getPermalink('bedding', 'category') },
+        { text: 'Supplements', href: getPermalink('supplements', 'category') },
       ],
     },
     {
