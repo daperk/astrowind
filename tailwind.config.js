@@ -12,6 +12,10 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        'brand-primary': '#1c2a44',
+        'brand-secondary': '#7aa2d6',
+        'brand-accent': '#4f7dcf',
+        'brand-accent-light': '#cdd8e6',
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
