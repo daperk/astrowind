@@ -320,3 +320,23 @@ export async function findPostsByCategory(categorySlug: string, maxResults?: num
   const filtered = allPosts.filter((post) => post.category?.slug === categorySlug);
   return maxResults ? filtered.slice(0, maxResults) : filtered;
 }
+
+/** Get all categories with post counts */
+export async function getCategoriesWithCounts(): Promise<Array<{ title: string; slug: string; count: number }>> {
+  const allPosts = await fetchPosts();
+
+  // Count posts for each predefined category
+  const categoriesWithCounts = SLEEP_CATEGORIES.map(category => {
+    const count = allPosts.filter(post => post.category?.slug === category.slug).length;
+    return {
+      ...category,
+      count
+    };
+  });
+
+  // Filter out categories with 0 posts (optional - you can remove this filter to show all categories)
+  // return categoriesWithCounts.filter(cat => cat.count > 0);
+
+  // Return all categories including those with 0 posts
+  return categoriesWithCounts;
+}

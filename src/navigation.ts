@@ -9,6 +9,8 @@ export const headerData = {
         { text: 'Sleep Environment', href: getPermalink('sleep-environment', 'category') },
         { text: 'Sleep Tools', href: getPermalink('sleep-tools', 'category') },
         { text: 'Habits & Routines', href: getPermalink('habits', 'category') },
+        { text: 'Sleep Trackers', href: getPermalink('sleep-trackers', 'category') },
+        { text: 'White Noise', href: getPermalink('white-noise', 'category') },
         { text: 'Supplements', href: getPermalink('supplements', 'category') },
       ],
     },

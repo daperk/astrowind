@@ -6,7 +6,7 @@ import ModernCard from '~/components/blog/ModernCard.astro';
 import Sidebar from '~/components/blog/Sidebar.astro';
 import Pagination from '~/components/blog/Pagination.astro';
 
-import { blogListRobots, getStaticPathsBlogList } from '~/utils/blog';
+import { blogListRobots, getStaticPathsBlogList, getCategoriesWithCounts } from '~/utils/blog';
 
 export const prerender = true;
 
@@ -19,15 +19,8 @@ type Props = InferGetStaticPropsType<typeof getStaticPaths>;
 const { page } = Astro.props as Props;
 const currentPage = page.currentPage ?? 1;
 
-// Get simplified categories for sidebar
-const topCategories = [
-  { title: 'Sleep Environment', slug: 'sleep-environment', count: 0 },
-  { title: 'Sleep Tools', slug: 'sleep-tools', count: 0 },
-  { title: 'Habits & Routines', slug: 'habits', count: 0 },
-  { title: 'Supplements', slug: 'supplements', count: 0 },
-  { title: 'Sleep Trackers', slug: 'sleep-trackers', count: 0 },
-  { title: 'White Noise', slug: 'white-noise', count: 0 },
-];
+// Get categories with real post counts
+const topCategories = await getCategoriesWithCounts();
 
 // Get popular posts (last 5 for sidebar)
 const popularPosts = page.data.slice(0, 5);
