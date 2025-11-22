@@ -2,16 +2,17 @@
 import Layout from '~/layouts/PageLayout.astro';
 import Schema from '~/components/common/Schema.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// Healthline-style components
+import HealthlineHero from '~/components/widgets/HealthlineHero.astro';
+import CategoryGrid from '~/components/widgets/CategoryGrid.astro';
+import LatestPostsGrid from '~/components/widgets/LatestPostsGrid.astro';
+import PopularArticles from '~/components/widgets/PopularArticles.astro';
+import CompactEmailCTA from '~/components/widgets/CompactEmailCTA.astro';
+import AdPlaceholder from '~/components/widgets/AdPlaceholder.astro';
+
+// Keep existing components that work with the new design
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
   title: 'SleepUpgradeHub — Science-Backed Sleep Optimization Guides & Tools',
@@ -56,389 +57,93 @@ const faqItems = [
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    tagline="Sleep Optimization Made Simple"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Explore Sleep Guides',
-        href: '/blog',
-        icon: 'tabler:moon-stars',
-      },
-      {
-        text: 'Best Sleep Tools',
-        href: '/category/sleep-tools',
-      },
-    ]}
-    image={{ src: '~/assets/images/hero-sleep.webp', alt: 'Woman Sleeping Peacefully in a Dark Cozy Bedroom' }}
-  >
-    <Fragment slot="title">
-      Upgrade Your Sleep with <span class="text-brand">Science-Backed Tools</span> & Proven Rest Strategies
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Discover the best sleep optimization products, expert guides, and bedroom upgrades to help you fall asleep faster,
-      sleep deeper, and wake up restored.
-    </Fragment>
-  </Hero>
-
-  <!-- Note Widget ******************* -->
-
-  <Note
-    title="Our Philosophy:"
-    description="Simple, science-backed changes to your bedroom, routine, and tools can radically improve your sleep—without overwhelm or hype."
+  <!-- Compact Hero - Healthline Style (text-first, minimal height) -->
+  <HealthlineHero
+    eyebrow="Sleep Optimization Made Simple"
+    title="Upgrade Your Sleep with <span class='text-brand-accent'>Science-Backed Tools</span> & Proven Strategies"
+    subtitle="Discover the best sleep optimization products, expert guides, and bedroom upgrades to help you fall asleep faster, sleep deeper, and wake up restored."
   />
 
-  <!-- Features Widget *************** -->
+  <!-- Category Grid - Healthline Style (clean, minimal cards) -->
+  <CategoryGrid />
 
-  <Features
-    id="features"
-    tagline="Why SleepUpgradeHub?"
-    title="What you get when you optimize your sleep with us"
-    subtitle="We combine sleep science, product research, and real-world testing to help you create a bedroom and routine that actually supports deep, restorative sleep."
-    items={[
-      {
-        title: 'Science-Based Guidance',
-        description:
-          'Clear explanations of sleep science, circadian rhythm, light exposure, and habits—so you know why each tip works.',
-        icon: 'tabler:brain',
-      },
-      {
-        title: 'Curated Sleep Tools',
-        description:
-          'We highlight lamps, masks, noise devices, trackers, and supplements that truly help, not just what is trending.',
-        icon: 'tabler:moon-stars',
-      },
-      {
-        title: 'Bedroom Optimization',
-        description:
-          'From blackout curtains to ideal humidity, we break down how to turn your room into a true sleep sanctuary.',
-        icon: 'tabler:home',
-      },
-      {
-        title: 'Actionable Checklists',
-        description:
-          'Simple step-by-step checklists so you can upgrade your sleep in days, not months of random trial and error.',
-        icon: 'tabler:checklist',
-      },
-      {
-        title: 'SEO-Friendly, Fast Site',
-        description:
-          'Built on Astro + Tailwind, the site loads fast and feels clean—which also helps your brain relax while reading.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Always Evolving',
-        description:
-          'We continuously review new tools, studies, and methods so your sleep setup can improve with the latest knowledge.',
-        icon: 'tabler:refresh',
-      },
-    ]}
-  />
+  <!-- Ad Placeholder: Horizontal Slot 1 -->
+  <AdPlaceholder type="horizontal" label="Sponsored Content" />
 
-  <!-- Content Widget **************** -->
+  <!-- Latest Articles Grid - Healthline Style (compact, 2-3 columns) -->
+  <LatestPostsGrid />
 
-  <Content
-    isReversed
-    tagline="Sleep Environment"
-    title="Start by upgrading the space where you sleep"
-    items={[
-      {
-        title: 'Light Control',
-        description:
-          'Learn how blue light, screen glow, and streetlights affect melatonin—and how to use red light and blackout solutions.',
-      },
-      {
-        title: 'Noise & Soundscape',
-        description:
-          'Discover when silence helps and when white noise, pink noise, or nature sounds are better for maintaining deep sleep.',
-      },
-      {
-        title: 'Temperature & Air Quality',
-        description:
-          'Dial in your bedroom temperature, airflow, and humidity to reduce night sweats, dry throat, and restless tossing.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/environment.webp',
-      alt: 'Sleep Optimization Tools',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Your bedroom should work with your biology, not against it.
-      </h3>
-      Small environment upgrades often create the biggest, fastest improvements in your sleep quality.
-    </Fragment>
+  <!-- Popular Articles - Healthline Style (most-read section) -->
+  <PopularArticles />
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
-    </Fragment>
-  </Content>
+  <!-- Ad Placeholder: Horizontal Slot 2 -->
+  <AdPlaceholder type="horizontal" label="Advertisement" />
 
-  <!-- Content Widget **************** -->
+  <!-- Stats Section - Maintaining Your Colors -->
+  <section class="py-12 md:py-16 bg-white dark:bg-slate-900">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Stats
+        stats={[
+          { title: 'Sleep Guides Published', amount: '48+' },
+          { title: 'Hours of Research', amount: '320+' },
+          { title: 'Tools & Products Reviewed', amount: '75+' },
+          { title: 'Average Time to First Upgrade', amount: '7 days' },
+        ]}
+      />
+    </div>
+  </section>
 
-  <Content
-    isAfterContent
-    tagline="Tools & Supplements"
-    title="Use sleep tools intelligently—not desperately"
-    items={[
-      {
-        title: 'Smart Sleep Gadgets',
-        description:
-          'We review tracking rings, bands, and devices from a practical angle: do they help you change habits or just show numbers?',
-      },
-      {
-        title: 'Low-EMF & Gentle Tech',
-        description:
-          'We highlight products designed to reduce EMF exposure at night, keeping your sleep as calm and clean as possible.',
-      },
-      {
-        title: 'Natural Aids & Supplements',
-        description:
-          'From magnesium to L-theanine, we break down what the research says, ideal doses, and how to avoid overdoing it.',
-      },
-      {
-        title: 'No-Hype Recommendations',
-        description:
-          'You get honest pros, cons, and use-cases, so you invest only in tools that truly match your sleep problems.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/tools-supplements.webp',
-      alt: 'Sleep gadgets and natural supplements',
-    }}
-  >
-    <Fragment slot="content">
-      Use tools to support your biology, not replace it. The right product, used the right way, can accelerate your
-      sleep upgrade.
-    </Fragment>
+  <!-- Compact Email CTA - Healthline Style (not oversized) -->
+  <CompactEmailCTA />
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    tagline="Habits & Routines"
-    title="Lock in a routine that your body recognizes as 'time to sleep'"
-    items={[
-      {
-        title: 'Evening Wind-Down',
-        description:
-          'Create a repeatable pre-sleep ritual that lowers cortisol, quiets your mind, and signals your body that it is safe to rest.',
-      },
-      {
-        title: 'Screen & Light Hygiene',
-        description:
-          'Get practical strategies to reduce stimulating inputs—without needing to quit your phone cold-turkey overnight.',
-      },
-      {
-        title: 'Flexible for Real Life',
-        description:
-          'We design routines that work for parents, night-shift workers, entrepreneurs, and anyone with a non-perfect schedule.',
-      },
-      {
-        title: 'Track What Actually Matters',
-        description:
-          'Focus on a few key metrics—like sleep latency, deep sleep, and morning energy—instead of obsessing over every graph.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/habits-routines.webp',
-      alt: 'Calm evening routine for better sleep',
-    }}
-  >
-    <Fragment slot="content">
-      Sustainable routines beat extreme hacks. We help you build sleep habits that fit your life and last.
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50/60 dark:bg-slate-900/40"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
-  <Steps
-    title="How SleepUpgradeHub helps you improve your nights"
-    items={[
-      {
-        title: 'Step 1: <span class="font-medium">Identify your main sleep problem</span>',
-        description:
-          'Is it falling asleep, staying asleep, waking up too early, or feeling tired even after 8 hours? Start by naming it.',
-        icon: 'tabler:question-mark',
-      },
-      {
-        title: 'Step 2: <span class="font-medium">Read the focused guides</span>',
-        description:
-          'Dive into our targeted articles on environment, tools, and habits that are specific to your sleep challenge.',
-        icon: 'tabler:book',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Upgrade one variable at a time</span>',
-        description:
-          'Follow our checklists to adjust light, sound, temperature, or routines—without overwhelming yourself.',
-        icon: 'tabler:adjustments-alt',
-      },
-      {
-        title: 'Step 4: <span class="font-medium">Track & refine</span>',
-        description:
-          'Use simple tracking (or a sleep device if you like) to see what works, then double down on the most effective changes.',
-        icon: 'tabler:chart-line',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/steps.webp',
-      alt: 'Steps to improve your sleep',
-    }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="What we cover inside SleepUpgradeHub"
-    subtitle="Explore every layer of great sleep—from your bedroom setup to your night routine and the tools that support you."
-    tagline="Sleep Topics"
-    items={[
-      {
-        title: 'Sleep Environment',
-        description: 'Light, noise, temperature, and air quality tweaks that support deeper, uninterrupted sleep.',
-        icon: 'tabler:home',
-      },
-      {
-        title: 'Sleep Tools & Gadgets',
-        description: 'Reviews of masks, lamps, white-noise machines, trackers, and low-EMF devices that actually help.',
-        icon: 'tabler:bulb',
-      },
-      {
-        title: 'Supplements & Natural Aids',
-        description: 'Evidence-based breakdowns of magnesium, L-theanine, herbs, and other supports for calmer nights.',
-        icon: 'tabler:pill',
-      },
-      {
-        title: 'Routines & Habits',
-        description: 'Night routines, pre-sleep rituals, and wake-up habits that sync your body clock and mind.',
-        icon: 'tabler:calendar',
-      },
-      {
-        title: 'Sleep for Busy People',
-        description: 'Guides tailored for entrepreneurs, parents, shift workers, and anyone with a non-ideal schedule.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'Sleep & Mental Health',
-        description: 'How stress, anxiety, and overthinking impact your nights—and tools to calm the mind before bed.',
-        icon: 'tabler:microphone',
-      },
-      {
-        title: 'Data & Tracking',
-        description:
-          'Simple ways to use sleep data without obsessing, so numbers work for you instead of stressing you out.',
-        icon: 'tabler:chart-bar',
-      },
-      {
-        title: 'Mattresses & Bedding',
-        description: 'Understanding firmness, pillows, and materials so your bed truly supports your body and spine.',
-        icon: 'tabler:layout-grid',
-      },
-      {
-        title: 'Travel & Jet Lag',
-        description: 'Sleep strategies and packing lists to stay rested across time zones and while traveling.',
-        icon: 'tabler:plane',
-      },
-    ]}
-  />
-  <Fragment slot="bg">
-    <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-  </Fragment>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Latest guides from the SleepUpgradeHub blog"
-    information={`Read our newest articles on sleep optimization, sleep tools, and practical routines.
-                        Each post is designed to help you make one clear upgrade to your nights—without needing a full life overhaul.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Sleep Optimization FAQs"
-    subtitle="Quick answers to common questions about improving sleep quality, tools, and routines."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Where should I start if my sleep is a mess?',
-        description:
-          'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
-      },
-      {
-        title: 'Do I really need gadgets to sleep better?',
-        description:
-          'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
-      },
-      {
-        title: 'Which supplements are best for sleep?',
-        description:
-          'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
-      },
-      {
-        title: 'How long until I notice better sleep?',
-        description:
-          'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
-      },
-      {
-        title: 'Can I improve sleep if I work late or do night shifts?',
-        description:
-          'Yes, but you need a more intentional routine: strong light exposure at your “morning,” strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
-      },
-      {
-        title: 'Is bad sleep really that big of a deal?',
-        description:
-          'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
-      },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Sleep Guides Published', amount: '48+' },
-      { title: 'Hours of Research', amount: '320+' },
-      { title: 'Tools & Products Reviewed', amount: '75+' },
-      { title: 'Average Time to First Upgrade', amount: '7 days' },
-    ]}
-  />
-
-  <!-- CallToAction Widget *********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Start Your Sleep Upgrade',
-        href: '/blog',
-        icon: 'tabler:moon-stars',
-      },
-    ]}
-  >
-    <Fragment slot="title"> Ready to finally wake up rested? </Fragment>
-
-    <Fragment slot="subtitle">
-      Begin with one guide, one change, and one night. Explore our sleep optimization articles and take your first step
-      toward deeper, calmer rest.
-    </Fragment>
-  </CallToAction>
+  <!-- FAQs Widget - Compact Version -->
+  <section class="py-12 md:py-16 bg-gray-50 dark:bg-slate-800/50">
+    <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-3">
+          Sleep Optimization FAQs
+        </h2>
+        <p class="text-gray-600 dark:text-gray-300">
+          Quick answers to common questions about improving sleep quality
+        </p>
+      </div>
+      <FAQs
+        items={[
+          {
+            title: 'Where should I start if my sleep is a mess?',
+            description:
+              'Start with the basics: set a consistent sleep/wake window, darken your room, lower screen brightness 60–90 minutes before bed, and aim for a slightly cooler bedroom. Then add tools or supplements only after these foundations are in place.',
+          },
+          {
+            title: 'Do I really need gadgets to sleep better?',
+            description:
+              'No. Many people see big improvements from light, noise, and routine alone. Gadgets and trackers are optional accelerators—they are most useful when they help you see patterns and stay consistent, not as magic fixes.',
+          },
+          {
+            title: 'Which supplements are best for sleep?',
+            description:
+              'Magnesium (especially glycinate or threonate), L-theanine, and glycine are common starting points. Melatonin can help with jet lag or shifting your schedule, but is often overused. Always consult a professional if you have health conditions or take medications.',
+          },
+          {
+            title: 'How long until I notice better sleep?',
+            description:
+              'Some changes, like blackout curtains or white noise, can help the first night. Habit-based changes—like consistent sleep times or reduced late scrolling—usually take 1–2 weeks before you clearly feel the difference.',
+          },
+          {
+            title: 'Can I improve sleep if I work late or do night shifts?',
+            description:
+              'Yes, but you need a more intentional routine: strong light exposure at your "morning," strict dark period when sleeping, strategic naps, and careful caffeine timing. We create guides specifically for shift workers and late-schedule lifestyles.',
+          },
+          {
+            title: 'Is bad sleep really that big of a deal?',
+            description:
+              'Chronic poor sleep is strongly linked to lower mood, reduced focus, worse decision-making, cravings, and long-term health risks. The good news: even modest improvements in sleep quality often create outsized gains in energy, patience, and productivity.',
+          },
+        ]}
+        classes={{ container: 'max-w-4xl' }}
+      />
+    </div>
+  </section>
 
   <!-- FAQ Schema for rich snippets in search results -->
   <Schema type="faqpage" faqs={faqItems} />
