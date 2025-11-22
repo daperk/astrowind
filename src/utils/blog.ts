@@ -193,28 +193,62 @@ export const getStaticPathsBlogPost = async () => {
   }));
 };
 
+/** Define all sleep categories - these will always generate even if empty */
+export const SLEEP_CATEGORIES = [
+  { slug: 'sleep-environment', title: 'Sleep Environment' },
+  { slug: 'sleep-tools', title: 'Sleep Tools' },
+  { slug: 'habits', title: 'Habits & Routines' },
+  { slug: 'sleep-routines', title: 'Sleep Routines' },
+  { slug: 'sleep-trackers', title: 'Sleep Trackers' },
+  { slug: 'white-noise-machines', title: 'White Noise Machines' },
+  { slug: 'white-noise', title: 'White Noise' },
+  { slug: 'lighting-lamps', title: 'Lighting & Lamps' },
+  { slug: 'lighting', title: 'Lighting' },
+  { slug: 'mattresses-bedding', title: 'Mattresses & Bedding' },
+  { slug: 'bedding', title: 'Bedding' },
+  { slug: 'supplements', title: 'Supplements' },
+];
+
 /** */
 export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: PaginateFunction }) => {
   if (!isBlogEnabled || !isBlogCategoryRouteEnabled) return [];
 
   const posts = await fetchPosts();
-  const categories = {};
+
+  // Collect categories from posts
+  const categoriesFromPosts = {};
   posts.map((post) => {
     if (post.category?.slug) {
-      categories[post.category?.slug] = post.category;
+      categoriesFromPosts[post.category?.slug] = post.category;
     }
   });
 
-  return Array.from(Object.keys(categories)).flatMap((categorySlug) =>
-    paginate(
-      posts.filter((post) => post.category?.slug && categorySlug === post.category?.slug),
+  // Merge predefined sleep categories with categories from posts
+  const allCategories = {};
+
+  // Add predefined categories
+  SLEEP_CATEGORIES.forEach(cat => {
+    allCategories[cat.slug] = cat;
+  });
+
+  // Override with post categories if they exist (to use actual post title casing)
+  Object.keys(categoriesFromPosts).forEach(slug => {
+    allCategories[slug] = categoriesFromPosts[slug];
+  });
+
+  // Generate pages for all categories (including empty ones)
+  return Array.from(Object.keys(allCategories)).flatMap((categorySlug) => {
+    const categoryPosts = posts.filter((post) => post.category?.slug && categorySlug === post.category?.slug);
+
+    return paginate(
+      categoryPosts,
       {
         params: { category: categorySlug, blog: CATEGORY_BASE || undefined },
         pageSize: blogPostsPerPage,
-        props: { category: categories[categorySlug] },
+        props: { category: allCategories[categorySlug] },
       }
-    )
-  );
+    );
+  });
 };
 
 /** */
@@ -278,4 +312,11 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
   }
 
   return selectedPosts;
+}
+
+/** Get posts by category slug */
+export async function findPostsByCategory(categorySlug: string, maxResults?: number): Promise<Post[]> {
+  const allPosts = await fetchPosts();
+  const filtered = allPosts.filter((post) => post.category?.slug === categorySlug);
+  return maxResults ? filtered.slice(0, maxResults) : filtered;
 }

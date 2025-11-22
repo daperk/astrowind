@@ -4,9 +4,14 @@ import Hero from '~/components/widgets/Hero.astro';
 import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Schema from '~/components/common/Schema.astro';
+import Grid from '~/components/blog/Grid.astro';
+import { findPostsByCategory } from '~/utils/blog';
+import { getPermalink } from '~/utils/permalinks';
 // import ProductRecommendations from '~/components/widgets/ProductRecommendations.astro';
+
+// Fetch posts from sleep-tools category
+const toolsPosts = await findPostsByCategory('sleep-tools', 6);
 
 const metadata = {
   title: 'Sleep Tools & Gadgets — Reviews & Recommendations — SleepUpgradeHub',
@@ -111,11 +116,32 @@ const faqItems = [
   </Content>
 
   <!-- Featured Articles -->
-  <BlogLatestPosts
-    title="Latest Sleep Tool Reviews & Guides"
-    information="Explore our in-depth reviews, buying guides, and comparison articles for sleep optimization tools and bedroom gadgets."
-    postIds={[]}
-  />
+  <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-7xl">
+    <div class="flex flex-col lg:justify-between lg:flex-row mb-8">
+      <div class="md:max-w-sm">
+        <h2 class="text-3xl font-bold tracking-tight sm:text-4xl sm:leading-none group font-heading mb-2">
+          Latest Sleep Tool Reviews & Guides
+        </h2>
+        <a
+          href={getPermalink('sleep-tools', 'category')}
+          class="text-brand-accent hover:text-brand-accent-light dark:text-brand-accent-light dark:hover:text-brand-accent transition-colors font-medium"
+        >
+          View all tools articles »
+        </a>
+      </div>
+      <p class="text-muted dark:text-slate-400 lg:text-sm lg:max-w-md mt-4 lg:mt-0">
+        Explore our in-depth reviews, buying guides, and comparison articles for sleep optimization tools and bedroom gadgets.
+      </p>
+    </div>
+
+    {toolsPosts.length > 0 ? (
+      <Grid posts={toolsPosts} />
+    ) : (
+      <p class="text-muted dark:text-slate-400 text-center py-8">
+        No sleep tools articles yet. Check back soon for comprehensive reviews and guides!
+      </p>
+    )}
+  </section>
 
   <!-- Product Recommendations (Commented out - enable when products are ready) -->
   <!--
