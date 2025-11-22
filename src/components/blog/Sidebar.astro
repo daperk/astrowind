@@ -109,13 +109,13 @@ const { popularPosts = [], categories = [] } = Astro.props;
     </div>
   )}
 
-  <!-- Newsletter CTA (Optional) -->
-  <div class="bg-gradient-to-br from-brand-primary to-brand-accent rounded-xl shadow-md p-6 text-white">
+  <!-- Newsletter CTA -->
+  <div class="bg-gray-100 dark:bg-slate-800 rounded-xl shadow-md p-6 border border-gray-200 dark:border-slate-700">
     <div class="flex items-start gap-3 mb-4">
-      <Icon name="tabler:mail" class="w-6 h-6 flex-shrink-0 mt-1" />
+      <Icon name="tabler:mail" class="w-6 h-6 flex-shrink-0 mt-1 text-brand-accent" />
       <div>
-        <h3 class="text-lg font-bold mb-2 text-white">Get Sleep Tips Weekly</h3>
-        <p class="text-sm text-blue-100 mb-4">
+        <h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-white">Get Sleep Tips Weekly</h3>
+        <p class="text-sm text-gray-600 dark:text-slate-400 mb-4">
           Join 12,000+ readers getting science-backed sleep optimization strategies.
         </p>
       </div>
@@ -124,12 +124,12 @@ const { popularPosts = [], categories = [] } = Astro.props;
       <input
         type="email"
         placeholder="Your email"
-        class="w-full px-4 py-2 rounded-lg bg-white/20 backdrop-blur border border-white/30 placeholder-white/70 text-white focus:ring-2 focus:ring-white/50 focus:border-transparent transition focus:outline-none"
+        class="w-full px-4 py-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-300 dark:border-slate-600 placeholder-gray-500 dark:placeholder-slate-400 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-accent focus:border-transparent transition focus:outline-none"
         required
       />
       <button
         type="submit"
-        class="w-full px-4 py-2 bg-white text-brand-primary rounded-lg font-medium hover:bg-blue-50 transition"
+        class="w-full px-4 py-2 bg-brand-primary text-white rounded-lg font-medium hover:bg-brand-primary/90 transition"
       >
         Subscribe
       </button>
