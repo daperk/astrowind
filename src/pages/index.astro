@@ -5,6 +5,7 @@ import Schema from '~/components/common/Schema.astro';
 // Healthline-style components
 import HealthlineHero from '~/components/widgets/HealthlineHero.astro';
 import CategoryGrid from '~/components/widgets/CategoryGrid.astro';
+import FeaturedTopics from '~/components/widgets/FeaturedTopics.astro';
 import LatestPostsGrid from '~/components/widgets/LatestPostsGrid.astro';
 import PopularArticles from '~/components/widgets/PopularArticles.astro';
 import CompactEmailCTA from '~/components/widgets/CompactEmailCTA.astro';
@@ -66,6 +67,9 @@ const faqItems = [
 
   <!-- Category Grid - Healthline Style (clean, minimal cards) -->
   <CategoryGrid />
+
+  <!-- Featured Topics with Images - Visual showcase of main categories -->
+  <FeaturedTopics />
 
   <!-- Ad Placeholder: Horizontal Slot 1 -->
   <AdPlaceholder type="horizontal" label="Sponsored Content" />
