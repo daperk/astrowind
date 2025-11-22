@@ -49,7 +49,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     updateDate: rawUpdateDate,
     title,
     excerpt,
-    image,
+    image: rawImage,
     tags: rawTags = [],
     category: rawCategory,
     author,
@@ -60,6 +60,9 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
   const slug = cleanSlug(id); // cleanSlug(rawSlug.split('/').pop());
   const publishDate = new Date(rawPublishDate);
   const updateDate = rawUpdateDate ? new Date(rawUpdateDate) : undefined;
+
+  // Handle image - can be string or object with src/width/height
+  const image = typeof rawImage === 'string' ? rawImage : rawImage?.src;
 
   const category = rawCategory
     ? {
