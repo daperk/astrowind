@@ -282,3 +282,26 @@ export async function getRelatedPosts(originalPost: Post, maxResults: number = 4
 
   return selectedPosts;
 }
+
+/** Get all categories with post counts */
+export async function getCategoriesWithCounts(): Promise<Array<{ title: string; slug: string; count: number }>> {
+  const posts = await fetchPosts();
+  const categoryMap = new Map<string, { title: string; slug: string; count: number }>();
+
+  posts.forEach((post) => {
+    if (post.category?.slug) {
+      const existing = categoryMap.get(post.category.slug);
+      if (existing) {
+        existing.count += 1;
+      } else {
+        categoryMap.set(post.category.slug, {
+          title: post.category.title,
+          slug: post.category.slug,
+          count: 1,
+        });
+      }
+    }
+  });
+
+  return Array.from(categoryMap.values()).sort((a, b) => b.count - a.count);
+}

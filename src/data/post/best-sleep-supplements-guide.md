@@ -1,8 +1,8 @@
 ---
 publishDate: 2024-01-22T00:00:00Z
-author: SleepUpgradeHub Team
-title: Best Sleep Supplements: Evidence-Based Guide to Natural Sleep Aids
-excerpt: A science-backed breakdown of magnesium, L-theanine, glycine, and other supplements that improve sleep—plus what to avoid and proper dosing guidelines.
+author: Sleep Team
+title: Best Sleep Supplements - Evidence-Based Guide to Natural Sleep Aids
+excerpt: A science-backed breakdown of magnesium, L-theanine, glycine, and other supplements that improve sleep quality naturally.
 image: ~/assets/images/tools-supplements.webp
 category: Supplements
 tags:

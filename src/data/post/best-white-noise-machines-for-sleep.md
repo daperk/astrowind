@@ -1,10 +1,10 @@
 ---
 publishDate: 2024-01-28T00:00:00Z
-author: SleepUpgradeHub Team
-title: Best White Noise Machines for Sleep: Complete 2024 Buyer's Guide
-excerpt: Expert reviews of white noise machines, pink noise generators, and sound masking devices—find the perfect audio solution for uninterrupted sleep.
+author: Sleep Team
+title: Best White Noise Machines for Sleep - Complete 2024 Buyer's Guide
+excerpt: Expert reviews of white noise machines, pink noise generators, and sound masking devices for uninterrupted sleep.
 image: ~/assets/images/environment.webp
-category: White Noise Machines
+category: White Noise
 tags:
   - white noise
   - pink noise

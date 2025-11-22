@@ -1,10 +1,10 @@
 ---
 publishDate: 2024-01-20T00:00:00Z
-author: SleepUpgradeHub Team
+author: Sleep Team
 title: Sleep Habits and Routines That Actually Work
-excerpt: Build a sustainable wind-down routine with proven sleep hygiene practices that fit your lifestyle and improve sleep quality naturally.
+excerpt: Build a sustainable wind-down routine with proven sleep hygiene practices that fit your lifestyle and improve sleep quality.
 image: ~/assets/images/habits-routines.webp
-category: Habits & Routines
+category: Habits
 tags:
   - sleep hygiene
   - wind-down routine

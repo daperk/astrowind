@@ -1,8 +1,8 @@
 ---
 publishDate: 2024-01-15T00:00:00Z
-author: SleepUpgradeHub Team
+author: Sleep Team
 title: How to Optimize Your Bedroom Environment for Better Sleep
-excerpt: Transform your bedroom into a sleep sanctuary with science-backed tips on light control, temperature, noise management, and air quality optimization.
+excerpt: Transform your bedroom into a sleep sanctuary with science-backed tips on light control, temperature, noise management, and air quality.
 image: ~/assets/images/environment.webp
 category: Sleep Environment
 tags:

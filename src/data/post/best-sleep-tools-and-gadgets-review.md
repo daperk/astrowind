@@ -1,8 +1,8 @@
 ---
 publishDate: 2024-01-18T00:00:00Z
-author: SleepUpgradeHub Team
-title: Best Sleep Tools and Gadgets: Expert Reviews for 2024
-excerpt: Discover the top-rated sleep masks, red light lamps, white noise machines, and tracking devices that actually improve sleep quality based on science and real-world testing.
+author: Sleep Team
+title: Best Sleep Tools and Gadgets - Expert Reviews for 2024
+excerpt: Discover the top-rated sleep masks, red light lamps, white noise machines, and tracking devices that improve sleep quality.
 image: ~/assets/images/tools-supplements.webp
 category: Sleep Tools
 tags:
