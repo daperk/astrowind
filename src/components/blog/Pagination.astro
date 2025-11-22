@@ -15,22 +15,24 @@ const { prevUrl, nextUrl, prevText = 'Newer posts', nextText = 'Older posts' } =
 
 {
   (prevUrl || nextUrl) && (
-    <div class="container flex">
-      <div class="flex flex-row mx-auto container justify-between">
-        <Button
-          variant="tertiary"
-          class={`md:px-3 px-3 mr-2 ${!prevUrl ? 'invisible' : ''}`}
-          href={getPermalink(prevUrl)}
-        >
-          <Icon name="tabler:chevron-left" class="w-6 h-6" />
-          <p class="ml-2">{prevText}</p>
-        </Button>
+    <nav class="flex items-center justify-center gap-4">
+      <a
+        href={prevUrl ? getPermalink(prevUrl) : undefined}
+        class={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-300 font-medium hover:border-brand-accent hover:text-brand-accent dark:hover:text-brand-accent-light transition-colors ${!prevUrl ? 'invisible pointer-events-none' : ''}`}
+      >
+        <Icon name="tabler:chevron-left" class="w-5 h-5" />
+        <span class="hidden sm:inline">{prevText}</span>
+        <span class="sm:hidden">Newer</span>
+      </a>
 
-        <Button variant="tertiary" class={`md:px-3 px-3 ${!nextUrl ? 'invisible' : ''}`} href={getPermalink(nextUrl)}>
-          <span class="mr-2">{nextText}</span>
-          <Icon name="tabler:chevron-right" class="w-6 h-6" />
-        </Button>
-      </div>
-    </div>
+      <a
+        href={nextUrl ? getPermalink(nextUrl) : undefined}
+        class={`inline-flex items-center gap-2 px-5 py-2.5 rounded-full border-2 border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-gray-700 dark:text-gray-300 font-medium hover:border-brand-accent hover:text-brand-accent dark:hover:text-brand-accent-light transition-colors ${!nextUrl ? 'invisible pointer-events-none' : ''}`}
+      >
+        <span class="hidden sm:inline">{nextText}</span>
+        <span class="sm:hidden">Older</span>
+        <Icon name="tabler:chevron-right" class="w-5 h-5" />
+      </a>
+    </nav>
   )
 }
