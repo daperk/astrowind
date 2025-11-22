@@ -212,7 +212,7 @@ export const getStaticPathsBlogCategory = async ({ paginate }: { paginate: Pagin
     paginate(
       posts.filter((post) => post.category?.slug && categorySlug === post.category?.slug),
       {
-        params: { category: categorySlug, blog: CATEGORY_BASE || undefined },
+        params: { category: categorySlug, blog: CATEGORY_BASE ? CATEGORY_BASE : undefined },
         pageSize: blogPostsPerPage,
         props: { category: categories[categorySlug] },
       }
