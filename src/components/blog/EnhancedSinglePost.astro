@@ -10,6 +10,7 @@ import AuthorBio from '~/components/blog/AuthorBio.astro';
 
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
+import NewsletterForm from '~/components/common/NewsletterForm.astro';
 
 import type { Post } from '~/types';
 
@@ -201,12 +202,14 @@ const articleSchema = {
               <p class="text-blue-100 mb-4 text-sm leading-snug">
                 Science-backed strategies delivered to your inbox.
               </p>
-              <a
-                href="/contact"
-                class="inline-block w-full px-4 py-2.5 bg-gray-900 text-white rounded-lg font-semibold text-center text-sm hover:bg-gray-800 transition"
-              >
-                Subscribe
-              </a>
+              <NewsletterForm
+                source="article_sidebar_cta"
+                layoutClass="space-y-3"
+                inputPlaceholder="Your email"
+                inputClass="w-full px-4 py-2 rounded-lg bg-white/10 border border-white/30 placeholder-white/80 text-white focus:ring-2 focus:ring-white focus:border-transparent transition focus:outline-none"
+                buttonClass="inline-block w-full px-4 py-2.5 bg-gray-900 text-white rounded-lg font-semibold text-center text-sm hover:bg-gray-800 transition disabled:bg-gray-700 disabled:text-gray-200"
+                buttonText="Subscribe"
+              />
             </div>
           </div>
         </div>

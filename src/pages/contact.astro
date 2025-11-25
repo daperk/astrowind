@@ -24,22 +24,28 @@ const metadata = {
         type: 'text',
         name: 'name',
         label: 'Name',
+        required: true,
       },
       {
         type: 'email',
         name: 'email',
         label: 'Email',
+        required: true,
       },
     ]}
     textarea={{
       label: 'Your Message',
       placeholder: 'Tell us about your sleep challenge or question...',
+      required: true,
     }}
     disclaimer={{
       label:
         'By submitting this form, you agree to our Privacy Policy and acknowledge that your information will be used solely to respond to your inquiry.',
     }}
     description="We typically respond within 24-48 hours during business days."
+    subject="New SleepUpgradeHub contact request"
+    source="contact_page"
+    button="Send message"
   />
 
   <!-- Features2 Widget ************** -->

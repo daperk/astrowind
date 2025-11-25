@@ -1,5 +1,5 @@
 import type { AstroComponentFactory } from 'astro/runtime/server/index.js';
-import type { HTMLAttributes, ImageMetadata } from 'astro/types';
+import type { HTMLAttributes, HTMLInputTypeAttribute, ImageMetadata } from 'astro/types';
 
 export interface Post {
   /** A unique ID number that identifies a post. */
@@ -167,6 +167,7 @@ export interface Input {
   label?: string;
   autocomplete?: string;
   placeholder?: string;
+  required?: boolean;
 }
 
 export interface Textarea {
@@ -174,6 +175,7 @@ export interface Textarea {
   name?: string;
   placeholder?: string;
   rows?: number;
+  required?: boolean;
 }
 
 export interface Disclaimer {
@@ -210,6 +212,13 @@ export interface Form {
   disclaimer?: Disclaimer;
   button?: string;
   description?: string;
+  action?: string;
+  method?: string;
+  accessKey?: string;
+  subject?: string;
+  fromName?: string;
+  source?: string;
+  redirect?: string;
 }
 
 // WIDGETS

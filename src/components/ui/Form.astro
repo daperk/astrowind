@@ -2,14 +2,36 @@
 import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
-const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } = Astro.props;
+const {
+  inputs,
+  textarea,
+  disclaimer,
+  button = 'Contact us',
+  description = '',
+  action = 'https://api.web3forms.com/submit',
+  method = 'POST',
+  accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY,
+  subject = 'New SleepUpgradeHub contact',
+  fromName = 'SleepUpgradeHub',
+  source = 'contact',
+  redirect,
+} = Astro.props as Props;
+
+const disableSubmit = !accessKey;
 ---
 
-<form>
+<form action={action} method={method} class="space-y-0" data-contact-form>
+  <input type="hidden" name="access_key" value={accessKey || ''} />
+  <input type="hidden" name="subject" value={subject} />
+  <input type="hidden" name="from_name" value={fromName} />
+  <input type="hidden" name="source" value={source} />
+  {redirect && <input type="hidden" name="redirect" value={redirect} />}
+  <input type="text" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
+
   {
     inputs &&
       inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '' }) =>
+        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', required = true }) =>
           name && (
             <div class="mb-6">
               {label && (
@@ -24,6 +46,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
                 autocomplete={autocomplete}
                 placeholder={placeholder}
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+                required={required}
               />
             </div>
           )
@@ -42,6 +65,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
           rows={textarea.rows ? textarea.rows : 4}
           placeholder={textarea.placeholder}
           class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          required={textarea.required ?? true}
         />
       </div>
     )
@@ -70,7 +94,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
   {
     button && (
       <div class="mt-10 grid">
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" disabled={disableSubmit}>
           {button}
         </Button>
       </div>
@@ -84,4 +108,10 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '' } 
       </div>
     )
   }
+
+  {disableSubmit && (
+    <p class="mt-2 text-xs text-amber-700 text-center">
+      Add a PUBLIC_WEB3FORMS_KEY environment variable to enable live submissions.
+    </p>
+  )}
 </form>

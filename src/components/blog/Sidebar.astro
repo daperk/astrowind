@@ -4,6 +4,7 @@ import type { Post } from '~/types';
 import { getPermalink } from '~/utils/permalinks';
 import { findImage } from '~/utils/images';
 import Image from '~/components/common/Image.astro';
+import NewsletterForm from '~/components/common/NewsletterForm.astro';
 
 export interface Props {
   popularPosts?: Array<Post>;
@@ -121,19 +122,13 @@ const { popularPosts = [], categories = [] } = Astro.props;
         </p>
       </div>
     </div>
-    <form class="space-y-3">
-      <input
-        type="email"
-        placeholder="Your email"
-        class="w-full px-4 py-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-300 dark:border-slate-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-accent focus:border-transparent transition focus:outline-none"
-        required
-      />
-      <button
-        type="submit"
-        class="w-full px-4 py-2 bg-brand-primary text-white rounded-lg font-medium hover:bg-brand-primary/90 transition disabled:bg-gray-200 disabled:text-gray-600 disabled:cursor-not-allowed dark:disabled:bg-slate-700 dark:disabled:text-slate-300"
-      >
-        Subscribe
-      </button>
-    </form>
+    <NewsletterForm
+      source="sidebar_cta"
+      layoutClass="space-y-3"
+      inputPlaceholder="Your email"
+      inputClass="w-full px-4 py-2 rounded-lg bg-white dark:bg-slate-700 border border-gray-300 dark:border-slate-600 placeholder-gray-500 dark:placeholder-gray-400 text-gray-900 dark:text-white focus:ring-2 focus:ring-brand-accent focus:border-transparent transition focus:outline-none"
+      buttonClass="w-full px-4 py-2 bg-brand-primary text-white rounded-lg font-medium hover:bg-brand-primary/90 transition disabled:bg-gray-200 disabled:text-gray-600 disabled:cursor-not-allowed dark:disabled:bg-slate-700 dark:disabled:text-slate-300"
+      buttonText="Subscribe"
+    />
   </div>
 </aside>

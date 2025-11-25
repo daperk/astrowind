@@ -1,0 +1,46 @@
+---
+const {
+  source = 'newsletter',
+  subject = 'New SleepUpgradeHub newsletter subscriber',
+  redirect = '',
+  layoutClass = 'space-y-3',
+  inputClass = '',
+  buttonClass = '',
+  buttonText = 'Subscribe',
+  inputPlaceholder = 'Enter your email',
+} = Astro.props;
+
+const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY;
+const action = 'https://api.web3forms.com/submit';
+const fieldId = `email-${String(source).replace(/[^a-zA-Z0-9_-]/g, '-') || 'newsletter'}`;
+const disableSubmit = !accessKey;
+---
+
+<form action={action} method="POST" class={layoutClass} data-newsletter-form>
+  <input type="hidden" name="access_key" value={accessKey || ''} />
+  <input type="hidden" name="subject" value={subject} />
+  <input type="hidden" name="from_name" value="SleepUpgradeHub" />
+  <input type="hidden" name="source" value={source} />
+  {redirect && <input type="hidden" name="redirect" value={redirect} />}
+  <input type="text" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
+
+  <label for={fieldId} class="sr-only">Email address</label>
+  <input
+    id={fieldId}
+    name="email"
+    type="email"
+    placeholder={inputPlaceholder}
+    class={inputClass}
+    required
+  />
+
+  <button type="submit" class={buttonClass} disabled={disableSubmit}>
+    {buttonText}
+  </button>
+
+  {disableSubmit && (
+    <p class="text-xs text-amber-700 mt-2">
+      Add a PUBLIC_WEB3FORMS_KEY to your environment to enable live submissions.
+    </p>
+  )}
+</form>
