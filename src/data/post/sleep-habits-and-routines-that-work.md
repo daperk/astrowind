@@ -15,6 +15,8 @@ tags:
 
 Your nightly routine sends powerful signals to your brain about whether it's time to sleep or stay alert. The right habits make falling asleep effortless.
 
+Once these behaviors feel natural, deepen the results with our [bedroom optimization checklist](/blog/optimize-bedroom-environment-for-better-sleep) and the [evidence-backed supplement stack](/blog/best-sleep-supplements-guide).
+
 ## The 90-Minute Wind-Down Protocol
 
 Don't expect to go from Netflix and phone scrolling to deep sleep instantly. Your brain needs transition time.

@@ -5,8 +5,9 @@ import Layout from '~/layouts/PageLayout.astro';
 import ModernCard from '~/components/blog/ModernCard.astro';
 import Sidebar from '~/components/blog/Sidebar.astro';
 import Pagination from '~/components/blog/Pagination.astro';
+import SearchExperience from '~/components/blog/SearchExperience.astro';
 
-import { blogListRobots, getStaticPathsBlogList, getCategoriesWithCounts } from '~/utils/blog';
+import { blogListRobots, getStaticPathsBlogList, getCategoriesWithCounts, fetchPosts } from '~/utils/blog';
 
 export const prerender = true;
 
@@ -21,6 +22,9 @@ const currentPage = page.currentPage ?? 1;
 
 // Get categories with real post counts
 const categoriesWithCounts = await getCategoriesWithCounts();
+
+// Build a full list of posts for search and SEO
+const allPosts = await fetchPosts();
 
 // Get popular posts (last 5 for sidebar)
 const popularPosts = page.data.slice(0, 5);
@@ -59,6 +63,8 @@ const metadata = {
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
         <!-- Main Content Area -->
         <div class="lg:col-span-8">
+          <SearchExperience posts={allPosts} categories={categoriesWithCounts} />
+
           {currentPage === 1 && page.data.length > 0 && (
             <!-- Featured Post -->
             <ModernCard post={page.data[0]} featured={true} />

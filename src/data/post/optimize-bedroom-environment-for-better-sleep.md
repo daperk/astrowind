@@ -15,6 +15,8 @@ tags:
 
 Creating the perfect sleep environment is one of the most impactful changes you can make to improve your sleep quality. Your bedroom should be a sanctuary optimized for rest, not a multipurpose space that sends mixed signals to your brain.
 
+Tie these upgrades together with the behaviors in [Sleep Habits That Work](/blog/sleep-habits-and-routines-that-work) and layer in sound tools from our [best white noise machines guide](/blog/best-white-noise-machines-for-sleep) for a complete recovery routine.
+
 ## Light Control: The Foundation of Sleep
 
 Light exposure is the most powerful regulator of your circadian rhythm. Even small amounts of light can suppress melatonin production and disrupt your sleep-wake cycle.

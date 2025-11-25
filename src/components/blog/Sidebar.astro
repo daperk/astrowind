@@ -20,12 +20,13 @@ const { popularPosts = [], categories = [] } = Astro.props;
       <Icon name="tabler:search" class="w-5 h-5 text-brand-accent" />
       Search Guides
     </h3>
-    <form action="/blog" method="get" class="relative">
+    <form action="/blog" method="get" class="relative" data-search-form>
       <input
         type="search"
         name="q"
         placeholder="Search sleep guides..."
         class="w-full px-4 py-3 pr-12 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent dark:bg-slate-700 dark:text-white transition"
+        data-search-input
       />
       <button
         type="submit"

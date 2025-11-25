@@ -16,6 +16,8 @@ tags:
 
 Supplements won't fix poor sleep hygiene, but they can accelerate improvements when used correctly. Here's what actually works.
 
+For best results, pair every protocol here with supportive habits from our [Sleep Habits and Routines](/blog/sleep-habits-and-routines-that-work) guide and dial in your environment with the [bedroom optimization checklist](/blog/optimize-bedroom-environment-for-better-sleep).
+
 ## Magnesium: The Foundation Mineral
 
 Magnesium deficiency is common and directly impacts sleep quality. It regulates GABA receptors and calms the nervous system.
