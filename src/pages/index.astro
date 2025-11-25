@@ -9,7 +9,6 @@ import FeaturedTopics from '~/components/widgets/FeaturedTopics.astro';
 import LatestPostsGrid from '~/components/widgets/LatestPostsGrid.astro';
 import PopularArticles from '~/components/widgets/PopularArticles.astro';
 import CompactEmailCTA from '~/components/widgets/CompactEmailCTA.astro';
-import AdPlaceholder from '~/components/widgets/AdPlaceholder.astro';
 
 // Keep existing components that work with the new design
 import FAQs from '~/components/widgets/FAQs.astro';
@@ -71,17 +70,11 @@ const faqItems = [
   <!-- Featured Topics with Images - Visual showcase of main categories -->
   <FeaturedTopics />
 
-  <!-- Ad Placeholder: Horizontal Slot 1 -->
-  <AdPlaceholder type="horizontal" label="Sponsored Content" />
-
   <!-- Latest Articles Grid - Healthline Style (compact, 2-3 columns) -->
   <LatestPostsGrid />
 
   <!-- Popular Articles - Healthline Style (most-read section) -->
   <PopularArticles />
-
-  <!-- Ad Placeholder: Horizontal Slot 2 -->
-  <AdPlaceholder type="horizontal" label="Advertisement" />
 
   <!-- Stats Section - Maintaining Your Colors -->
   <section class="py-12 md:py-16 bg-white dark:bg-slate-900">

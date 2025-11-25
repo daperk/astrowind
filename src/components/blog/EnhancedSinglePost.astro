@@ -7,7 +7,6 @@ import SocialShare from '~/components/common/SocialShare.astro';
 import Schema from '~/components/common/Schema.astro';
 import TOC from '~/components/blog/TOC.astro';
 import AuthorBio from '~/components/blog/AuthorBio.astro';
-import AdPlaceholder from '~/components/widgets/AdPlaceholder.astro';
 
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
@@ -172,9 +171,6 @@ const articleSchema = {
                 class="flex flex-col gap-3"
               />
             </div>
-
-            <!-- Ad Placeholder: Sidebar Ad Slot -->
-            <AdPlaceholder type="sidebar" label="Sponsored" />
 
             <!-- Related Topics -->
             {post.tags && post.tags.length > 0 && (
