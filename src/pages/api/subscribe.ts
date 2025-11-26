@@ -64,7 +64,8 @@ export const POST: APIRoute = async ({ request, url }) => {
   }
 
   const acceptsHtml = (request.headers.get('accept') || '').includes('text/html');
-  if (acceptsHtml) {
+  const isNavigate = request.headers.get('sec-fetch-mode') === 'navigate';
+  if (acceptsHtml || isNavigate) {
     return new Response(null, {
       status: 303,
       headers: { Location: redirect || '/?subscribed=1' },
@@ -75,7 +76,7 @@ export const POST: APIRoute = async ({ request, url }) => {
 };
 
 export const GET: APIRoute = async () =>
-  new Response(JSON.stringify({ message: 'Method Not Allowed' }), {
-    status: 405,
-    headers: { Allow: 'POST' },
+  new Response(null, {
+    status: 303,
+    headers: { Location: '/?subscribed=1' },
   });
