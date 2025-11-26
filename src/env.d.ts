@@ -6,6 +6,7 @@
 
 interface ImportMetaEnv {
   readonly PUBLIC_WEB3FORMS_KEY?: string;
+  readonly BUTTONDOWN_API_KEY?: string;
 }
 
 interface ImportMeta {

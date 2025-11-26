@@ -1,25 +1,20 @@
 ---
 const {
   source = 'newsletter',
-  subject = 'New SleepUpgradeHub newsletter subscriber',
-  redirect = '',
   layoutClass = 'space-y-3',
   inputClass = '',
   buttonClass = '',
   buttonText = 'Subscribe',
   inputPlaceholder = 'Enter your email',
+  redirect = '',
 } = Astro.props;
 
-const accessKey = import.meta.env.PUBLIC_WEB3FORMS_KEY;
-const action = 'https://api.web3forms.com/submit';
+const endpoint = '/api/subscribe';
 const fieldId = `email-${String(source).replace(/[^a-zA-Z0-9_-]/g, '-') || 'newsletter'}`;
-const disableSubmit = !accessKey;
+const disableSubmit = !import.meta.env.BUTTONDOWN_API_KEY;
 ---
 
-<form action={action} method="POST" class={layoutClass} data-newsletter-form>
-  <input type="hidden" name="access_key" value={accessKey || ''} />
-  <input type="hidden" name="subject" value={subject} />
-  <input type="hidden" name="from_name" value="SleepUpgradeHub" />
+<form action={endpoint} method="POST" class={layoutClass} data-newsletter-form>
   <input type="hidden" name="source" value={source} />
   {redirect && <input type="hidden" name="redirect" value={redirect} />}
   <input type="text" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
@@ -40,7 +35,7 @@ const disableSubmit = !accessKey;
 
   {disableSubmit && (
     <p class="text-xs text-amber-700 mt-2">
-      Add a PUBLIC_WEB3FORMS_KEY to your environment to enable live submissions.
+      Add a BUTTONDOWN_API_KEY environment variable to enable live signups.
     </p>
   )}
 </form>
