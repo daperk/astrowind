@@ -6,7 +6,8 @@
 
 interface ImportMetaEnv {
   readonly PUBLIC_WEB3FORMS_KEY?: string;
-  readonly BUTTONDOWN_API_KEY?: string;
+  readonly MAILERLITE_API_KEY?: string;
+  readonly MAILERLITE_GROUP_ID?: string;
 }
 
 interface ImportMeta {

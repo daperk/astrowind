@@ -11,7 +11,7 @@ const {
 
 const endpoint = '/api/subscribe';
 const fieldId = `email-${String(source).replace(/[^a-zA-Z0-9_-]/g, '-') || 'newsletter'}`;
-const disableSubmit = !import.meta.env.BUTTONDOWN_API_KEY;
+const disableSubmit = !import.meta.env.MAILERLITE_API_KEY;
 ---
 
 <form action={endpoint} method="POST" class={layoutClass} data-newsletter-form>
@@ -19,23 +19,37 @@ const disableSubmit = !import.meta.env.BUTTONDOWN_API_KEY;
   {redirect && <input type="hidden" name="redirect" value={redirect} />}
   <input type="text" name="botcheck" class="hidden" tabindex="-1" autocomplete="off" />
 
-  <label for={fieldId} class="sr-only">Email address</label>
-  <input
-    id={fieldId}
-    name="email"
-    type="email"
-    placeholder={inputPlaceholder}
-    class={inputClass}
-    required
-  />
-
-  <button type="submit" class={buttonClass} disabled={disableSubmit}>
-    {buttonText}
-  </button>
+  <div class="flex flex-col sm:flex-row gap-3 items-start">
+    <div class="w-full space-y-2">
+      <label for={fieldId} class="sr-only">Email address</label>
+      <input
+        id={fieldId}
+        name="email"
+        type="email"
+        placeholder={inputPlaceholder}
+        class={`w-full ${inputClass}`}
+        required
+      />
+      <p class="flex items-start gap-2 text-xs text-gray-600 dark:text-gray-300 leading-snug">
+        <span class="mt-0.5 inline-flex h-4 w-4 items-center justify-center rounded-full bg-green-100 text-green-700 dark:bg-green-900/70 dark:text-green-200">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-3 w-3">
+            <path d="M5 13l4 4L19 7" />
+          </svg>
+        </span>
+        <span>
+          I agree to the
+          <a href="/privacy" class="underline underline-offset-2 text-gray-800 dark:text-white">Privacy Policy</a>.
+        </span>
+      </p>
+    </div>
+    <button type="submit" class={buttonClass} disabled={disableSubmit}>
+      {buttonText}
+    </button>
+  </div>
 
   {disableSubmit && (
     <p class="text-xs text-amber-700 mt-2">
-      Add a BUTTONDOWN_API_KEY environment variable to enable live signups.
+      Add a MAILERLITE_API_KEY environment variable to enable live signups.
     </p>
   )}
 </form>

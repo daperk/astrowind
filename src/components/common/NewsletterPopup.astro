@@ -1,0 +1,73 @@
+---
+import NewsletterForm from '~/components/common/NewsletterForm.astro';
+
+const { delay = 4500 } = Astro.props;
+const storageKey = 'newsletter_popup_dismissed';
+---
+
+<div
+  data-newsletter-popup
+  class="fixed bottom-4 right-4 z-40 w-[calc(100%-2rem)] max-w-md sm:max-w-sm drop-shadow-2xl hidden"
+>
+  <div class="rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur border border-gray-200 dark:border-slate-700 p-4">
+    <div class="flex items-start gap-3 mb-3">
+      <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-700 dark:bg-green-900/70 dark:text-green-200">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5">
+          <path d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <div class="flex-1">
+        <p class="text-sm font-semibold text-gray-900 dark:text-white">Join the Sleep Upgrade list</p>
+        <p class="text-xs text-gray-600 dark:text-gray-300">
+          Get weekly sleep fixes, monetization-friendly tips, and new guides.
+        </p>
+      </div>
+      <button
+        type="button"
+        data-newsletter-popup-close
+        class="text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-white"
+        aria-label="Close newsletter popup"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5">
+          <path d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <NewsletterForm
+      source="popup"
+      layoutClass="space-y-3"
+      inputPlaceholder="Enter your email"
+      inputClass="px-4 py-3 rounded-lg text-gray-900 dark:text-white bg-gray-50 dark:bg-slate-800 border border-gray-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-transparent"
+      buttonClass="w-full px-4 py-3 bg-brand-primary text-white font-semibold rounded-lg hover:bg-brand-primary/90 transition disabled:bg-gray-200 disabled:text-gray-600 disabled:cursor-not-allowed dark:disabled:bg-slate-700 dark:disabled:text-slate-300"
+      buttonText="Get weekly tips"
+      redirect="/?subscribed=1"
+    />
+  </div>
+</div>
+
+<script is:inline>
+  const storageKey = {JSON.stringify(storageKey)};
+  const delayMs = Number({JSON.stringify(delay)});
+  const popup = document.querySelector('[data-newsletter-popup]');
+  const closeButton = popup?.querySelector('[data-newsletter-popup-close]');
+  const dismissed = typeof window !== 'undefined' && localStorage.getItem(storageKey);
+
+  const openPopup = () => {
+    if (!popup || typeof window === 'undefined') return;
+    if (localStorage.getItem(storageKey)) return;
+    popup.classList.remove('hidden');
+  };
+
+  const closePopup = () => {
+    if (!popup || typeof window === 'undefined') return;
+    popup.classList.add('hidden');
+    localStorage.setItem(storageKey, '1');
+  };
+
+  if (!dismissed) {
+    window.setTimeout(openPopup, delayMs);
+  }
+
+  closeButton?.addEventListener('click', closePopup);
+</script>
