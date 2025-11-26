@@ -47,27 +47,36 @@ const storageKey = 'newsletter_popup_dismissed';
 </div>
 
 <script is:inline>
-  const storageKey = {JSON.stringify(storageKey)};
-  const delayMs = Number({JSON.stringify(delay)});
-  const popup = document.querySelector('[data-newsletter-popup]');
-  const closeButton = popup?.querySelector('[data-newsletter-popup-close]');
-  const dismissed = typeof window !== 'undefined' && localStorage.getItem(storageKey);
+  if (typeof window !== 'undefined') {
+    const storageKey = {JSON.stringify(storageKey)};
+    const delayMs = Number({JSON.stringify(delay)});
 
-  const openPopup = () => {
-    if (!popup || typeof window === 'undefined') return;
-    if (localStorage.getItem(storageKey)) return;
-    popup.classList.remove('hidden');
-  };
+    const initPopup = () => {
+      const popup = document.querySelector('[data-newsletter-popup]');
+      if (!popup) return;
 
-  const closePopup = () => {
-    if (!popup || typeof window === 'undefined') return;
-    popup.classList.add('hidden');
-    localStorage.setItem(storageKey, '1');
-  };
+      const closeButton = popup.querySelector('[data-newsletter-popup-close]');
+      const openPopup = () => {
+        if (localStorage.getItem(storageKey)) return;
+        popup.classList.remove('hidden');
+      };
 
-  if (!dismissed) {
-    window.setTimeout(openPopup, delayMs);
+      const closePopup = () => {
+        popup.classList.add('hidden');
+        localStorage.setItem(storageKey, '1');
+      };
+
+      if (!localStorage.getItem(storageKey)) {
+        window.setTimeout(openPopup, delayMs);
+      }
+
+      closeButton?.addEventListener('click', closePopup);
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initPopup, { once: true });
+    } else {
+      initPopup();
+    }
   }
-
-  closeButton?.addEventListener('click', closePopup);
 </script>
