@@ -1,7 +1,7 @@
 ---
 import NewsletterForm from '~/components/common/NewsletterForm.astro';
 
-const { delay = 4500 } = Astro.props;
+const { delay = 0 } = Astro.props;
 const storageKey = 'newsletter_popup_dismissed';
 ---
 
@@ -9,9 +9,10 @@ const storageKey = 'newsletter_popup_dismissed';
   data-newsletter-popup
   data-popup-delay={delay}
   data-popup-storage={storageKey}
-  class="fixed bottom-4 right-4 z-40 w-[calc(100%-2rem)] max-w-md sm:max-w-sm drop-shadow-2xl hidden"
+  class="fixed inset-0 z-40 hidden items-center justify-center px-4"
 >
-  <div class="rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur border border-gray-200 dark:border-slate-700 p-4">
+  <div data-popup-overlay class="absolute inset-0 bg-slate-900/70 backdrop-blur-sm"></div>
+  <div class="relative w-full max-w-lg rounded-2xl bg-white/98 dark:bg-slate-900/98 backdrop-blur border border-gray-200 dark:border-slate-700 p-6 drop-shadow-2xl">
     <div class="flex items-start gap-3 mb-3">
       <div class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-700 dark:bg-green-900/70 dark:text-green-200">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-5 w-5">
@@ -57,23 +58,39 @@ const storageKey = 'newsletter_popup_dismissed';
       if (!popup) return;
 
       const storageKey = popup.dataset.popupStorage || 'newsletter_popup_dismissed';
-      const delayMs = Number(popup.dataset.popupDelay || '4500');
       const closeButton = popup.querySelector('[data-newsletter-popup-close]');
+      const overlay = popup.querySelector('[data-popup-overlay]');
+
       const openPopup = () => {
         if (localStorage.getItem(storageKey)) return;
         popup.classList.remove('hidden');
+        popup.classList.add('flex');
+        document.body.classList.add('overflow-hidden');
       };
 
       const closePopup = () => {
         popup.classList.add('hidden');
+        popup.classList.remove('flex');
+        document.body.classList.remove('overflow-hidden');
         localStorage.setItem(storageKey, '1');
       };
 
       if (!localStorage.getItem(storageKey)) {
-        window.setTimeout(openPopup, delayMs);
+        const delayMs = Number(popup.dataset.popupDelay || '0');
+        if (delayMs > 0) {
+          window.setTimeout(openPopup, delayMs);
+        } else {
+          openPopup();
+        }
       }
 
       closeButton?.addEventListener('click', closePopup);
+      overlay?.addEventListener('click', closePopup);
+      document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !popup.classList.contains('hidden')) {
+          closePopup();
+        }
+      });
     };
 
     if (document.readyState === 'loading') {
