@@ -42,10 +42,22 @@ const disableSubmit = !import.meta.env.MAILERLITE_API_KEY;
         </span>
       </p>
     </div>
-    <button type="submit" class={`sm:self-stretch sm:h-full ${buttonClass}`} disabled={disableSubmit}>
+    <button
+      type="submit"
+      class={`sm:self-stretch sm:h-full ${buttonClass}`}
+      disabled={disableSubmit}
+      data-submit-button
+    >
       {buttonText}
     </button>
   </div>
+
+  <p
+    class="text-sm hidden mt-1"
+    data-submit-feedback
+    role="status"
+    aria-live="polite"
+  ></p>
 
   {disableSubmit && (
     <p class="text-xs text-amber-700 mt-2">
@@ -53,3 +65,81 @@ const disableSubmit = !import.meta.env.MAILERLITE_API_KEY;
     </p>
   )}
 </form>
+
+<script>
+  const enhanceForms = () => {
+    document.querySelectorAll('[data-newsletter-form]').forEach((form) => {
+      if (form.dataset.enhanced === 'true') return;
+      form.dataset.enhanced = 'true';
+
+      const button = form.querySelector('[data-submit-button]');
+      const feedback = form.querySelector('[data-submit-feedback]');
+
+      form.addEventListener('submit', async (event) => {
+        if (!button || !feedback) return;
+        event.preventDefault();
+
+        feedback.classList.add('hidden');
+        feedback.textContent = '';
+        feedback.classList.remove('text-green-700', 'text-red-700');
+
+        if (!(form instanceof HTMLFormElement)) return;
+
+        const formData = new FormData(form);
+        const payload = {
+          email: formData.get('email'),
+          redirect: formData.get('redirect'),
+          botcheck: formData.get('botcheck'),
+        };
+
+        button.disabled = true;
+        button.textContent = 'Sending...';
+
+        let wasSuccessful = false;
+
+        try {
+          const response = await fetch(form.getAttribute('action') || '/api/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              Accept: 'application/json',
+            },
+            body: JSON.stringify(payload),
+          });
+
+          const data = await response.json().catch(() => ({}));
+
+          wasSuccessful = response.ok;
+          feedback.textContent = wasSuccessful
+            ? 'Thank you! You are now subscribed.'
+            : data?.message || 'Unable to subscribe right now. Please try again.';
+
+          feedback.classList.remove('hidden');
+          feedback.classList.toggle('text-green-700', wasSuccessful);
+          feedback.classList.toggle('text-red-700', !wasSuccessful);
+        } catch (error) {
+          console.error('Newsletter submit error', error);
+          feedback.textContent = 'Something went wrong. Please try again.';
+          feedback.classList.remove('hidden');
+          feedback.classList.add('text-red-700');
+          wasSuccessful = false;
+        } finally {
+          if (wasSuccessful) {
+            form.reset();
+          }
+
+          button.disabled = wasSuccessful;
+          button.textContent = wasSuccessful ? 'Subscribed' : 'Subscribe';
+        }
+      });
+    });
+  };
+
+  if (typeof window !== 'undefined') {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', enhanceForms, { once: true });
+    } else {
+      enhanceForms();
+    }
+  }
+</script>
