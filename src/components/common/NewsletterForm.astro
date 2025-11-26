@@ -68,12 +68,12 @@ const disableSubmit = !import.meta.env.MAILERLITE_API_KEY;
 
 <script>
   const enhanceForms = () => {
-    document.querySelectorAll('[data-newsletter-form]').forEach((form) => {
+    document.querySelectorAll<HTMLFormElement>('[data-newsletter-form]').forEach((form) => {
       if (form.dataset.enhanced === 'true') return;
       form.dataset.enhanced = 'true';
 
-      const button = form.querySelector('[data-submit-button]');
-      const feedback = form.querySelector('[data-submit-feedback]');
+      const button = form.querySelector<HTMLButtonElement>('[data-submit-button]');
+      const feedback = form.querySelector<HTMLElement>('[data-submit-feedback]');
 
       form.addEventListener('submit', async (event) => {
         if (!button || !feedback) return;
@@ -82,8 +82,6 @@ const disableSubmit = !import.meta.env.MAILERLITE_API_KEY;
         feedback.classList.add('hidden');
         feedback.textContent = '';
         feedback.classList.remove('text-green-700', 'text-red-700');
-
-        if (!(form instanceof HTMLFormElement)) return;
 
         const formData = new FormData(form);
         const payload = {

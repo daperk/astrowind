@@ -7,6 +7,8 @@ const storageKey = 'newsletter_popup_dismissed';
 
 <div
   data-newsletter-popup
+  data-popup-delay={delay}
+  data-popup-storage={storageKey}
   class="fixed bottom-4 right-4 z-40 w-[calc(100%-2rem)] max-w-md sm:max-w-sm drop-shadow-2xl hidden"
 >
   <div class="rounded-2xl bg-white/95 dark:bg-slate-900/95 backdrop-blur border border-gray-200 dark:border-slate-700 p-4">
@@ -48,14 +50,13 @@ const storageKey = 'newsletter_popup_dismissed';
 
 <script is:inline>
   if (typeof window !== 'undefined') {
-    const storageKey = {JSON.stringify(storageKey)};
-    const delayMs = Number({JSON.stringify(delay)});
-
     const initPopup = () => {
-      const popup = document.querySelector('[data-newsletter-popup]');
+      const popup = document.querySelector<HTMLElement>('[data-newsletter-popup]');
       if (!popup) return;
 
-      const closeButton = popup.querySelector('[data-newsletter-popup-close]');
+      const storageKey = popup.dataset.popupStorage || 'newsletter_popup_dismissed';
+      const delayMs = Number(popup.dataset.popupDelay || '4500');
+      const closeButton = popup.querySelector<HTMLElement>('[data-newsletter-popup-close]');
       const openPopup = () => {
         if (localStorage.getItem(storageKey)) return;
         popup.classList.remove('hidden');

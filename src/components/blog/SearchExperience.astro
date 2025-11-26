@@ -126,21 +126,37 @@ const serializedSearchIndex = searchIndex.map((post) => ({
 
   <p class="text-sm text-muted dark:text-slate-400 mt-4 hidden" data-search-empty>No results found yet. Try a different keyword or clear the category filter.</p>
 
-  <script type="application/json" id="search-index" aria-hidden="true">{JSON.stringify(serializedSearchIndex)}</script>
+  <script is:inline type="application/json" id="search-index" aria-hidden="true">{JSON.stringify(serializedSearchIndex)}</script>
   <script>
     const searchDataElement = document.getElementById('search-index');
-    const searchResults = document.querySelector('[data-search-results]');
-    const searchCount = document.querySelector('[data-search-count]');
-    const emptyState = document.querySelector('[data-search-empty]');
-    const categoryButtons = Array.from(document.querySelectorAll('[data-search-category]'));
-    const searchForms = Array.from(document.querySelectorAll('[data-search-form]'));
-    const searchInputs = Array.from(document.querySelectorAll('[data-search-input]'));
+    const searchResults = document.querySelector<HTMLElement>('[data-search-results]');
+    const searchCount = document.querySelector<HTMLElement>('[data-search-count]');
+    const emptyState = document.querySelector<HTMLElement>('[data-search-empty]');
+    const categoryButtons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-search-category]'));
+    const searchForms = Array.from(document.querySelectorAll<HTMLFormElement>('[data-search-form]'));
+    const searchInputs = Array.from(document.querySelectorAll<HTMLInputElement>('[data-search-input]'));
 
     if (searchDataElement && searchResults && searchCount) {
-      const posts = JSON.parse(searchDataElement.textContent || '[]');
+      type SearchPost = {
+        title: string;
+        excerpt?: string;
+        category?: string;
+        categorySlug?: string;
+        permalink: string;
+        publishDate: string;
+        tags?: string[];
+        readingTime?: number;
+        image?: string;
+      };
+
+      const posts: SearchPost[] = JSON.parse(searchDataElement.textContent || '[]');
       const params = new URLSearchParams(window.location.search);
       let activeCategory = params.get('category') || '';
       let query = params.get('q') || '';
+
+      const resultsEl = searchResults;
+      const countEl = searchCount;
+      const emptyEl = emptyState;
 
       searchInputs.forEach((input) => {
         input.value = query;
@@ -182,15 +198,15 @@ const serializedSearchIndex = searchIndex.map((post) => ({
         updateURL();
       }
 
-      function renderResults(items) {
-        searchResults.innerHTML = '';
+      function renderResults(items: SearchPost[]) {
+        resultsEl.innerHTML = '';
         if (!items.length) {
-          emptyState?.classList.remove('hidden');
-          searchCount.textContent = 'No articles match that search yet.';
+          emptyEl?.classList.remove('hidden');
+          countEl.textContent = 'No articles match that search yet.';
           return;
         }
-        emptyState?.classList.add('hidden');
-        searchCount.textContent = `Showing ${items.length} ${items.length === 1 ? 'result' : 'results'}.`;
+        emptyEl?.classList.add('hidden');
+        countEl.textContent = `Showing ${items.length} ${items.length === 1 ? 'result' : 'results'}.`;
         const formatter = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
         items.slice(0, 20).forEach((post) => {
@@ -266,11 +282,11 @@ const serializedSearchIndex = searchIndex.map((post) => ({
           body.appendChild(tagRow);
 
           card.appendChild(body);
-          searchResults.appendChild(card);
+          resultsEl.appendChild(card);
         });
       }
 
-      function syncInputs(target) {
+      function syncInputs(target: HTMLInputElement) {
         searchInputs.forEach((input) => {
           if (input !== target) {
             input.value = target.value;
@@ -280,8 +296,10 @@ const serializedSearchIndex = searchIndex.map((post) => ({
 
       searchInputs.forEach((input) => {
         input.addEventListener('input', (event) => {
-          query = event.target.value;
-          syncInputs(event.target);
+          const target = event.target as HTMLInputElement | null;
+          if (!target) return;
+          query = target.value;
+          syncInputs(target);
           filterPosts();
         });
       });
