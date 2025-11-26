@@ -51,12 +51,14 @@ const storageKey = 'newsletter_popup_dismissed';
 <script is:inline>
   if (typeof window !== 'undefined') {
     const initPopup = () => {
-      const popup = document.querySelector<HTMLElement>('[data-newsletter-popup]');
+      const popup = /** @type {HTMLElement | null} */ (
+        document.querySelector('[data-newsletter-popup]')
+      );
       if (!popup) return;
 
       const storageKey = popup.dataset.popupStorage || 'newsletter_popup_dismissed';
       const delayMs = Number(popup.dataset.popupDelay || '4500');
-      const closeButton = popup.querySelector<HTMLElement>('[data-newsletter-popup-close]');
+      const closeButton = popup.querySelector('[data-newsletter-popup-close]');
       const openPopup = () => {
         if (localStorage.getItem(storageKey)) return;
         popup.classList.remove('hidden');
