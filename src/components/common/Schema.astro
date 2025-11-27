@@ -1,7 +1,7 @@
 ---
 /**
  * Schema.astro - JSON-LD Structured Data Component
- * Implements schema.org markup for SEO and rich results
+ * Implements schema.org markup for rich results
  *
  * Supports:
  * - WebSite schema (sitewide)
@@ -36,7 +36,7 @@ const { type, article, faqs } = Astro.props;
 const siteUrl = SITE?.site || 'https://sleepupgradehub.com';
 const siteName = SITE?.name || 'SleepUpgradeHub';
 
-// WebSite Schema - for sitewide SEO
+// WebSite Schema - for sitewide discovery
 const websiteSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',

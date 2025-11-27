@@ -83,7 +83,7 @@ This approach ensures that you observe the best practices in action. Also, it en
 
 **Key Differentiator**: Unlike “Click-through Landing Pages,” which guide users to another step, these directly gather user data.
 
-**Example**: A digital marketing agency offering a free SEO audit in exchange for business contact details.
+**Example**: A sleep coaching studio offering a free bedroom and routine audit in exchange for contact details.
 
 ### [Long-form Sales Landing Page](landing/sales)
 

@@ -6,7 +6,7 @@ site:
 
   googleSiteVerificationId: null # add your real one later
 
-# Default SEO metadata
+# Default site metadata
 metadata:
   title:
     default: SleepUpgradeHub
@@ -58,7 +58,7 @@ apps:
       isEnabled: true
       pathname: 'tag'
       robots:
-        index: true # changed from false → tags should index for SEO
+        index: true # changed from false → tags should index for discoverability
 
     isRelatedPostsEnabled: true
     relatedPostsCount: 4
