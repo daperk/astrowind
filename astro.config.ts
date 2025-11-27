@@ -7,6 +7,7 @@ import sitemap from '@astrojs/sitemap';
 import tailwind from '@astrojs/tailwind';
 import mdx from '@astrojs/mdx';
 import partytown from '@astrojs/partytown';
+import vercel from '@astrojs/vercel/serverless';
 import icon from 'astro-icon';
 import compress from 'astro-compress';
 import type { AstroIntegration } from 'astro';
@@ -22,7 +23,8 @@ const whenExternalScripts = (items: (() => AstroIntegration) | (() => AstroInteg
   hasExternalScripts ? (Array.isArray(items) ? items.map((item) => item()) : [items()]) : [];
 
 export default defineConfig({
-  output: 'static',
+  output: 'hybrid',
+  adapter: vercel(),
 
   integrations: [
     tailwind({
