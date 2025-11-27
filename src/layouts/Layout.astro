@@ -1,5 +1,6 @@
 ---
 import '~/assets/styles/tailwind.css';
+import Analytics from '@vercel/analytics/astro';
 
 import { I18N } from 'astrowind:config';
 
@@ -9,7 +10,6 @@ import CustomStyles from '~/components/CustomStyles.astro';
 import ApplyColorMode from '~/components/common/ApplyColorMode.astro';
 import Metadata from '~/components/common/Metadata.astro';
 import SiteVerification from '~/components/common/SiteVerification.astro';
-import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 import Schema from '~/components/common/Schema.astro';
 
@@ -48,5 +48,6 @@ const { language, textDirection } = I18N;
     <slot />
 
     <BasicScripts />
+    <Analytics />
   </body>
 </html>
