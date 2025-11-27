@@ -8,7 +8,6 @@
 :root {
   /* Background */
   --aw-color-bg-page: #f7f9fc;
-  --aw-color-bg-page-dark: #0b0f19;
 
   /* Brand colors */
   --aw-color-primary: #1c2a44;
@@ -28,15 +27,6 @@
   /* Text colors */
   --aw-color-text-page: #1a1a1a;
   --aw-color-text-muted: #5f6b7c;
-}
-
-/* DARK MODE OVERRIDES */
-.dark {
-  --aw-color-text-page: #e2e8f0;
-  --aw-color-text-muted: #94a3b8;
-  --aw-color-bg-page: #0b1120;
-  --brand-primary: #cdd8e6;
-  --brand-accent: #9bb7e9;
 }
 
 @layer utilities {
@@ -75,9 +65,5 @@
 
 .text-brand {
   color: var(--brand-accent);
-}
-
-.dark .text-brand {
-  color: var(--brand-accent-light);
 }
 
