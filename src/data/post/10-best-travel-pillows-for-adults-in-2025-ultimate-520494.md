@@ -10,6 +10,8 @@ tags:
   - "Travel Pillows"
   - "Comfort"
   - "Travel Sleep"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cuddle-pillows-for-adults-in-2025-ultimate-348123
 ---
 
 # 10 Best Travel Pillows For Adults in 2025 (Ultimate Guide)

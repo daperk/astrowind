@@ -10,6 +10,8 @@ tags:
   - "dry eyes"
   - "sleep masks"
   - "product review"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-sleep-masks-for-women-in-2025-complete-gui-525040
 ---
 
 # 10 Best Sleep Masks for Dry Eyes: 2025 Complete Guide

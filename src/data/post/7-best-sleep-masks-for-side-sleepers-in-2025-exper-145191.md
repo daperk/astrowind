@@ -11,6 +11,8 @@ tags:
   - "side sleepers"
   - "blackout masks"
   - "sleep accessories"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-sleep-masks-for-women-in-2025-complete-gui-525040
 ---
 
 # 7 Best Sleep Masks for Side Sleepers in 2025 [Expert Guide]

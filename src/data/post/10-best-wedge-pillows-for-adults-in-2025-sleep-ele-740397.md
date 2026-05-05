@@ -11,6 +11,8 @@ tags:
   - "Acid Reflux"
   - "Sleep Apnea"
   - "Back Pain"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cuddle-pillows-for-adults-in-2025-ultimate-348123
 ---
 
 # 10 Best Wedge Pillows for Adults in 2025: Sleep Elevated

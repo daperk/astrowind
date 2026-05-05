@@ -10,6 +10,8 @@ tags:
   - "Sleep"
   - "Magnesium"
   - "Australia"
+metadata:
+  canonical: https://sleepupgradehub.com/best-magnesium-for-sleep-reddit-s-top-picks-for-20-117914
 ---
 
 # Best Magnesium for Sleep Australia: Ultimate 2025 Guide

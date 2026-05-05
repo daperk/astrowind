@@ -11,6 +11,8 @@ tags:
   - "bedding"
   - "hot sleepers"
   - "cooling"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cooling-blankets-australia-reddit-approved-127726
 ---
 
 ## The Hot Sleeper's Dilemma: Finding Bedding That Actually Cools

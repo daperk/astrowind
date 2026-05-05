@@ -7,6 +7,8 @@ import SocialShare from '~/components/common/SocialShare.astro';
 import Schema from '~/components/common/Schema.astro';
 import TOC from '~/components/blog/TOC.astro';
 import AuthorBio from '~/components/blog/AuthorBio.astro';
+import AffiliateDisclosure from '~/components/common/AffiliateDisclosure.astro';
+import AdSlot from '~/components/common/AdSlot.astro';
 
 import { getPermalink } from '~/utils/permalinks';
 import { getFormattedDate } from '~/utils/utils';
@@ -116,6 +118,12 @@ const articleSchema = {
         <!-- MAIN CONTENT COLUMN (Ideal Reading Width ~700-800px) -->
         <div class="lg:col-span-8 xl:col-span-8">
           <div class="max-w-3xl mx-auto lg:mx-0">
+            <!-- Affiliate disclosure above the fold (FTC + Amazon Associates compliant) -->
+            <AffiliateDisclosure variant="block" className="mb-6" />
+
+            <!-- Top of article ad slot (no-op until AdSense enabled) -->
+            <AdSlot slot="article-top" format="auto" className="my-4" />
+
             <!-- Article Content with Healthline-style Typography -->
             <div
               class="prose prose-lg max-w-none
@@ -137,6 +145,9 @@ const articleSchema = {
             >
               <slot />
             </div>
+
+            <!-- Bottom of article ad slot (no-op until AdSense enabled) -->
+            <AdSlot slot="article-bottom" format="auto" className="my-8" />
 
             <!-- Tags Section -->
             {post.tags && post.tags.length > 0 && (

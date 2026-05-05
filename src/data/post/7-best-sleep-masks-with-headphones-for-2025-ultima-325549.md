@@ -11,6 +11,8 @@ tags:
   - "headphones"
   - "sleep mask"
   - "bluetooth"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-sleep-masks-for-women-in-2025-complete-gui-525040
 ---
 
 # 7 Best Sleep Masks with Headphones for 2025 | Ultimate Guide

@@ -10,6 +10,8 @@ tags:
   - "cooling blankets"
   - "hot sleepers"
   - "temperature regulation"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cooling-blankets-australia-reddit-approved-127726
 ---
 
 ## Say Goodbye to Night Sweats: The Best Cooling Blankets According to Reddit in 2025

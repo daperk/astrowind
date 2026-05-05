@@ -10,6 +10,8 @@ tags:
   - "Car Pillows"
   - "Travel Comfort"
   - "Neck Support"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cuddle-pillows-for-adults-in-2025-ultimate-348123
 ---
 
 # 10 Best Car Pillows for Adults in 2025: Sleep Comfortably on the Go

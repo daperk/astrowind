@@ -11,6 +11,8 @@ tags:
   - "Body Pillows"
   - "Sleep Comfort"
   - "Sleep Anxiety"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cuddle-pillows-for-adults-in-2025-ultimate-348123
 ---
 
 # 10 Best Hugging Pillows for Adults in 2025 (Ultimate Guide)

@@ -10,6 +10,8 @@ tags:
   - "Cooling Mattress Pads"
   - "Night Sweats"
   - "Hot Sleepers"
+metadata:
+  canonical: https://sleepupgradehub.com/7-best-cooling-mattress-toppers-reddit-loves-for-h-737643
 ---
 
 # 10 Best Cooling Mattress Pads Reddit Users Swear By in 2025

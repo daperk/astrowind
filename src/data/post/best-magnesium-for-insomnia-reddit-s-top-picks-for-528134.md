@@ -11,6 +11,8 @@ tags:
   - "Magnesium"
   - "Insomnia"
   - "Reddit"
+metadata:
+  canonical: https://sleepupgradehub.com/best-magnesium-for-sleep-reddit-s-top-picks-for-20-117914
 ---
 
 ## Struggling to Sleep? Reddit's Favorite Magnesium Supplements for Insomnia in 2025

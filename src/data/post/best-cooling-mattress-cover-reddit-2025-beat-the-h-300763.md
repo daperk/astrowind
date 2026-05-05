@@ -10,6 +10,8 @@ tags:
   - "cooling mattress cover"
   - "sleep products"
   - "hot sleepers"
+metadata:
+  canonical: https://sleepupgradehub.com/7-best-cooling-mattress-toppers-reddit-loves-for-h-737643
 ---
 
 ## Tired of Waking Up in a Sweat? Reddit's Favorite Cooling Mattress Covers for 2025

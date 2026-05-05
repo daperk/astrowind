@@ -11,6 +11,8 @@ tags:
   - "sleep mask"
   - "amazon"
   - "guide"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-sleep-masks-for-women-in-2025-complete-gui-525040
 ---
 
 # 10 Best Sleep Masks on Amazon (2025): Block Light & Sleep Better

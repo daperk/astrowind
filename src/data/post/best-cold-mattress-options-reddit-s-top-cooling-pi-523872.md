@@ -11,6 +11,8 @@ tags:
   - "cooling"
   - "hot sleepers"
   - "reddit"
+metadata:
+  canonical: https://sleepupgradehub.com/7-best-cooling-mattress-toppers-reddit-loves-for-h-737643
 ---
 
 # Best Cold Mattress Options: Reddit's Top Cooling Picks for 2025

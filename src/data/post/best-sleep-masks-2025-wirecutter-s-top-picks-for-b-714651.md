@@ -11,6 +11,8 @@ tags:
   - "Wirecutter"
   - "Blackout Masks"
   - "Sleep Accessories"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-sleep-masks-for-women-in-2025-complete-gui-525040
 ---
 
 ## The Ultimate Guide to Finding Your Perfect Sleep Mask in 2025

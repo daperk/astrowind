@@ -11,6 +11,8 @@ tags:
   - "guide"
   - "cooling mats"
   - "temperature regulation"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cooling-blankets-australia-reddit-approved-127726
 ---
 
 ## The Quest for Cool: What Reddit Says About Cooling Mats in 2025

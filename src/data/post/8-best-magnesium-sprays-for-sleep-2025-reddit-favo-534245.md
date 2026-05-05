@@ -10,6 +10,8 @@ tags:
   - "Sleep"
   - "Magnesium Spray"
   - "Reddit Reviews"
+metadata:
+  canonical: https://sleepupgradehub.com/best-magnesium-for-sleep-reddit-s-top-picks-for-20-117914
 ---
 
 ## The Sleep Secret Reddit Can't Stop Talking About: Magnesium Sprays

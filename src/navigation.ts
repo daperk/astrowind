@@ -68,12 +68,14 @@ export const footerData = {
       links: [
         { text: 'Privacy Policy', href: getPermalink('/privacy') },
         { text: 'Terms & Conditions', href: getPermalink('/terms') },
+        { text: 'Affiliate Disclosure', href: getPermalink('/disclosure') },
       ],
     },
   ],
   secondaryLinks: [
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: 'Terms', href: getPermalink('/terms') },
+    { text: 'Disclosure', href: getPermalink('/disclosure') },
   ],
   socialLinks: [
     // Add when real social profiles are available

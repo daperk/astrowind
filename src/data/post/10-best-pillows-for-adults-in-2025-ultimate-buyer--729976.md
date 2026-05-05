@@ -11,6 +11,8 @@ tags:
   - "sleep accessories"
   - "neck pain"
   - "side sleepers"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cuddle-pillows-for-adults-in-2025-ultimate-348123
 ---
 
 # The Best Pillows for Adults in 2025: Your Ultimate Guide to Better Sleep

@@ -11,6 +11,8 @@ tags:
   - "blackout masks"
   - "sleep accessories"
   - "sleep quality"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-sleep-masks-for-women-in-2025-complete-gui-525040
 ---
 
 # 10 Best Sleep Masks of 2025: Find Your Perfect Blackout Companion

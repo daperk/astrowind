@@ -10,6 +10,8 @@ tags:
   - "Reddit Sleep Tips"
   - "Deep Sleep Guide"
   - "Sleep Products"
+metadata:
+  canonical: https://sleepupgradehub.com/528-hz-dna-repair-music-the-ultimate-deep-sleep-ha-707297
 ---
 
 # Reddit's Top Heavy Sleep Secrets: 2025 Guide to Deep Sleep

@@ -11,6 +11,8 @@ tags:
   - "sleep position"
   - "pain relief"
   - "pregnancy"
+metadata:
+  canonical: https://sleepupgradehub.com/10-best-cuddle-pillows-for-adults-in-2025-ultimate-348123
 ---
 
 # 10 Best Body Pillows for Adults in 2025: Ultimate Guide
