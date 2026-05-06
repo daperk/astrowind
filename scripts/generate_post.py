@@ -6,9 +6,10 @@ import _env  # noqa: F401  loads .env
 import json
 import os
 import re
+import time
 from datetime import datetime, timezone
 
-from anthropic import Anthropic
+from anthropic import Anthropic, APIStatusError
 
 from db import find_similar, shingles, content_hash
 from niches import NICHES
@@ -49,6 +50,11 @@ REQUIREMENTS:
 - **Bold** product names
 - Real current-year prices when relevant
 - Bullet lists for features
+- NO em dashes (—). Use a regular hyphen (-), period, or comma instead.
+  Same for en dashes (–). This is non-negotiable.
+- Avoid AI tells: "delve", "moreover", "furthermore", "in essence",
+  "it's worth noting", "navigate the complex landscape", "in today's
+  fast-paced world". Write like a real person on Reddit, not a press release.
 - 2-3 internal links from this list (markdown format):
 {pillars_block}
 - Voice: {niche_cfg["voice"]}
@@ -119,12 +125,29 @@ def generate(conn, site_id: int, niche_key: str, keyword: str,
         return None
 
     client = Anthropic()
-    msg = client.messages.create(
-        model=CLAUDE_MODEL,
-        max_tokens=4096,
-        messages=[{"role": "user", "content": prompt}],
-    )
-    raw = msg.content[0].text
+    raw = None
+    last_err: Exception | None = None
+    for attempt in range(5):
+        try:
+            msg = client.messages.create(
+                model=CLAUDE_MODEL,
+                max_tokens=4096,
+                messages=[{"role": "user", "content": prompt}],
+            )
+            raw = msg.content[0].text
+            break
+        except APIStatusError as e:
+            last_err = e
+            status = getattr(e, "status_code", None)
+            if status in (429, 500, 502, 503, 529):
+                wait = min(2 ** attempt * 5, 90)
+                print(f"[generate] {status} attempt {attempt+1}/5, retry in {wait}s")
+                time.sleep(wait)
+                continue
+            raise
+    if raw is None:
+        print(f"[generate] giving up after retries: {last_err}")
+        return None
     out = _parse_two_part(raw)
 
     body = out["body"]

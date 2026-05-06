@@ -95,6 +95,47 @@ NICHE_PALETTES = {
 }
 
 
+FAVICON_LETTERS = {
+    "trading": "T",
+    "ai-tools": "A",
+    "dev-tools": "C",
+}
+
+FAVICON_ASTRO_TEMPLATE = """---
+import favIconSvg from '~/assets/favicons/favicon.svg';
+---
+
+<link rel="icon" type="image/svg+xml" href={favIconSvg.src} />
+<link rel="mask-icon" href={favIconSvg.src} color="#000000" />
+"""
+
+
+def write_favicon(target: Path, niche_key: str) -> None:
+    palette = NICHE_PALETTES.get(niche_key)
+    if not palette:
+        return
+    color = palette["brand_accent"]
+    letter = FAVICON_LETTERS.get(niche_key, "?")
+    fav_dir = target / "src" / "assets" / "favicons"
+    fav_dir.mkdir(parents=True, exist_ok=True)
+    svg = (
+        '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">'
+        f'<rect width="64" height="64" rx="14" fill="{color}"/>'
+        f'<text x="32" y="44" font-family="ui-sans-serif,system-ui,Arial" '
+        f'font-size="36" font-weight="800" fill="#ffffff" '
+        f'text-anchor="middle">{letter}</text></svg>'
+    )
+    (fav_dir / "favicon.svg").write_text(svg, encoding="utf-8")
+    for old in ("favicon.ico", "favicon-16x16.png",
+                "favicon-32x32.png", "apple-touch-icon.png"):
+        p = fav_dir / old
+        if p.exists():
+            p.unlink()
+    (target / "src" / "components" / "Favicons.astro").write_text(
+        FAVICON_ASTRO_TEMPLATE, encoding="utf-8"
+    )
+
+
 def write_tailwind_css(target: Path, niche_key: str, site_name_pretty: str) -> None:
     palette = NICHE_PALETTES.get(niche_key)
     if not palette:
@@ -491,6 +532,7 @@ def scaffold(niche_key: str, target: Path, force: bool = False) -> int:
     write_homepage(target, cfg, site_name_pretty)
     write_about(target, site_name_pretty, cfg)
     write_tailwind_css(target, niche_key, site_name_pretty)
+    write_favicon(target, niche_key)
 
     legal_replacements = [
         ("SleepUpgradeHub", site_name_pretty),
