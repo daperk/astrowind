@@ -21,7 +21,7 @@ from niches import NICHES
 
 SRC = Path("C:/Users/06123/GitHub/astrowind")
 
-EXCLUDE_DIRS = {".git", "node_modules", "dist", ".astro", ".vercel",
+EXCLUDE_DIRS = {".git", ".github", "node_modules", "dist", ".astro", ".vercel",
                 ".claude", "data", "venv", ".venv"}
 
 EXCLUDE_FILES = {".env", ".env.production", ".env.local",
