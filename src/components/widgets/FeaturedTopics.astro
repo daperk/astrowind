@@ -6,27 +6,31 @@ import { Icon } from 'astro-icon/components';
 import Image from '~/components/common/Image.astro';
 import { getPermalink } from '~/utils/permalinks';
 
+import moon from '~/icons/moon.svg?raw';
+import mask from '~/icons/mask.svg?raw';
+import clock from '~/icons/clock.svg?raw';
+
 const featuredTopics = [
   {
     title: 'Sleep Environment',
     slug: 'sleep-environment',
     description: 'Master your bedroom setup with optimal light, noise, temperature, and air quality for deeper sleep.',
     image: '~/assets/images/environment.webp',
-    icon: 'tabler:home',
+    icon: moon,
   },
   {
     title: 'Sleep Tools & Gadgets',
     slug: 'sleep-tools',
     description: 'Discover the best sleep masks, red light lamps, trackers, and devices that actually improve your rest.',
     image: '~/assets/images/tools-supplements.webp',
-    icon: 'tabler:bulb',
+    icon: mask,
   },
   {
     title: 'Habits & Routines',
     slug: 'habits',
     description: 'Build sustainable wind-down rituals and sleep hygiene practices that work with your lifestyle.',
     image: '~/assets/images/habits-routines.webp',
-    icon: 'tabler:calendar',
+    icon: clock,
   },
 ];
 ---
@@ -63,8 +67,8 @@ const featuredTopics = [
           <!-- Content -->
           <div class="p-6">
             <div class="flex items-center gap-3 mb-3">
-              <div class="w-10 h-10 rounded-full bg-brand-accent/10 flex items-center justify-center group-hover:bg-brand-accent group-hover:text-white transition">
-                <Icon name={topic.icon} class="w-5 h-5 text-brand-accent group-hover:text-white" />
+              <div class="w-10 h-10 rounded-full bg-white ring-1 ring-gray-200 flex items-center justify-center p-2 shrink-0">
+                <span class="block w-full h-full" set:html={topic.icon} aria-hidden="true" />
               </div>
               <h3 class="text-xl font-bold text-gray-900 group-hover:text-brand-accent transition">
                 {topic.title}

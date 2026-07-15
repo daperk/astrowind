@@ -1,45 +1,59 @@
 ---
 /**
- * Healthline-style category grid - clean, minimal, vertical cards
+ * Browse by Topic — rich image cards for all six categories, each with a
+ * custom brand icon badge. Replaces the flat icon-only grid.
  */
-import { Icon } from 'astro-icon/components';
+import Image from '~/components/common/Image.astro';
 import { getPermalink } from '~/utils/permalinks';
+
+import moon from '~/icons/moon.svg?raw';
+import mask from '~/icons/mask.svg?raw';
+import clock from '~/icons/clock.svg?raw';
+import pill from '~/icons/pill.svg?raw';
+import watch from '~/icons/watch.svg?raw';
+import waves from '~/icons/waves.svg?raw';
 
 const categories = [
   {
     title: 'Sleep Environment',
     slug: 'sleep-environment',
-    icon: 'tabler:home',
+    image: '~/assets/images/environment.webp',
+    icon: moon,
     description: 'Light, noise, temperature & air quality',
   },
   {
     title: 'Sleep Tools',
     slug: 'sleep-tools',
-    icon: 'tabler:bulb',
+    image: '~/assets/images/tools-supplements.webp',
+    icon: mask,
     description: 'Masks, lamps, trackers & devices',
   },
   {
     title: 'Habits & Routines',
     slug: 'habits',
-    icon: 'tabler:calendar',
+    image: '~/assets/images/habits-routines.webp',
+    icon: clock,
     description: 'Wind-down rituals & sleep hygiene',
   },
   {
     title: 'Supplements',
     slug: 'supplements',
-    icon: 'tabler:pill',
+    image: '~/assets/images/supplements.webp',
+    icon: pill,
     description: 'Magnesium, L-theanine & natural aids',
   },
   {
     title: 'Sleep Trackers',
     slug: 'sleep-trackers',
-    icon: 'tabler:chart-bar',
+    image: '~/assets/images/sleep-trackers.webp',
+    icon: watch,
     description: 'Rings, bands & tracking devices',
   },
   {
     title: 'White Noise Machines',
     slug: 'white-noise',
-    icon: 'tabler:volume',
+    image: '~/assets/images/white-noise.webp',
+    icon: waves,
     description: 'Sound machines & noise masking',
   },
 ];
@@ -48,32 +62,39 @@ const categories = [
 <section class="py-12 md:py-16 bg-gray-50">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="mb-8">
-      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-        Browse by Topic
-      </h2>
-      <p class="text-gray-600">
-        Explore sleep optimization guides organized by category
-      </p>
+      <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">Browse by Topic</h2>
+      <p class="text-gray-600">Explore sleep optimization guides organized by category</p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
       {categories.map((category) => (
         <a
           href={getPermalink(category.slug, 'category')}
-          class="group bg-white rounded-lg border border-gray-200 p-5 hover:shadow-md hover:border-brand-accent transition-all duration-200"
+          class="group relative flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-xl hover:border-brand-accent transition-all duration-300"
         >
-          <div class="flex flex-col items-start space-y-3">
-            <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center group-hover:bg-brand-accent/20 transition">
-              <Icon name={category.icon} class="w-6 h-6 text-brand-accent" />
-            </div>
-            <div>
-              <h3 class="font-bold text-gray-900 text-sm mb-1 group-hover:text-brand-accent transition">
-                {category.title}
-              </h3>
-              <p class="text-xs text-gray-600 leading-snug">
-                {category.description}
-              </p>
-            </div>
+          <div class="relative aspect-[16/10] overflow-hidden bg-brand-primary">
+            <Image
+              src={category.image}
+              alt={category.title}
+              class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              widths={[400, 600]}
+              sizes="(max-width: 768px) 100vw, 400px"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-primary/80 via-brand-primary/15 to-transparent"></div>
+            <span class="absolute top-4 left-4 flex items-center justify-center w-11 h-11 rounded-full bg-white shadow-md p-2.5" aria-hidden="true">
+              <span class="block w-full h-full" set:html={category.icon} />
+            </span>
+            <h3 class="absolute bottom-3 left-4 right-4 text-white text-lg font-bold drop-shadow-sm">
+              {category.title}
+            </h3>
+          </div>
+          <div class="flex flex-col flex-1 p-5">
+            <p class="text-sm text-gray-600 leading-snug">{category.description}</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-brand-accent group-hover:gap-2 transition-all">
+              Explore guides
+              <span aria-hidden="true">&rarr;</span>
+            </span>
           </div>
         </a>
       ))}
