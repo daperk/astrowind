@@ -20,9 +20,9 @@
   /* Extended brand system */
   --brand-primary: #1c2a44;
   --brand-primary-light: #3a4e6b;
-  --brand-accent: #4f7dcf;
+  --brand-accent: #3b5bb5; /* accessible indigo, passes AA on white for links/text */
   --brand-accent-light: #7ea4e3;
-  --brand-check: #4f7dcf;
+  --brand-check: #3b5bb5;
 
   /* Text colors */
   --aw-color-text-page: #1a1a1a;

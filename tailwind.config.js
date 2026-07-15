@@ -12,6 +12,15 @@ export default {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        // SleepUpgradeHub brand palette — calm "night" identity.
+        // Defined as hex so opacity modifiers (e.g. bg-brand-accent/10) work.
+        brand: {
+          DEFAULT: '#3b5bb5',
+          primary: '#1c2a44', // deep night navy
+          'primary-light': '#3a4e6b',
+          accent: '#3b5bb5', // accessible indigo (AA on white)
+          'accent-light': '#7ea4e3',
+        },
       },
       fontFamily: {
         sans: ['var(--aw-font-sans, ui-sans-serif)', ...defaultTheme.fontFamily.sans],
