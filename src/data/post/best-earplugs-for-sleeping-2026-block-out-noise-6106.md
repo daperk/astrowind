@@ -40,6 +40,11 @@ If your main problem is a snoring partner, pairing earplugs with a [white noise 
 
 ---
 
+<figure>
+  <img src="/blog/earplugs-section.webp" alt="Foam and silicone sleep earplugs on a dark nightstand" loading="lazy" />
+  <figcaption>Foam plugs block the most noise, while reusable silicone is comfier for nightly use.</figcaption>
+</figure>
+
 ## Foam vs Silicone vs Wax
 
 The three main types each suit different sleepers.

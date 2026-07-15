@@ -95,6 +95,11 @@ Prices depend heavily on size, so treat these as ballpark ranges.
 
 ---
 
+<figure>
+  <img src="/blog/blackout-curtains-section.webp" alt="Heavy blackout curtains drawn across a bedroom window with faint light at the edges" loading="lazy" />
+  <figcaption>Mounting curtains high and wide removes the light gaps around the edges.</figcaption>
+</figure>
+
 ## The Installation Trick Most People Miss
 
 Even the best curtain leaks light if it is mounted wrong. Here is how to get a genuinely dark room.

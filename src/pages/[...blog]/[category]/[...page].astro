@@ -39,7 +39,7 @@ const categoryDescriptions: Record<string, string> = {
 const categoryDescription = categoryDescriptions[category.slug] || `Guides and research-backed insights on ${category.title}.`;
 
 const metadata = {
-  title: `${category.title} — Sleep Optimization Guides — SleepUpgradeHub ${currentPage > 1 ? ` (Page ${currentPage})` : ''}`,
+  title: `${category.title}: Sleep Optimization Guides | SleepUpgradeHub ${currentPage > 1 ? ` (Page ${currentPage})` : ''}`,
   description: categoryDescription,
   robots: {
     index: blogCategoryRobots?.index,

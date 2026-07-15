@@ -53,6 +53,11 @@ If your sleep problems come from a noisy environment, an irregular schedule, or 
 
 ---
 
+<figure>
+  <img src="/blog/ashwagandha-section.webp" alt="Ashwagandha root powder in a bowl with capsules on a dark nightstand" loading="lazy" />
+  <figcaption>Most studies use a standardized extract such as KSM-66 at 300 to 600 mg per day.</figcaption>
+</figure>
+
 ## Dosage: How Much Ashwagandha for Sleep
 
 Most clinical studies on sleep and stress use a standardized root extract in the range of **300 to 600 mg per day**, often split into two doses or taken in the evening.

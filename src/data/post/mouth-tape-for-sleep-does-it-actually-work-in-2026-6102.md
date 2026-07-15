@@ -72,6 +72,11 @@ If you cannot breathe comfortably through your nose while awake with your mouth 
 
 ---
 
+<figure>
+  <img src="/blog/mouth-tape-section.webp" alt="A small box of thin mouth tape strips on a dark nightstand" loading="lazy" />
+  <figcaption>Only porous, skin-safe strips made for sleep should ever be used for mouth taping.</figcaption>
+</figure>
+
 ## How to Try Mouth Taping Safely
 
 If you are a good candidate and want to test it, do it gradually.

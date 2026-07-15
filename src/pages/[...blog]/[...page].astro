@@ -30,7 +30,7 @@ const allPosts = await fetchPosts();
 const popularPosts = page.data.slice(0, 5);
 
 const metadata = {
-  title: `Sleep Optimization Guides${currentPage > 1 ? ` — Page ${currentPage}` : ''} — SleepUpgradeHub`,
+  title: `Sleep Optimization Guides${currentPage > 1 ? ` | Page ${currentPage}` : ''} | SleepUpgradeHub`,
   description: 'Science-backed sleep guides, product reviews, and optimization strategies. Learn how to fall asleep faster, sleep deeper, and wake up restored.',
   robots: {
     index: blogListRobots?.index && currentPage === 1,

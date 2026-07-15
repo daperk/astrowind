@@ -51,6 +51,11 @@ The fair summary is that L-theanine is a gentle relaxation aid that helps some p
 
 ---
 
+<figure>
+  <img src="/blog/l-theanine-section.webp" alt="A warm cup of green tea beside supplement capsules at night" loading="lazy" />
+  <figcaption>L-theanine, the calming amino acid in tea, is usually taken at 100 to 400 mg.</figcaption>
+</figure>
+
 ## L-Theanine Dosage for Sleep
 
 Most people use a dose in the range of **100 to 400 mg** for relaxation and sleep.

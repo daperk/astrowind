@@ -27,6 +27,11 @@ The **Philips SmartSleep Wake-Up Light** remains the best sunrise alarm clock fo
 
 ---
 
+<figure>
+  <img src="/blog/sunrise-clock-section.webp" alt="A sunrise alarm clock glowing warm amber on a nightstand at dawn" loading="lazy" />
+  <figcaption>A sunrise clock wakes you with gradually brightening light instead of a jarring alarm.</figcaption>
+</figure>
+
 ## Why a Sunrise Alarm Clock Helps
 
 Your body clock is heavily influenced by light. Bright light in the morning is one of the strongest signals that tells your brain it is time to be awake and alert.

@@ -28,6 +28,11 @@ export const headerData = {
       text: 'Contact',
       href: getPermalink('/contact'),
     },
+    {
+      text: 'Search',
+      href: getPermalink('/search'),
+      icon: 'tabler:search',
+    },
   ],
 
   actions: [],

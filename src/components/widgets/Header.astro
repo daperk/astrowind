@@ -98,19 +98,19 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         </li>
         <li>
           <a
-            href="/category/sleep-tools"
+            href="/tools"
             class:list={[
               'px-1.5 py-1.5 hover:text-primary',
-              { 'aw-link-active': '/category/sleep-tools' === currentPath },
+              { 'aw-link-active': '/tools' === currentPath },
             ]}>Tools</a
           >
         </li>
         <li>
           <a
-            href="/category/habits"
+            href="/habits"
             class:list={[
               'px-1.5 py-1.5 hover:text-primary',
-              { 'aw-link-active': '/category/habits' === currentPath },
+              { 'aw-link-active': '/habits' === currentPath },
             ]}>Habits</a
           >
         </li>
@@ -131,6 +131,19 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
               { 'aw-link-active': '/contact' === currentPath },
             ]}>Contact</a
           >
+        </li>
+        <li>
+          <a
+            href="/search"
+            aria-label="Search"
+            class:list={[
+              'px-1.5 py-1.5 hover:text-primary inline-flex items-center gap-1',
+              { 'aw-link-active': '/search' === currentPath },
+            ]}
+          >
+            <Icon name="tabler:search" class="w-5 h-5" />
+            <span class="md:sr-only">Search</span>
+          </a>
         </li>
       </ul>
     </nav>

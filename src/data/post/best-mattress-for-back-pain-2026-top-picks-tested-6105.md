@@ -42,6 +42,11 @@ Signs your current mattress is causing or worsening back pain:
 
 ---
 
+<figure>
+  <img src="/blog/mattress-back-pain-section.webp" alt="A supportive mattress on a low bed frame in a calm dark bedroom" loading="lazy" />
+  <figcaption>A medium-firm mattress suits most people with low back pain.</figcaption>
+</figure>
+
 ## Firmness and Sleep Position: The Real Guide
 
 This is where most buyers go wrong. The right firmness depends heavily on how you sleep.

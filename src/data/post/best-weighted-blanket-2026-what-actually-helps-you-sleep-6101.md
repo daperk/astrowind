@@ -103,6 +103,11 @@ Prices shift often, so treat these as ballpark figures rather than exact numbers
 
 ---
 
+<figure>
+  <img src="/blog/weighted-blanket-section.webp" alt="Chunky-knit weighted blanket draped over a bed in a dark bedroom" loading="lazy" />
+  <figcaption>A breathable knit weighted blanket gives deep pressure without trapping heat.</figcaption>
+</figure>
+
 ## Cooling: The Biggest Complaint to Avoid
 
 The number one reason people return weighted blankets is heat. Traditional bead-and-polyester blankets act like an insulator, which is great in winter and miserable in summer.

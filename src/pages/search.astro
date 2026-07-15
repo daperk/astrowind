@@ -1,0 +1,139 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Search',
+  description: 'Search across every SleepUpgradeHub guide, review, and habit article to find exactly what you need for better sleep.',
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-4 md:px-6 py-12 sm:py-16 mx-auto max-w-4xl">
+    <header class="mb-8">
+      <h1 class="font-heading text-4xl md:text-5xl font-bold tracking-tight text-brand-primary dark:text-white">
+        Search
+      </h1>
+      <p class="mt-3 text-lg text-muted dark:text-slate-400">
+        Find guides, reviews, and habits across the whole site.
+      </p>
+    </header>
+
+    <div class="relative">
+      <label for="search-input" class="sr-only">Search articles</label>
+      <input
+        id="search-input"
+        type="search"
+        autocomplete="off"
+        placeholder="Search for mattresses, magnesium, white noise..."
+        class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-900 px-4 py-3 text-base text-brand-primary dark:text-white placeholder:text-slate-400 focus:border-brand-accent focus:ring-2 focus:ring-brand-accent focus:outline-none"
+      />
+    </div>
+
+    <p id="search-status" class="mt-4 text-sm text-muted dark:text-slate-400" aria-live="polite"></p>
+
+    <ul id="search-results" class="mt-6 space-y-4"></ul>
+  </section>
+</Layout>
+
+<script>
+  type SearchDoc = {
+    title: string;
+    excerpt: string;
+    url: string;
+    category: string;
+    tags: string[];
+  };
+
+  const input = document.getElementById('search-input') as HTMLInputElement | null;
+  const results = document.getElementById('search-results') as HTMLUListElement | null;
+  const status = document.getElementById('search-status') as HTMLParagraphElement | null;
+
+  let docs: SearchDoc[] = [];
+  let loaded = false;
+
+  const escapeHtml = (value: string) =>
+    value
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+
+  const render = (query: string) => {
+    if (!results || !status) return;
+
+    const q = query.trim().toLowerCase();
+
+    if (!q) {
+      results.innerHTML = '';
+      status.textContent = loaded
+        ? `Type to search ${docs.length} articles.`
+        : 'Loading articles...';
+      return;
+    }
+
+    const scored = docs
+      .map((doc) => {
+        const title = doc.title.toLowerCase();
+        const excerpt = (doc.excerpt || '').toLowerCase();
+        const tags = (doc.tags || []).join(' ').toLowerCase();
+        let score = 0;
+        if (title.includes(q)) score += 3;
+        if (excerpt.includes(q)) score += 2;
+        if (tags.includes(q)) score += 1;
+        return { doc, score };
+      })
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score);
+
+    if (scored.length === 0) {
+      results.innerHTML = '';
+      status.textContent = `No results for "${query}". Try a different word.`;
+      return;
+    }
+
+    status.textContent = `${scored.length} result${scored.length === 1 ? '' : 's'} for "${query}".`;
+
+    results.innerHTML = scored
+      .map(({ doc }) => {
+        const category = doc.category
+          ? `<span class="inline-block mt-2 text-xs font-medium uppercase tracking-wide text-brand-accent">${escapeHtml(doc.category)}</span>`
+          : '';
+        return `
+          <li class="rounded-lg border border-slate-200 dark:border-slate-700 p-5 hover:border-brand-accent transition-colors">
+            <a href="${escapeHtml(doc.url)}" class="block">
+              <h2 class="font-heading text-xl font-semibold text-brand-primary dark:text-white">${escapeHtml(doc.title)}</h2>
+              <p class="mt-1 text-sm text-muted dark:text-slate-400">${escapeHtml(doc.excerpt || '')}</p>
+              ${category}
+            </a>
+          </li>
+        `;
+      })
+      .join('');
+  };
+
+  const loadIndex = async () => {
+    try {
+      const res = await fetch('/search-index.json');
+      docs = (await res.json()) as SearchDoc[];
+      loaded = true;
+      render(input?.value || '');
+    } catch (err) {
+      if (status) status.textContent = 'Search is temporarily unavailable. Please try again later.';
+    }
+  };
+
+  if (input) {
+    // Prefill from ?q=
+    const params = new URLSearchParams(window.location.search);
+    const initial = params.get('q');
+    if (initial) input.value = initial;
+
+    input.addEventListener('input', () => render(input.value));
+    loadIndex();
+  }
+</script>

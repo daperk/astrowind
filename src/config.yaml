@@ -10,7 +10,7 @@ site:
 metadata:
   title:
     default: SleepUpgradeHub
-    template: '%s — SleepUpgradeHub'
+    template: '%s | SleepUpgradeHub'
   description: 'Science-backed guides, tools, and sleep optimization strategies to help you fall asleep faster, sleep deeper, and wake up restored.'
   robots:
     index: true

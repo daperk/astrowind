@@ -42,6 +42,11 @@ That framing keeps expectations realistic, which is exactly how you avoid wastin
 
 ---
 
+<figure>
+  <img src="/blog/essential-oils-section.webp" alt="An amber essential oil bottle with lavender beside a softly misting diffuser" loading="lazy" />
+  <figcaption>Lavender is the best-researched essential oil for relaxation and sleep.</figcaption>
+</figure>
+
 ## The Best Essential Oils for Sleep
 
 Here are the options worth your attention.

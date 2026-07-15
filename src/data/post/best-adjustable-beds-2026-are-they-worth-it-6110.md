@@ -27,6 +27,11 @@ For most people in 2026, the **Saatva Adjustable Base Plus** is the best all-aro
 
 ---
 
+<figure>
+  <img src="/blog/adjustable-bed-section.webp" alt="An adjustable bed with the head section raised in a calm modern dark bedroom" loading="lazy" />
+  <figcaption>Raising the head of the bed can ease snoring and nighttime acid reflux for many people.</figcaption>
+</figure>
+
 ## Who Actually Benefits From an Adjustable Bed
 
 An adjustable base is not for everyone, so here is the honest breakdown.
