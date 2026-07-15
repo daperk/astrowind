@@ -20,6 +20,8 @@ export default {
           'primary-light': '#3a4e6b',
           accent: '#3b5bb5', // accessible indigo (AA on white)
           'accent-light': '#7ea4e3',
+          warm: '#d8a24a', // warm lamp-glow gold — editorial pairing with navy
+          'warm-light': '#e7c489',
         },
       },
       fontFamily: {
