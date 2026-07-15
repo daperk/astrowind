@@ -26,6 +26,11 @@ Good sleep tracking helps you:
 
 **The trap**: Obsessing over nightly scores instead of weekly trends.
 
+<figure>
+  <img src="/blog/smart-ring-charging.webp" alt="A smart sleep tracking ring resting on its charging dock with a blue glow" loading="lazy" />
+  <figcaption>A smart ring tracks your sleep without a screen on your wrist all night.</figcaption>
+</figure>
+
 ## Oura Ring: Best for Comprehensive Sleep Insights
 
 The Oura Ring is the gold standard for sleep tracking without wrist discomfort.

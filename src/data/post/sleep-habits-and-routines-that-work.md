@@ -27,6 +27,11 @@ Don't expect to go from Netflix and phone scrolling to deep sleep instantly. You
 3. Finish eating and drinking caffeine
 4. Start your wind-down activities
 
+<figure>
+  <img src="/blog/bedtime-wind-down.webp" alt="An open book and reading glasses on a bed beside a warm bedside lamp" loading="lazy" />
+  <figcaption>A calm, consistent wind-down signals your body that sleep is coming.</figcaption>
+</figure>
+
 ## Screen Time: The Science-Backed Approach
 
 You don't need to quit screens cold turkey, but you do need boundaries.

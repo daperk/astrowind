@@ -29,6 +29,11 @@ Magnesium deficiency is common and directly impacts sleep quality. It regulates 
 
 **Timing**: 1-2 hours before bed with a small snack
 
+<figure>
+  <img src="/blog/magnesium-supplements.webp" alt="Magnesium sleep supplement capsules and powder on a dark nightstand" loading="lazy" />
+  <figcaption>Magnesium glycinate is a common, gentle starting point for better sleep.</figcaption>
+</figure>
+
 ## L-Theanine: Calm Focus Without Sedation
 
 This amino acid from tea promotes alpha brain waves and reduces stress without drowsiness.

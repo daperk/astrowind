@@ -27,6 +27,11 @@ Light exposure is the most powerful regulator of your circadian rhythm. Even sma
 - Use red or amber lighting for evening activities
 - Avoid screens 60-90 minutes before bed
 
+<figure>
+  <img src="/blog/dark-bedroom-blackout.webp" alt="A dark bedroom with blackout curtains parted to reveal faint moonlight" loading="lazy" />
+  <figcaption>Blocking outside light is the single highest-impact bedroom change for most people.</figcaption>
+</figure>
+
 ## Temperature Optimization
 
 The ideal bedroom temperature for sleep is between 60-67°F (15-19°C). Your body temperature naturally drops during sleep, and a cooler room facilitates this process.

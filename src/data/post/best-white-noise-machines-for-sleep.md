@@ -26,6 +26,11 @@ Sudden noises—dogs barking, traffic, neighbors—wake you by creating contrast
 - Improves sleep onset time
 - Reduces nighttime awakenings
 
+<figure>
+  <img src="/blog/white-noise-machine.webp" alt="A white noise sound machine glowing softly on a nightstand at night" loading="lazy" />
+  <figcaption>A dedicated sound machine delivers steadier noise than most phone apps.</figcaption>
+</figure>
+
 ## Types of Noise: White, Pink, and Brown
 
 Not all noise is created equal.

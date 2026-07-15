@@ -24,6 +24,11 @@ A quality sleep mask can be transformative, especially for shift workers or thos
 - **Weighted silk masks**: Provide gentle pressure for relaxation
 - **Bluetooth sleep masks**: Combine light blocking with calming audio
 
+<figure>
+  <img src="/blog/sleep-tools-flatlay.webp" alt="A sleep eye mask, earplugs, and a small bedside light on dark linen" loading="lazy" />
+  <figcaption>A simple eye mask and earplugs often outperform expensive gadgets.</figcaption>
+</figure>
+
 ## Red Light Therapy Lamps
 
 Red and amber wavelengths don't suppress melatonin like blue light does, making them ideal for evening use.
