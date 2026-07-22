@@ -113,3 +113,22 @@ The tools and techniques in this article aren't magic—they require consistency
 If you're trapped in insomnia's grip, know that recovery is possible even after years of suffering. The combination of evidence-based behavioral approaches, environmental optimization, and personalized interventions can rebuild your relationship with sleep. [Start with optimizing your sleep environment](/optimize-bedroom-environment-for-better-sleep) – it's the easiest first step that yields quick wins to build momentum.
 
 Sleep isn't just something that happens to you – it's a skill that can be relearned. And trust me, few things are more worth relearning.
+
+---
+
+## Frequently Asked Questions
+
+**Q: What finally helped this writer overcome years of insomnia?**
+The breakthrough came from Cognitive Behavioral Therapy for Insomnia (CBT-I), supported by strategic low-dose melatonin, environmental changes like a cooling mattress pad, and consistent sleep tracking. CBT-I therapy at $350 for 8 sessions delivered the greatest return by far.
+
+**Q: Can chronic insomnia really be reversed?**
+Yes. The article cites that 70 to 80% of chronic insomnia responds well to behavioral interventions, and references a Michigan Medicine study showing even 30-year insomnia cases improved in just weeks with the right approach.
+
+**Q: What is sleep restriction therapy?**
+It involves limiting time in bed, initially to 5.5 hours regardless of how little you sleep, to build sleep pressure and reset your sleep drive. As sleep efficiency improves, the sleep window is gradually extended. The writer found it brutal but effective.
+
+**Q: What supplements did the author use for insomnia recovery?**
+A targeted, healthcare-guided stack of just 0.3mg timed melatonin taken three hours before bed, 400mg magnesium glycinate nightly, and 200mg L-theanine for racing thoughts. Total monthly cost was $35 to 45, far less than previously spent on ineffective aids.
+
+**Q: What is the easiest first step to fix insomnia?**
+The author recommends starting with optimizing your sleep environment, since it is the easiest first step that yields quick wins. Their sleep tracker showed a 22% increase in deep sleep within the first week of environmental changes.

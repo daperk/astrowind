@@ -165,3 +165,22 @@ For seniors dealing with night sweats or overheating, the cooling properties of 
 Remember that even the best pillow works better as part of a comprehensive sleep strategy. Consider complementing your new pillow with other [sleep tools and gadgets](/best-sleep-tools-and-gadgets-review) for the ultimate sleep upgrade.
 
 Whichever pillow you choose, investing in quality sleep support is one of the most important things you can do for your health and well-being as you age.
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is the best pillow for older adults in 2025?**
+The Layla Kapok Pillow ($109) is our top recommendation. It uses adjustable shredded memory foam and kapok fill that molds to your head and neck, accommodates all sleep positions, and has a copper-infused cooling cover.
+
+**Q: What should seniors look for in a pillow?**
+Older adults should look for adjustable loft and firmness, pressure relief for the neck and shoulders, washable covers, breathability, durability, and hypoallergenic properties. The pillow should also accommodate position changes throughout the night.
+
+**Q: What is the best budget pillow for older adults?**
+The Tuft & Needle Original Foam Pillow ($75 to $80) offers the best balance of comfort and support at an accessible price. It uses a solid piece of adaptive foam infused with cooling gel and graphite, with a medium loft that works for most positions.
+
+**Q: Which pillow is best for seniors who overheat at night?**
+The Purple Harmony Pillow ($179) provides exceptional cooling with its Purple Grid Hex technology and responsive latex core. It is the most expensive option, but the cooling benefits may justify the price for those with night sweats.
+
+**Q: Are adjustable pillows better for older adults?**
+Adjustable pillows help because seniors often change sleep positions more frequently and have changing needs over time. Options like the Layla Kapok, Coop Original, and Saybrook Adjustable let you add or remove fill for the right height and firmness.

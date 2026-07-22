@@ -163,3 +163,22 @@ By following these steps, you'll protect yourself from the nearly three-fold inc
 [Learn more about the best white noise machines to improve sleep quality](/best-white-noise-machines-for-sleep)
 
 Your body deserves better than the dangerous trade-off tanning beds offer. Choose health-promoting habits that support both beautiful skin and restful sleep without the devastating risks revealed in the latest 2025 research.
+
+---
+
+## Frequently Asked Questions
+
+**Q: How much do tanning beds increase melanoma risk?**
+New 2025 research shows tanning bed users face a 2.85-fold higher chance of developing melanoma than non-users. The Northwestern Medicine study found melanoma in 5.1% of tanning bed users versus just 2.1% of non-users.
+
+**Q: How do tanning beds affect sleep?**
+Tanning beds emit intense UV radiation 10 to 15 times higher than natural sunlight, which sends confusing signals to your brain about time of day. Users often experience delayed sleep onset from suppressed melatonin, fragmented sleep, daytime fatigue, and higher insomnia risk.
+
+**Q: What are safer ways to get vitamin D than tanning beds?**
+Safer options include 15 to 20 minutes of morning sunlight, vitamin D3 supplements (many specialists recommend 1000 to 2000 IU daily), vitamin D-rich foods like fatty fish and fortified milk, and UV-free light therapy lamps.
+
+**Q: Are self-tanning products safe for sleep?**
+Yes. Self-tanning mousses, bronzing makeup, spray tans, and tinted moisturizers provide color without UV exposure, so they do not cause DNA damage or disrupt melatonin production and sleep.
+
+**Q: How does the WHO classify tanning beds?**
+The World Health Organization classifies tanning beds as a Class 1 carcinogen, the same category as tobacco. Women in their 30s and 40s who used tanning beds showed mutation levels comparable to people in their 70s and 80s.

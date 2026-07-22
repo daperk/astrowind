@@ -144,3 +144,22 @@ Remember that consistency matters more than quick fixes. Establish a comprehensi
 By implementing these evidence-based strategies, you can transform your nights from stuffy struggles to clear, restful breathing. Sweet dreams and clear passages await!
 
 *Have you found effective ways to manage nasal congestion at night? Share your experiences in the comments below!*
+
+---
+
+## Frequently Asked Questions
+
+**Q: Why does my nose get more blocked at night?**
+When you lie down, blood flow redistribution causes nasal blood vessels to expand, a phenomenon called positional congestion. Evening drops in cortisol can also increase inflammatory responses, and dry bedroom air plus dust mites and pet dander make it worse.
+
+**Q: What natural remedies help clear a stuffy nose before bed?**
+Elevate your head with a wedge pillow or stacked pillows, stay well hydrated to thin mucus, use steam therapy from a hot shower, and try saline irrigation like a NeilMed Sinus Rinse or the Navage system. Side sleeping also reduces post-nasal drip.
+
+**Q: Do nasal strips work for congestion at night?**
+Yes, mechanical dilators physically open the airways. Breathe Right Extra Strength strips adhere outside the nose to pull the nostrils open, and the Rhinomed Mute inserts inside the nostrils to increase airflow without adhesives, both drug-free.
+
+**Q: How long can I safely use decongestant nasal sprays?**
+Decongestant sprays like Afrin Original should never be used for more than 3 consecutive days, because extended use leads to rebound congestion that can be worse than the original symptoms. Nasal steroid sprays like Flonase are safer for longer-term daily use.
+
+**Q: When should I see a doctor about nasal congestion?**
+See a healthcare provider if congestion persists beyond two weeks despite multiple remedies, or if you notice persistent one-sided congestion, nosebleeds, changes in smell, facial pain, or discolored discharge. Loud snoring or gasping may warrant a sleep evaluation.

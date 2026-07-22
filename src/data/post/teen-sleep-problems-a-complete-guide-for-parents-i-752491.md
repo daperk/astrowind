@@ -255,3 +255,22 @@ For lasting success:
 In our achievement-oriented culture, sleep is often sacrificed first. Help your teen understand that quality sleep isn't a luxury or weakness - it's the foundation that makes everything else possible. By investing in better sleep habits now, you're giving your teenager not just better days and improved health, but essential skills for lifelong wellbeing in our 24/7 world.
 
 The teenage years are challenging enough without the burden of chronic sleep deprivation. With patience, consistency, and the evidence-based approaches outlined in this guide, you can help your teen develop healthier sleep patterns that will serve them throughout life.
+
+---
+
+## Frequently Asked Questions
+
+**Q: How much sleep do teenagers actually need?**
+Teens aged 13 to 18 need 8 to 10 hours of sleep nightly. According to CDC data, 77% of American teenagers fail to get the recommended 8 hours on school nights.
+
+**Q: Why do teens naturally stay up later?**
+Around puberty, adolescents experience a biological shift in their circadian rhythm that delays sleepiness by about two hours. While younger children feel tired at 8 or 9 PM, teenagers don't feel drowsy until 10 or 11 PM.
+
+**Q: What time should school start for teenagers?**
+The American Academy of Pediatrics, the CDC, and the American Medical Association all recommend middle and high schools start no earlier than 8:30 AM to align with teens' natural rhythms. Schools that did so report better attendance and fewer drowsy-driving accidents.
+
+**Q: What is the gold-standard treatment for teen insomnia?**
+Cognitive Behavioral Therapy for Insomnia (CBT-I) adapted for adolescents is the gold-standard first-line treatment, with success rates of 70 to 80% in teens. It includes sleep restriction, stimulus control, cognitive restructuring, and relaxation training.
+
+**Q: How should screens be managed for better teen sleep?**
+Devices should be turned off and removed from the bedroom ideally 60 to 90 minutes before bedtime. Creating a family charging station outside bedrooms keeps all devices out overnight, since blue light suppresses melatonin.

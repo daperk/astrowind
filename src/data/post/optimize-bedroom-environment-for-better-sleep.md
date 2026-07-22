@@ -67,3 +67,22 @@ Poor air quality and incorrect humidity levels can cause restless sleep, dry thr
 Your bedroom should signal "sleep" to your brain. Remove work materials, exercise equipment, and minimize clutter. Reserve your bed exclusively for sleep and intimacy—not for scrolling, working, or watching TV.
 
 The investment you make in your sleep environment pays dividends in energy, focus, and overall health.
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is the ideal bedroom temperature for sleep?**
+The ideal bedroom temperature is between 60 and 67°F, or 15 to 19°C, with a nighttime thermostat setting of 65 to 68°F. Your body temperature naturally drops during sleep, and a cooler room helps that process along.
+
+**Q: What is the single most impactful change for better sleep?**
+Light control is the foundation, and blocking outside light is the single highest-impact bedroom change for most people. Even small amounts of light can suppress melatonin production and disrupt your sleep-wake cycle, so blackout curtains make a big difference.
+
+**Q: Is silence or white noise better for sleep?**
+Silence is not always best. Consistent, gentle noise sometimes works better than pure quiet. White noise machines mask disruptive sounds, pink noise offers deeper and more natural masking, and quality earplugs work if you prefer complete silence.
+
+**Q: What humidity level is best for a bedroom?**
+Aim to maintain 30 to 50% humidity using a humidifier or dehumidifier. Poor air quality and incorrect humidity can cause restless sleep, dry throat, and congestion, so HEPA air purifiers and proper ventilation also help.
+
+**Q: Should I use my bed for anything besides sleep?**
+No. Reserve your bed exclusively for sleep and intimacy, not for scrolling, working, or watching TV. Removing work materials and clutter helps your bedroom signal sleep to your brain rather than sending mixed signals.

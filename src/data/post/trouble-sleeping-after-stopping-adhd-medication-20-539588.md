@@ -181,3 +181,22 @@ Remember that better sleep is possible without medication. Many adults report th
 If sleep problems persist beyond 3 months or significantly impact your daily functioning, consult with a sleep specialist who understands ADHD. Sometimes underlying sleep disorders that were masked by medication need specific treatment.
 
 Your path to naturally restful sleep after ADHD medication is challenging but achievable—and the reward of waking refreshed without pharmaceutical assistance is worth the journey.
+
+---
+
+## Frequently Asked Questions
+
+**Q: Why is it hard to sleep after stopping ADHD medication?**
+Stimulants like Adderall, Ritalin, and Vyvanse raise dopamine and norepinephrine, which suppress natural melatonin and keep your brain in "go mode." When you stop, the resulting imbalance causes rebound hyperactivity, disrupted circadian rhythms, neurotransmitter deficits, and intense REM rebound dreams.
+
+**Q: How long do sleep problems last after stopping ADHD medication?**
+Sleep disruptions typically last 2 to 10 weeks, with the first 10 days being most challenging. Many people return to baseline or better sleep within 1 to 3 months.
+
+**Q: Should I stop ADHD medication abruptly to fix my sleep?**
+No. Gradual tapering rather than abrupt discontinuation, done with your doctor, is one of the most successful strategies. Abrupt stopping tends to worsen the rebound.
+
+**Q: What supplements help with sleep during ADHD medication withdrawal?**
+Options include magnesium glycinate (300 to 400mg at dinner), L-theanine (200mg before bed), low-dose time-released melatonin (0.5 to 1mg two hours before bed), and omega-3s. Consult your healthcare provider first, and use them for 4 to 12 weeks during the transition.
+
+**Q: Does exercise help sleep recovery after stopping ADHD medication?**
+Yes. A Stanford study published in January 2025 found that 30 minutes of moderate cardio 3 to 4 times weekly improved sleep quality by 65% in adults who recently discontinued ADHD medication. Avoid high-intensity exercise within 4 hours of bedtime.

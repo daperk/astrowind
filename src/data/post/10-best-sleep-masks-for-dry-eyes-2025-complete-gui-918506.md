@@ -195,3 +195,22 @@ Remember that dry eye symptoms can indicate underlying health conditions. While 
 Your eyes deserve the same attention as the rest of your sleep setup. After all, waking up with comfortable, refreshed eyes sets the tone for your entire day.
 
 *Note: Prices may vary slightly by retailer. All prices listed reflect manufacturer's suggested retail prices as of February 2025.*
+
+---
+
+## Frequently Asked Questions
+
+**Q: Why do dry eyes get worse during sleep?**
+Tear production naturally decreases during sleep, blinking stops so tears are not distributed, some people sleep with their eyes partially open, and heating or cooling systems reduce ambient humidity. Standard masks can also create friction against the eyelid.
+
+**Q: How is a dry eye sleep mask different from a regular blackout mask?**
+A specialized dry eye mask creates a sealed moisture chamber that retains hydration and prevents tear evaporation, prioritizing moisture over darkness, while standard blackout masks focus only on blocking light.
+
+**Q: Which sleep mask is best for dry eyes overall?**
+The Blinkjoy Hydrating Sleep Mask 2nd Gen at $85 is the top pick, using medical-grade silicone cups to create a moisture chamber around each eye while staying low-profile enough for side sleepers.
+
+**Q: Are there dry eye masks that work with a CPAP machine?**
+Yes, the EyeSeals 4.0 Clear at $63.95 has a transparent, sealed design that is CPAP-compatible and helps with nocturnal lagophthalmos, where the eyes stay partially open during sleep.
+
+**Q: How do I use a dry eye sleep mask for the best results?**
+Clean your eyelids, apply lubricating drops before putting on the mask, ensure a proper fit with no pressure points, clean the mask regularly, and replace it roughly every 6 to 12 months. Nightly use provides cumulative benefits.

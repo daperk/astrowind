@@ -136,3 +136,22 @@ While technology and supplements can support better sleep, the fundamentals rema
 Remember the clear dose-response relationship confirmed by research: the greater the improvement in your sleep quality, the greater the improvement in your health outcomes. This makes sleep optimization one of the most powerful and accessible ways to enhance your wellbeing in 2025.
 
 Your best life begins with a good night's sleep. It's time to make it a priority.
+
+---
+
+## Frequently Asked Questions
+
+**Q: How does poor sleep affect mental health?**
+Adults sleeping six hours or less per night are approximately 2.5 times more likely to experience frequent mental distress. People with chronic insomnia have a two-fold increased risk of developing depression later in life.
+
+**Q: How much sleep do adults need for good health?**
+Most experts recommend 7 to 9 hours of high-quality sleep for adults, and consider it as important to health and wellbeing as nutrition and exercise. Nearly 46% of adults report poor sleep quality.
+
+**Q: How does sleep deprivation affect the body physically?**
+Sleep deprivation is a significant risk factor for hypertension, stroke, and coronary heart disease, and increases risks for obesity and type 2 diabetes. Even one night of poor sleep reduces immune cell activity.
+
+**Q: Why does sleep matter for memory and focus?**
+Memory consolidation happens primarily during deep sleep. Even moderate sleep restriction of 6 hours per night for two weeks produces cognitive deficits equivalent to going without sleep entirely for 24 to 48 hours.
+
+**Q: Which supplements are supported for better sleep?**
+Options with evidence include melatonin (0.5 to 5mg) for sleep disorders and jet lag, magnesium glycinate (300 to 400mg), L-theanine (200 to 400mg), and ashwagandha (300 to 600mg) for cortisol and anxiety.

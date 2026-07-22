@@ -148,3 +148,22 @@ For personalized guidance, consider consulting a sleep specialist who can identi
 Remember: sleep is a natural process. With the right approach and tools, your body can remember how to do it again—even after the most persistent insomnia episode.
 
 [Learn about the best white noise machines to help you sleep](/best-white-noise-machines-for-sleep)
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is the most effective treatment for insomnia in 2025?**
+Cognitive Behavioral Therapy for Insomnia (CBT-I) remains the gold standard and first-line treatment recommended by sleep specialists, outperforming medications in long-term studies because it addresses the root causes rather than masking symptoms.
+
+**Q: What are the different types of insomnia?**
+There are three main types: sleep onset insomnia, which is difficulty falling asleep, sleep maintenance insomnia, which is difficulty staying asleep, and terminal insomnia, which is waking too early. Identifying your type is the first step toward effective treatment.
+
+**Q: Can phone use before bed cause insomnia?**
+Yes. The article cites a Harvard sleep study finding that using phones within 30 minutes of bedtime increased sleep onset latency by an average of 27 minutes, since blue light disrupts melatonin production more severely than previously thought.
+
+**Q: What supplements help with an insomnia episode?**
+Melatonin at a 1 to 3mg starting dose taken 30 to 60 minutes before bed is the most studied, along with magnesium glycinate, ashwagandha, L-theanine, and valerian root. Choose brands with third-party testing and consult your healthcare provider first.
+
+**Q: How long should I wait before seeking help for insomnia?**
+If your insomnia persists for more than three weeks, consider pursuing CBT-I through a specialist or a digital program. A sleep specialist can also identify underlying medical conditions that may be contributing to your episodes.

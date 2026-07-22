@@ -163,3 +163,22 @@ For personalized help with your sleep habits, check out our guides on [sleep hab
 Remember, deep sleep is highly individual—what works for many Redditors may not work for you. Track your results, be consistent with any new intervention for at least 2 weeks, and consult a healthcare provider before starting any new supplement regimen.
 
 What's your experience with increasing deep sleep? Share in the comments below!
+
+---
+
+## Frequently Asked Questions
+
+**Q: Which supplement do Reddit users recommend most for deep sleep?**
+Magnesium, especially magnesium glycinate, is the most recommended supplement, with over 80 percent of users reporting improvements. The typical dose is 200 to 400mg taken 1 to 2 hours before bed.
+
+**Q: What bedroom temperature is best for deep sleep?**
+A cooler room between 65 and 67°F, or 18 to 19°C, helps your body lower its core temperature to enter and maintain deep sleep. Reddit users rate this as one of the most effective non-supplement interventions.
+
+**Q: How does glycine help deep sleep and how much should I take?**
+Glycine lowers your core body temperature, a key signal for entering deep sleep, and has inhibitory effects on brain activity. The common dose is 3 grams before bed, usually as a powder dissolved in water.
+
+**Q: Does alcohol affect deep sleep?**
+Yes, Reddit users consistently report that even 1 to 2 drinks can reduce deep sleep by 20 to 30 percent. Late-night screens, evening caffeine, and many OTC sleep aids are also flagged as deep sleep disruptors.
+
+**Q: How can morning sunlight increase deep sleep?**
+Getting 10 to 15 minutes of morning sunlight within 30 to 60 minutes of waking, without sunglasses, resets your circadian rhythm and triggers hormonal changes that increase deep sleep roughly 14 to 16 hours later.

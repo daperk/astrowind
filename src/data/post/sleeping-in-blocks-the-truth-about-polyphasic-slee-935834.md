@@ -204,3 +204,22 @@ If you're struggling with sleep quality, you'll likely see better results by foc
 Remember that sleep isn't just downtime—it's an active biological process crucial for physical restoration, cognitive function, and emotional well-being. In the quest for productivity, sacrificing sleep quality is ultimately counterproductive.
 
 The most sustainable approach to better sleep in 2025 remains consistent: prioritize quality sleep in patterns that work with your body's natural rhythms, not against them.
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is polyphasic sleep?**
+Polyphasic sleep is any pattern where rest is divided into multiple periods across 24 hours, rather than one consolidated nighttime block. Humans are naturally somewhat biphasic, but more extreme polyphasic schedules are largely artificial constructs.
+
+**Q: Is sleeping in blocks safe?**
+Current research does not support extreme polyphasic schedules that reduce total sleep below 7 hours. Moderate biphasic patterns can work for some people, but extreme forms like the Uberman schedule risk serious health consequences.
+
+**Q: What is the safest way to try block sleeping?**
+Start with a modest biphasic schedule: a 5.5 to 6 hour nighttime core sleep plus one 90-minute daytime nap, giving about 7 to 7.5 hours total. Implement gradually, shifting times in 15 to 30 minute increments and allowing 2 to 3 weeks per stage.
+
+**Q: Who should avoid polyphasic sleep entirely?**
+People with existing sleep disorders, mental health conditions, or cardiovascular issues should avoid it, along with children, teenagers, and athletes in training whose recovery relies on consolidated deep sleep.
+
+**Q: What are the documented risks of extreme block sleeping?**
+A 2025 meta-analysis found polyphasic sleepers under 6 hours total showed deficits in working memory, attention, and decision-making equivalent to being legally intoxicated. Other risks include metabolic disruption, cardiovascular strain, and mood disorders.

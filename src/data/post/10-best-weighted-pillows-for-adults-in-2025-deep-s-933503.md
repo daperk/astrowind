@@ -219,3 +219,22 @@ Whichever weighted pillow you choose, consistency is key to experiencing the ful
 Have you tried a weighted pillow? We'd love to hear about your experience in the comments below!
 
 *Note: Prices are accurate as of June 2025 but may vary by retailer and special promotions.*
+
+---
+
+## Frequently Asked Questions
+
+**Q: How do weighted pillows work?**
+They use deep pressure stimulation, which activates the parasympathetic nervous system responsible for the rest and digest response. This can reduce cortisol, increase serotonin and dopamine, and promote melatonin release for better sleep.
+
+**Q: How heavy should my weighted pillow be?**
+The general guideline is about 5 to 10 percent of your body weight. For example, a 150-pound adult suits a 7 to 8 pound pillow, and a 180-pound adult suits a 9 to 10 pound pillow. If you are new to weighted products, start lighter.
+
+**Q: What is the best weighted pillow overall for 2025?**
+The Quiet Mind Original Weighted Pillow at $89.99 is the top pick, a versatile 9-pound pillow with a cooling cotton cover that can be hugged for sleep, placed on your lap for meditation, or draped across your shoulders.
+
+**Q: Are weighted pillows better than weighted blankets?**
+Weighted pillows provide targeted pressure to specific areas without overheating, unlike blankets that can feel too hot or restrictive, which makes them suitable for year-round use and for people who find blankets confining.
+
+**Q: Who should avoid weighted pillows?**
+Use caution or consult a healthcare provider if you have respiratory issues or sleep apnea, circulatory problems, recent surgeries or injuries, or claustrophobia related to pressure. Pregnant women should only use specially designed pregnancy weighted pillows that avoid abdominal pressure.

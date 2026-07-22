@@ -123,3 +123,22 @@ For those whose disruption stems primarily from physical discomfort, prioritize 
 Most importantly, treat your intervention as a comprehensive system rather than isolated products. The synergy between behavioral changes, environmental optimization, and targeted product support creates the powerful reset your disrupted cycle needs. With patience and consistency, even long-established patterns can be transformed into restorative, refreshing sleep.
 
 [Discover which white noise machines best support sleep](/best-white-noise-machines-for-sleep)
+
+---
+
+## Frequently Asked Questions
+
+**Q: Why does sleep get worse in the latter stages of life?**
+After 50, sleep architecture changes with less deep sleep, more nighttime awakenings, and shifts in melatonin release. This causes phase advancement, meaning going to bed earlier but waking before dawn unable to fall back asleep, and it compounds age-related conditions like arthritis.
+
+**Q: What room temperature is best for older adults?**
+The ideal sleep temperature of 65 to 68°F, or 18 to 20°C, becomes even more critical as the aging body's thermoregulation changes. Products like the ChiliSleep OOLER system provide precise temperature control to address night sweats that disrupt sleep.
+
+**Q: Does light therapy help reset a disrupted sleep cycle?**
+Yes. As we age, our eyes transmit less light to the brain's circadian center, so stronger cues help. Using a lamp like the Verilux HappyLight, which delivers 10,000 lux, for 20 to 30 minutes each morning signals your brain to properly time melatonin release later.
+
+**Q: How much melatonin should older adults take?**
+The guide points to a controlled 3mg dose, such as the Nature Made Melatonin Gummies, which is optimal for most older adults to avoid the hangover effect of higher doses. Taking it about 2 hours before your desired bedtime helps reset circadian timing.
+
+**Q: Is napping a good way to catch up on lost sleep in later life?**
+Often not. Many attempt to compensate with daytime napping, but this frequently backfires by further fragmenting nighttime sleep. Consolidating your sleep window to match actual sleep duration tends to work better.

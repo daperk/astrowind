@@ -151,3 +151,22 @@ For more detailed information on optimizing your bedroom environment for better 
 And if you're curious about the tech side of sleep improvement, don't miss our [best sleep trackers comparison guide](/best-sleep-trackers-comparison-guide) to find the right tool for your sleep optimization journey.
 
 What heavy sleep techniques have worked for you? Have you tried any of Reddit's recommendations? Share your experience in the comments below!
+
+---
+
+## Frequently Asked Questions
+
+**Q: What weight should a weighted blanket be for heavy sleep?**
+Redditors recommend a weighted blanket that is approximately 10% of your body weight. Popular picks range from the YnM at $89 to the Gravity Blanket Premium at $179, with glass beads preferred over plastic pellets.
+
+**Q: What is heavy sleep exactly?**
+Heavy sleep is what scientists call slow-wave sleep or deep sleep, which is stages 3 and 4 of non-REM sleep. During this stage your brain produces slow delta waves while your body repairs tissues, strengthens immunity, and consolidates memories.
+
+**Q: Which supplements does Reddit rank highest for deeper sleep?**
+The 2025 Reddit hierarchy puts magnesium glycinate (300 to 400mg) first, followed by L-theanine (200mg), glycine (3g), and tart cherry extract. Many users report deeper sleep when combining magnesium and glycine.
+
+**Q: How long does it take for a new sleep routine to work?**
+Many Redditors report the routine took 2 to 3 weeks to show results, then increased their deep sleep percentage from an average of 15% to 22 to 25% of total sleep time.
+
+**Q: When should I see a doctor about my sleep?**
+Reddit communities recommend professional help for snoring plus daytime fatigue, persistent insomnia despite standard advice, excessive daytime sleepiness after 8 or more hours in bed, sudden sleep pattern changes, or depression symptoms alongside sleep problems.

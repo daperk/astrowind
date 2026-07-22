@@ -83,3 +83,25 @@ If you work late or have a delayed sleep phase, you need a more intentional rout
 ## Making Habits Stick
 
 Don't overhaul everything at once. Pick one habit, implement it for 2 weeks, then add another. Small, consistent changes compound into transformative results.
+
+---
+
+## Frequently Asked Questions
+
+**Q: How early before bed should I start winding down?**
+Start about 90 minutes before bed. Dim the lights throughout your home, lower the thermostat by 2 to 3 degrees, finish eating and caffeine, and begin your wind-down activities.
+
+**Q: Do I have to give up screens completely before bed?**
+No, but you need boundaries. Use blue light filters after sunset, switch to red or amber night lights, read on an e-reader with warm backlighting, and keep screen brightness at 30% or lower if you must use them.
+
+**Q: How consistent does my sleep schedule need to be?**
+Go to bed and wake up at roughly the same time every day, even on weekends. Choose a wake time you can maintain 7 days a week, and if you must sleep in, limit it to 60 to 90 minutes maximum.
+
+**Q: What should I avoid doing before bed?**
+Avoid intense exercise within 3 hours of bedtime, large or spicy meals late at night, alcohol, emotionally charged conversations, and checking email or social media one last time.
+
+**Q: How should shift workers or night owls adjust their routine?**
+Use bright light exposure at your personal morning, create total darkness during your sleep window with blackout solutions, use strategic naps of either 20 or 90 minutes, and time caffeine carefully.
+
+**Q: What is the best way to make new sleep habits stick?**
+Do not overhaul everything at once. Pick one habit, practice it for 2 weeks, then add another. Small, consistent changes compound over time.

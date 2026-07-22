@@ -101,3 +101,22 @@ Take 60-90 minutes before bed with a small snack.
 If you have medical conditions, take medications, or are pregnant/nursing, consult your doctor before starting any supplement regimen.
 
 Supplements work best as part of a comprehensive sleep strategy—not as a standalone fix.
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is the best magnesium form for sleep?**
+Magnesium glycinate is a common, gentle starting point at 200 to 400mg because it is highly absorbable and easy on digestion. Magnesium threonate crosses the blood-brain barrier, and citrate has more of a laxative effect.
+
+**Q: How much melatonin should I take for sleep?**
+A low dose of 0.3 to 1mg works best for most people, not the 5 to 10mg found in many products. Use it strategically for jet lag, shift work, or circadian rhythm reset rather than every night.
+
+**Q: Can I combine sleep supplements safely?**
+A simple stack of magnesium glycinate (300mg), L-theanine (200mg), and glycine (3g) taken 60 to 90 minutes before bed with a small snack works well together. Always consult your doctor first if you have medical conditions, take medications, or are pregnant or nursing.
+
+**Q: Which sleep supplements should I avoid?**
+This guide advises against valerian root due to inconsistent quality and grogginess, CBD for minimal sleep evidence, 5-HTP because it can deplete other neurotransmitters long-term, and high-dose melatonin since more is not better.
+
+**Q: When should I take glycine for sleep?**
+Take 3 to 5 grams of glycine powder mixed in water 30 to 60 minutes before bed. It lowers core body temperature and improves sleep quality without grogginess, and may even improve morning alertness.

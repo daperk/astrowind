@@ -221,3 +221,22 @@ Remember that the best wedge pillow for you depends on your specific sleep conce
 [Check our guide on the best sleep trackers to monitor your improvement](/best-sleep-trackers-comparison-guide)
 
 Upgrade your sleep position today, and you might be surprised at how something as simple as a wedge-shaped pillow can transform your sleep quality and overall health.
+
+---
+
+## Frequently Asked Questions
+
+**Q: How does a wedge pillow help with acid reflux?**
+By elevating your upper body about 10 to 12 inches, a wedge pillow creates a downward slope that uses gravity to keep stomach acid from traveling up your esophagus during sleep, reducing nighttime heartburn.
+
+**Q: What height and incline should a wedge pillow have?**
+Wedge pillows range from 7 to 15 inches at the highest point. Gentle 7 to 8 inch heights suit mild reflux and reading, 10 to 12 inches handle moderate reflux and snoring, and 12 to 15 inches provide maximum elevation. For acid reflux, research suggests at least a 10-degree angle.
+
+**Q: Which wedge pillow is best overall for 2025?**
+The Helix Wedge Pillow at $95 is the top pick, using gel-infused memory foam to address heat retention, with a 12-inch height and 10-degree incline that balances reflux relief, snoring reduction, and reading posture.
+
+**Q: Can a wedge pillow be used for leg elevation?**
+Yes. Place the wedge at the foot of the bed with the high edge under your knees and the slope toward your feet. Elevating the legs improves venous return and reduces swelling, which helps with varicose veins, pregnancy leg swelling, and recovery.
+
+**Q: What wedge pillow material should I choose?**
+Memory foam offers superior contouring but can retain heat unless gel-infused, polyfoam is more affordable and generally cooler, and latex offers durability and temperature regulation. Choose memory foam for pressure relief or latex and gel-infused options if you sleep hot.

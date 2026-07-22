@@ -143,3 +143,22 @@ Ignore:
 Don't let tracking create sleep anxiety. If seeing the data makes you stressed, stop tracking and focus on consistent sleep habits instead.
 
 Use trackers to identify patterns and test interventions—not to judge yourself every morning.
+
+---
+
+## Frequently Asked Questions
+
+**Q: Which sleep tracker is the most accurate?**
+The Oura Ring is described here as the gold standard for sleep tracking, offering highly accurate heart rate variability and sleep staging without wrist discomfort. It runs $299 to $549 and requires a $5.99 per month subscription.
+
+**Q: What is the best sleep tracker for athletes?**
+The WHOOP Strap focuses on recovery, strain, and sleep as performance metrics, with a recovery score that guides training intensity. It is subscription-only at $30 per month or $239 per year with no one-time purchase option.
+
+**Q: Is the Apple Watch good for sleep tracking?**
+It is convenient if you already own one, offering sleep staging, heart rate, blood oxygen, and Apple Health integration with no extra subscription for basic tracking. The main drawback is daily charging, which creates awkward timing for overnight wear.
+
+**Q: Which sleep tracker has the best battery life?**
+Garmin watches excel here with 5 to 14 day battery life depending on the model, plus detailed sleep staging and no subscription required. They are bulkier than rings or minimal bands.
+
+**Q: What sleep metrics actually matter?**
+Focus on sleep efficiency, deep sleep and REM percentages over weeks, HRV trends, and resting heart rate. Ignore highly variable nightly scores, exact sleep stage times, and often-inaccurate sleep debt.

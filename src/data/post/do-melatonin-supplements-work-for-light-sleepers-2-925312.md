@@ -125,3 +125,22 @@ Most importantly, recognize that being a light sleeper often requires personaliz
 By combining targeted physical barriers like earplugs with good sleep hygiene practices that support natural melatonin production, most light sleepers can significantly improve their rest quality without relying heavily on supplements.
 
 [Discover how sleep tracking can transform your sleep quality](/best-sleep-trackers-comparison-guide)
+
+---
+
+## Frequently Asked Questions
+
+**Q: Does melatonin work for light sleepers?**
+Melatonin shows modest benefits mainly for falling asleep, reducing sleep onset time by roughly 5 to 10 minutes, but there is limited evidence it helps you stay asleep through noise or other disturbances. The best results come from adults over 55 using 2mg modified-release formulations.
+
+**Q: Are earplugs better than melatonin for noise-sensitive sleepers?**
+For light sleepers disturbed mainly by noise, earplugs are often more effective because they target the actual problem. Quality sleep earplugs reduce noise by 20 to 33 decibels, with no risk of dependency and fewer side effects than hormonal supplements.
+
+**Q: How much melatonin should I take and when?**
+Start with the lowest effective dose, typically 0.5 to 2mg, with sleep specialists favoring 2mg modified-release formulations, especially for adults over 55. Take it 1 to 2 hours before your desired bedtime, not right when you want to sleep.
+
+**Q: Is long-term melatonin use safe?**
+The article cites a large 2025 preliminary study that linked long-term use of 12 months or more to a 90% higher heart failure risk and 3.5 times higher hospitalization rates. It advises limiting continuous use to under 3 months without medical supervision while these findings await peer review.
+
+**Q: Why do melatonin supplements vary so much in quality?**
+2025 quality testing found that 71% of melatonin supplements differed from their label claims by more than 10%, ranging from 83% to 478% of the stated amount. Choosing products with third-party testing from organizations like USP or NSF helps ensure accurate potency.

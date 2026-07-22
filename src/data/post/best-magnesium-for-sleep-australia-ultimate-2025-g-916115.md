@@ -185,3 +185,22 @@ Remember that supplements work best as part of a comprehensive sleep hygiene app
 [Learn about complementing your magnesium with white noise for enhanced sleep](/best-white-noise-machines-for-sleep)
 
 *This article is regularly updated to reflect the latest products, pricing, and user experiences in the Australian market. Last updated: January 2025.*
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is the best magnesium for sleep in Australia?**
+Switch Nutrition Mag-Gly ($39.95 for 90 capsules) is our top recommendation for most Australians. It delivers 300mg of elemental magnesium in the highly bioavailable glycinate form, combining excellent absorption with minimal digestive issues at under $0.50 per day.
+
+**Q: Which type of magnesium is best for sleep?**
+Magnesium glycinate (also called bisglycinate) reigns supreme for sleep support. It bonds magnesium to glycine, which itself promotes relaxation, offers high bioavailability, and rarely causes the digestive discomfort associated with other forms.
+
+**Q: What magnesium is best for anxiety-related sleep issues?**
+For Youth The Unwind ($54.99) pairs Magnesium L-Threonate with L-theanine. L-Threonate is the only form proven to efficiently cross the blood-brain barrier, making it especially effective for racing thoughts and anxiety-induced insomnia.
+
+**Q: When should I take magnesium for sleep?**
+Take your magnesium supplement 1 to 2 hours before bedtime for optimal absorption. Start with half the recommended dose for the first week to assess tolerance, then gradually increase to 300 to 400mg of elemental magnesium daily.
+
+**Q: Who should be cautious about taking magnesium?**
+Exercise caution if you have kidney disease or impaired kidney function, certain cardiac conditions, low blood pressure, or digestive disorders like inflammatory bowel disease. Always consult your healthcare provider before starting, especially if you take medications.

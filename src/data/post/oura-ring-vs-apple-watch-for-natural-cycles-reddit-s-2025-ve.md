@@ -213,3 +213,22 @@ Whichever device you choose, expect a 2-4 week adjustment period as the algorith
 - [Sleep Tools Review](/best-sleep-tools-and-gadgets-review)
 
 *Prices and features accurate at time of writing (December 2025). Always check manufacturer websites for the most current information.*
+
+---
+
+## Frequently Asked Questions
+
+**Q: Does the Oura Ring or Apple Watch measure true basal body temperature for Natural Cycles?**
+Neither device measures true basal body temperature. Both track skin temperature changes from your baseline, and Natural Cycles compensates for this with device-specific calibration.
+
+**Q: Which Apple Watch models work with Natural Cycles?**
+Apple Watch Series 8 or newer include the temperature sensors needed for Natural Cycles cycle tracking. The Apple Watch SE 2024 version at $279 also offers compatible temperature sensing at a lower price point.
+
+**Q: How many nights per week do I need to wear my device for Natural Cycles to work?**
+Natural Cycles requires temperature data from at least 5 nights per week for optimal accuracy. The Oura Ring's 7-day battery makes consistent overnight wear easier than the Apple Watch's daily charging routine.
+
+**Q: How long before my device gives reliable readings?**
+Most Reddit users report both devices establish reliable baseline readings within 2 to 4 weeks of consistent use. Clear temperature patterns matching your cycle phases usually appear within 1 to 2 months.
+
+**Q: How effective is Natural Cycles as birth control?**
+Natural Cycles reports 93% effectiveness with perfect use and 82 to 87% with typical use. Observing additional signs like cervical mucus can enhance accuracy.

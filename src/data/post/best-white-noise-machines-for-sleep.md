@@ -132,3 +132,22 @@ Avoid gimmicks:
 **Best budget**: A simple fan
 
 White noise machines are one of the highest ROI sleep investments—especially if you live in a noisy environment or are a light sleeper.
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is the difference between white, pink, and brown noise?**
+White noise is high-frequency like static or a fan and masks sharp sudden sounds. Pink noise is deeper and more balanced like rain, and research suggests it may improve deep sleep and memory. Brown noise is low-frequency like a waterfall and many find it less irritating.
+
+**Q: What is the best white noise machine overall?**
+This guide names the LectroFan EVO at around $50 as best overall for its 22 sound variations and strong volume for noisy environments. The Yogasleep Dohm is best for natural mechanical sound, and the Hatch Restore is best as an all-in-one with a sunrise alarm.
+
+**Q: Are white noise machines better than phone apps?**
+For bedroom use, dedicated machines win because they have better speakers, consistent volume, and keep your phone out of the bedroom. Apps like myNoise or Dark Noise are better for travel since they are free or cheap with infinite variety.
+
+**Q: Can I just use a fan instead of a white noise machine?**
+Yes. A simple box fan costs $20 to 40 and provides genuine mechanical sound plus airflow for temperature regulation, with no app or battery required and fewer parts to break. It is the recommended budget option.
+
+**Q: How should I position a white noise machine for best results?**
+Place it near the noise source, between you and the disruptive sound. Keep the volume high enough to mask noise without being jarring, and use it every night so your brain associates the sound with sleep.

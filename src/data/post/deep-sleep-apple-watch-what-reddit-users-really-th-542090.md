@@ -150,3 +150,22 @@ If you're serious about sleep tracking, pair your Apple Watch with good sleep hy
 For those with suspected sleep disorders, Reddit overwhelmingly recommends professional sleep studies rather than relying exclusively on consumer wearables. Your Apple Watch might flag the issue, but it can't diagnose or treat it.
 
 Sleep well, track smartly, but don't lose sleep over your deep sleep numbers.
+
+---
+
+## Frequently Asked Questions
+
+**Q: Is the Apple Watch accurate for tracking deep sleep?**
+The Apple Watch is excellent at tracking when and how long you sleep, but only moderately accurate for deep sleep staging. It relies mainly on movement data from the accelerometer, which limits accuracy compared to the brain wave monitoring used in sleep labs.
+
+**Q: Why does my Apple Watch show less deep sleep than my Oura Ring?**
+Redditors who wear both report that Apple consistently underreports deep sleep compared to Oura. Oura's ring form factor does not move during sleep and it focuses on recovery metrics, which many users and sleep doctors find gives higher, often more realistic deep sleep readings.
+
+**Q: How can I improve my Apple Watch sleep tracking accuracy?**
+Wear the watch snug about an inch above your wrist bone, manually turn on Sleep Focus when you get in bed, keep watchOS updated, charge before bed rather than right at sleep, and use a comfortable band like a nylon sport loop.
+
+**Q: Which Apple Watch is best for sleep tracking?**
+Reddit often recommends the Series 11 at $399 for its balance of accuracy and features, while battery-conscious users prefer the Ultra 3 at $799 for up to 36 hours of battery. The SE 2 at $249 is a popular budget option with essentially similar sleep data.
+
+**Q: What actually increases deep sleep beyond tracking it?**
+Reddit users cite a consistent sleep schedule, lowering bedroom temperature to 65 to 68°F, magnesium glycinate before bed, limiting alcohol, using a white noise machine like the Yogasleep Dohm, and blocking blue light before bed. Morning exercise was linked to better deep sleep than evening workouts.

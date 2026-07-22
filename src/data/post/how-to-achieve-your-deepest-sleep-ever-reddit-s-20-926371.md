@@ -145,3 +145,22 @@ Remember what Reddit users emphasize most: deep sleep optimization is highly ind
 [Explore our guide on the best sleep supplements](/best-sleep-supplements-guide)
 
 What deep sleep techniques have worked for you? Share your experiences in the comments below!
+
+---
+
+## Frequently Asked Questions
+
+**Q: How much deep sleep should I get each night?**
+According to sleep neurologists cited in this guide, most adults should aim for 1.5 to 2 hours of deep sleep per night, yet average just 45 to 60 minutes. Deep sleep also declines with age, by roughly 2% per decade after 30.
+
+**Q: What supplements does Reddit recommend for deep sleep?**
+The top-ranked stack is magnesium glycinate at 300 to 400mg, glycine at 3g, and L-theanine at 200 to 400mg, with tart cherry extract and apigenin also popular. Most Redditors combine 2 to 3 rather than trying them all at once.
+
+**Q: Does supplement timing affect deep sleep?**
+Yes, timing matters significantly. Users reported up to 34% more deep sleep when supplements were taken exactly 45 to 60 minutes before bed, which the community considers one of the more surprising insights of 2025.
+
+**Q: What is the 10-3-2-1-0 sleep rule?**
+It is Reddit's most referenced routine: no caffeine 10 hours before bed, no food or alcohol 3 hours before, no work 2 hours before, no screens 1 hour before, and 0 times hitting snooze in the morning.
+
+**Q: Why has Reddit turned against high-dose melatonin?**
+In 2025, multiple threads cite research on receptor desensitization and disrupted natural production from high doses. Most users now prefer a physiological dose of 0.3mg if they use synthetic melatonin at all, and some favor tart cherry extract instead.

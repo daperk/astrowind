@@ -116,3 +116,22 @@ Address your sleep environment next, focusing first on temperature optimization 
 Establish consistent daily habits, particularly around light exposure and sleep/wake times. Supplement thoughtfully based on your specific needs rather than trends. And remember that persistence matters - most interventions take 3-4 weeks of consistent use to show meaningful results.
 
 The bottom line? You don't have to accept fatigue as your normal state. With the right combination of technology, environment optimization, and consistent habits, 2025 can be the year you finally stop saying "I'm tired."
+
+---
+
+## Frequently Asked Questions
+
+**Q: Why am I still tired after a full night of sleep?**
+Nearly 60% of adults report feeling chronically tired even after adequate sleep. The article explains that even minor disruptions in temperature, sound, or light can fragment your sleep architecture and leave you tired despite the hours, and that fatigue has different root causes for everyone.
+
+**Q: What supplements actually help with fatigue in 2025?**
+Evidence-based options include magnesium glycinate at 300 to 400mg daily for sleep maintenance, ashwagandha KSM-66 at 600mg daily to reduce cortisol, and L-theanine at 200 to 400mg combined with low-dose time-released melatonin at 0.5 to 1mg. Consult a healthcare provider first.
+
+**Q: How early should I stop drinking caffeine?**
+New research in the article suggests the safest cutoff for most people is 10 hours before bedtime, not the previously recommended 6 hours. This longer window accounts for slow metabolizers, who make up about half the population.
+
+**Q: What is the most impactful daily habit for beating fatigue?**
+Light exposure sequencing tops the list: get 10 to 15 minutes of direct morning sunlight within 30 minutes of waking, then reduce blue light starting 3 hours before bed. This resets your circadian rhythm more effectively than any supplement.
+
+**Q: How long before sleep changes show results?**
+Most interventions take 3 to 4 weeks of consistent use to show meaningful results. The guide stresses that persistence and personalization matter most, since generic solutions fail when everyone's fatigue has different causes.

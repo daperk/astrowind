@@ -221,3 +221,22 @@ However, if budget is a primary concern, the **CoolMax Bamboo Throw** ($89-$129 
 Whichever option you choose, investing in a quality cooling blanket is one of the most effective steps you can take toward better sleep during Australia's increasingly hot summers. Your body temperature plays a crucial role in sleep quality, and the right cooling blanket can transform restless, sweaty nights into cool, restorative sleep.
 
 Sweet (and cool) dreams, Australia!
+
+---
+
+## Frequently Asked Questions
+
+**Q: What is a Qmax rating on a cooling blanket?**
+Qmax is a scientific measurement of how cool a fabric feels upon initial contact. Higher Qmax values indicate a stronger cooling sensation, which is why the Evercool ranks so well for Australian hot sleepers.
+
+**Q: Which cooling blanket is best for a tight budget in Australia?**
+The CoolMax Bamboo Throw at $89 to $129 AUD offers effective cooling through natural bamboo viscose at less than half the price of premium options, making it a Reddit favorite for budget buyers.
+
+**Q: Can I get a weighted blanket that does not trap heat?**
+Yes, the ChillTech Weighted Cooling Blanket uses cooling glass bead technology and a breathable cotton outer layer, so you get the calming pressure of a weighted blanket without the overheating.
+
+**Q: Which cooling material should I pick for my Australian region?**
+It depends on your climate. Tropical areas like Darwin and Cairns benefit from moisture-wicking and breathability, while temperate southern cities like Melbourne and Adelaide do well with reversible options for seasonal versatility.
+
+**Q: How do I wash a cooling blanket without ruining it?**
+Follow the manufacturer instructions, use gentle cold water cycles, and avoid fabric softeners since they can clog the cooling fibers. Air dry when possible or use low-heat tumble drying.

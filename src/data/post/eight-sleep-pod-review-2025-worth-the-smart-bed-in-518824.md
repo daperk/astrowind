@@ -156,3 +156,22 @@ Before purchasing, consider your specific sleep challenges and whether temperatu
 *[Learn more about effective sleep habits and routines to complement your sleep environment](/sleep-habits-and-routines-that-work)*
 
 Remember that technology alone can't fix poor sleep hygiene. For optimal results, combine the Eight Sleep Pod with proper sleep habits, a supportive mattress, and a cool, dark sleeping environment.
+
+---
+
+## Frequently Asked Questions
+
+**Q: How much does the Eight Sleep Pod cost in 2025?**
+The Pod 4 starts at $1,695 for a Queen, the Pod 5 starts at $2,395, and the Pod 5 Ultra starts at $3,095. All models also require a mandatory subscription of $19 to $38 per month to access the smart features.
+
+**Q: Is the Eight Sleep Pod a mattress?**
+No. It is a high-tech cover that fits over your existing mattress, working with most beds 8 to 13 inches thick. Its Active Grid layer of water tubes and sensors cools or heats each side of the bed between 55°F and 110°F.
+
+**Q: Does the Eight Sleep Pod require a subscription?**
+Yes, the subscription is mandatory. The Standard Plan at $19 per month covers temperature automation and basic tracking, while the Enhanced Plan at $38 per month adds advanced health metrics and sleep coaching, adding $228 to $456 per year.
+
+**Q: Who benefits most from the Eight Sleep Pod?**
+Hot sleepers who wake up sweating, couples with different temperature preferences who want dual-zone control, and health-conscious users who want detailed sleep tracking without a wearable. Budget-conscious shoppers and those needing pressure relief may prefer alternatives.
+
+**Q: What is the difference between the Pod 5 and Pod 5 Ultra?**
+The Pod 5 Ultra includes everything in the Pod 5 plus built-in speakers, adjustable base integration, advanced snore detection, and a 3-year warranty instead of 2 years. Both share the same 55°F to 110°F temperature range.

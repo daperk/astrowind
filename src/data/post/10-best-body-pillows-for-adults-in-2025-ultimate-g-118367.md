@@ -239,3 +239,22 @@ However, those with specific requirements may prefer our specialized picks:
 Whichever model you choose, a quality body pillow represents one of the most impactful sleep investments you can make in 2025. Your body will thank you with better sleep, reduced pain, and improved overall wellbeing.
 
 Complement your new body pillow with other sleep improvements from our guide to [best white noise machines for sleep](/best-white-noise-machines-for-sleep) for a truly transformative sleep experience.
+
+---
+
+## Frequently Asked Questions
+
+**Q: What size body pillow should I get for my height?**
+Match the pillow length to your height, typically between 48 and 72 inches long, while making sure it also fits your bed size.
+
+**Q: Which body pillow shape is best for pregnancy?**
+U-shaped pillows surround your body for maximum support, and C-shaped pillows balance support with space efficiency. Both provide the belly and back support pregnant sleepers often need.
+
+**Q: What firmness do side sleepers need in a body pillow?**
+Side sleepers typically need medium to firm support to align the shoulders, hips, and knees. Many top 2025 models feature adjustable fills so you can personalize the firmness.
+
+**Q: How do I keep a body pillow from making me overheat?**
+Look for cooling covers and breathable fills, such as bamboo-derived covers or shredded foam that allows airflow, since body pillows increase your body contact area and can trap heat.
+
+**Q: Can I try a body pillow before committing to it?**
+Yes, many premium brands offer sleep trials ranging from 30 to 120 nights. Check the return policy before purchasing so you can test how the pillow affects your sleep.

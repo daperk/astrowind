@@ -178,3 +178,22 @@ Remember that sleep cycle needs are highly individual. Some people naturally req
 Implement these evidence-based strategies consistently, and within 2-3 weeks, you'll likely experience more refreshing sleep and improved daytime functioning—regardless of whether you're getting exactly eight hours.
 
 Your sleep cycles are the foundation of your health. Invest in understanding them, and you invest in a better version of yourself.
+
+---
+
+## Frequently Asked Questions
+
+**Q: How many sleep cycles does a healthy adult have per night?**
+A healthy adult experiences 4 to 6 complete sleep cycles per night, each lasting approximately 90 to 110 minutes. For optimal health, adults should aim for 7 to 9 hours of sleep to allow for complete cycles.
+
+**Q: What are the four stages of sleep?**
+The stages are N1 (light sleep, about 5% of sleep), N2 (established light sleep, 45 to 55%), N3 (deep or slow-wave sleep, 10 to 20%), and REM sleep (about 20 to 25%). Each stage serves distinct biological and cognitive functions.
+
+**Q: Why do I feel worse in the morning after early awakenings?**
+Later cycles in the second half of the night include extended REM periods focused on mental processing and emotional regulation. Early morning awakenings mean you miss these crucial REM-dominant cycles, which impacts mood and emotional resilience.
+
+**Q: How do caffeine and alcohol affect sleep cycles?**
+Late caffeine consumption can reduce deep sleep by up to 25%, and evening alcohol may help you fall asleep but reduces REM sleep by 30 to 40%. Both disrupt your natural sleep architecture.
+
+**Q: Which supplements support deep sleep versus REM sleep?**
+For deep sleep, magnesium glycinate (300 to 400mg), ashwagandha (300 to 600mg), and glycine (3g) are options. For REM support, L-theanine (200mg), 5-HTP (50 to 100mg), and vitamin B6 (50 to 100mg) are mentioned.

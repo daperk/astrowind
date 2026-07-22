@@ -143,3 +143,22 @@ Remember that supplements should complement, not replace, good [sleep habits](/s
 Have you tried magnesium for sleep? Which form worked best for you? Share your experience in the comments below!
 
 *Note: This article is based on Reddit discussions and available research as of early 2025. Always consult with a healthcare provider before beginning any new supplement regimen, especially if you have existing health conditions or take medications.*
+
+---
+
+## Frequently Asked Questions
+
+**Q: Which form of magnesium is best for sleep?**
+Magnesium glycinate is the undisputed Reddit favorite and the best starting point for most people. It has up to 80% bioavailability, is gentle on digestion, and its glycine component adds calming effects. Most Redditors take 300 to 400mg before bed.
+
+**Q: What is magnesium L-threonate good for?**
+Magnesium L-threonate uniquely crosses the blood-brain barrier, making it popular for cognitive health alongside sleep. Users report more vivid dreams and more deep sleep, but it is the most expensive form at $38 to $45 a month and contains less elemental magnesium per dose.
+
+**Q: Why do people avoid magnesium citrate for sleep?**
+Magnesium citrate is the budget option at $12 to $18 a month, but it can have laxative effects. Reddit users favor glycinate to avoid digestive issues before bed.
+
+**Q: When should I take magnesium for sleep?**
+Most Redditors find the best results taking magnesium 1 to 2 hours before bed rather than immediately before sleeping, ideally with a small snack for absorption. Benefits often accumulate after 2 to 3 weeks of consistent daily use.
+
+**Q: Does science support magnesium for sleep?**
+A 2024 systematic review of 18 clinical trials found moderate evidence that magnesium improved sleep quality in people with insomnia or magnesium deficiency, though results were inconsistent in those with normal magnesium levels. Larger standardized trials are still needed.
