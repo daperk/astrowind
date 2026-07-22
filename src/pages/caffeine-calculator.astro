@@ -1,0 +1,237 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Schema from '~/components/common/Schema.astro';
+
+const metadata = {
+  title: 'Caffeine Calculator: When to Stop Drinking Coffee Before Bed',
+  description:
+    'Free caffeine calculator. See how much caffeine is left in your system at bedtime and the latest time to have your last coffee, based on caffeine half-life.',
+  ignoreTitleTemplate: true,
+};
+
+const faqs = [
+  {
+    question: 'How long does caffeine stay in your system?',
+    answer:
+      'Caffeine has a half-life of roughly 5 to 6 hours in most adults, so about half is still in your body 5 to 6 hours after you drink it. A coffee at 3pm can leave a meaningful amount in your system near a 10pm bedtime.',
+  },
+  {
+    question: 'When should I stop drinking coffee before bed?',
+    answer:
+      'A common guideline is to stop caffeine about 8 to 10 hours before bed. This calculator gives you a personalized cutoff based on your drink size and bedtime, aiming to keep the amount left at bedtime low.',
+  },
+  {
+    question: 'How much caffeine is too much before bed?',
+    answer:
+      'There is no exact number, since sensitivity varies. As a rough guide, keeping the amount left at bedtime under about 50 mg is a reasonable target for many people. Sensitive sleepers should aim lower and allow more time.',
+  },
+  {
+    question: 'Does caffeine affect everyone the same way?',
+    answer:
+      'No. Genetics, tolerance, age, medications, and pregnancy all change how fast you clear caffeine. Half-life can range from about 4 to 6 hours or longer, so treat these results as an average, not a precise medical value.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Schema type="faqpage" faqs={faqs} />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-brand-primary">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-3 text-xs font-semibold text-brand-warm uppercase tracking-[0.2em] mb-5">
+          <span class="w-8 h-px bg-brand-warm" aria-hidden="true"></span>
+          Free Sleep Tool
+        </p>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-5 leading-[1.08]">
+          Caffeine Calculator
+        </h1>
+        <p class="text-lg md:text-xl text-slate-200/90 leading-relaxed">
+          See how much caffeine is still in your system at bedtime, and the latest time to have
+          your last coffee so it does not steal your sleep.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label for="drink" class="block text-sm font-medium text-gray-700 mb-1">Your caffeine drink</label>
+            <select id="drink"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 text-base bg-white focus:outline-none focus:ring-2 focus:ring-brand-accent">
+              <option value="95">Brewed coffee, 8 oz (95 mg)</option>
+              <option value="190">Large coffee, 16 oz (190 mg)</option>
+              <option value="64">Espresso, 1 shot (64 mg)</option>
+              <option value="128">Espresso, double (128 mg)</option>
+              <option value="47">Black tea (47 mg)</option>
+              <option value="28">Green tea (28 mg)</option>
+              <option value="70">Matcha (70 mg)</option>
+              <option value="80">Energy drink, 8 oz (80 mg)</option>
+              <option value="35">Cola, 12 oz (35 mg)</option>
+              <option value="200">Pre-workout (200 mg)</option>
+            </select>
+          </div>
+          <div>
+            <label for="drink-time" class="block text-sm font-medium text-gray-700 mb-1">Time you drink it</label>
+            <div class="flex gap-2">
+              <input id="drink-time" type="time" value="15:00"
+                class="flex-1 px-4 py-3 rounded-lg border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+              <button id="use-now" type="button"
+                class="px-3 py-3 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">Now</button>
+            </div>
+          </div>
+          <div>
+            <label for="bedtime" class="block text-sm font-medium text-gray-700 mb-1">Your bedtime</label>
+            <input id="bedtime" type="time" value="22:30"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 text-base focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </div>
+          <div class="flex items-end">
+            <button id="calc-btn" type="button"
+              class="w-full px-6 py-3 rounded-full bg-brand-primary text-white font-semibold hover:bg-brand-accent transition">
+              Calculate
+            </button>
+          </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="mt-8 hidden">
+          <div id="verdict" class="rounded-xl border p-5 text-center mb-4"></div>
+          <p id="cutoff" class="text-sm text-gray-700 text-center"></p>
+          <p class="text-xs text-gray-500 mt-4 text-center">
+            Based on an average caffeine half-life of about 5.5 hours. Sensitivity varies from person to
+            person, so allow extra time if caffeine tends to keep you up.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-gray-600 mt-6">
+        Also try our
+        <a href="/sleep-calculator" class="text-brand-accent font-medium hover:underline">Sleep Calculator</a>,
+        and read up on
+        <a href="/best-sleep-supplements-guide" class="text-brand-accent font-medium hover:underline">natural sleep aids</a>
+        if caffeine is not your only issue.
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works + FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 prose prose-lg max-w-none
+      prose-headings:font-heading prose-headings:font-semibold prose-headings:text-gray-900
+      prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline">
+      <h2>How the caffeine calculator works</h2>
+      <p>
+        Your body clears caffeine slowly. On average it has a half-life of about 5 to 6 hours, which
+        means half of what you drank is still in your system 5 to 6 hours later, and a quarter is still
+        there after 11 hours. That afternoon coffee can quietly follow you to bed.
+      </p>
+      <p>
+        This calculator estimates how much caffeine is left at your bedtime based on your drink size and
+        when you had it, then works out the latest time to have that drink so the amount left stays low.
+        It is a helpful guide, not a medical measurement, because how fast you clear caffeine depends on
+        your genetics, tolerance, age, and any medications.
+      </p>
+      <p>
+        If caffeine is only part of the picture, a dark, cool, quiet room and a steady schedule matter
+        just as much. See our <a href="/optimize-bedroom-environment-for-better-sleep">bedroom setup guide</a>
+        and <a href="/sleep-habits-and-routines-that-work">sleep habits guide</a> for the rest.
+      </p>
+      <p class="text-sm text-gray-500">
+        This tool is general information, not medical advice. If you have a heart condition, are pregnant,
+        or take medication, talk to your doctor about caffeine.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f) => (
+        <>
+          <h3>{f.question}</h3>
+          <p>{f.answer}</p>
+        </>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const HALF_LIFE = 5.5; // hours
+    const TARGET = 50; // mg remaining goal at bedtime
+
+    const drink = document.getElementById('drink');
+    const drinkTime = document.getElementById('drink-time');
+    const bedtime = document.getElementById('bedtime');
+    const useNow = document.getElementById('use-now');
+    const calcBtn = document.getElementById('calc-btn');
+    const results = document.getElementById('results');
+    const verdict = document.getElementById('verdict');
+    const cutoff = document.getElementById('cutoff');
+
+    function toMin(v) {
+      const p = (v || '').split(':');
+      if (p.length !== 2) return null;
+      return parseInt(p[0], 10) * 60 + parseInt(p[1], 10);
+    }
+    function fmt(mins) {
+      mins = ((Math.round(mins) % 1440) + 1440) % 1440;
+      let h = Math.floor(mins / 60);
+      const m = mins % 60;
+      const ap = h < 12 ? 'AM' : 'PM';
+      h = h % 12; if (h === 0) h = 12;
+      return h + ':' + String(m).padStart(2, '0') + ' ' + ap;
+    }
+
+    function calculate() {
+      const dose = parseFloat(drink.value);
+      const dt = toMin(drinkTime.value);
+      const bt = toMin(bedtime.value);
+      if (dose == null || dt == null || bt == null || isNaN(dose)) return;
+
+      // hours from drink to bedtime (assume bedtime is later same night; wrap if needed)
+      let diff = (bt - dt) / 60;
+      if (diff < 0) diff += 24;
+      const remaining = dose * Math.pow(0.5, diff / HALF_LIFE);
+
+      let label, cls;
+      if (remaining < 25) {
+        label = 'Low: unlikely to affect most sleepers';
+        cls = 'border-green-300 bg-green-50 text-green-800';
+      } else if (remaining < 75) {
+        label = 'Moderate: may affect sensitive sleepers';
+        cls = 'border-amber-300 bg-amber-50 text-amber-800';
+      } else {
+        label = 'High: likely to disrupt your sleep';
+        cls = 'border-red-300 bg-red-50 text-red-800';
+      }
+
+      verdict.className = 'rounded-xl border p-5 text-center mb-4 ' + cls;
+      verdict.innerHTML =
+        '<div class="text-4xl font-bold">' + Math.round(remaining) + ' mg</div>' +
+        '<div class="text-sm mt-1">still in your system at ' + fmt(bt) + '</div>' +
+        '<div class="text-sm font-semibold mt-2">' + label + '</div>';
+
+      if (dose <= TARGET) {
+        cutoff.textContent = 'This drink is small enough that timing is flexible, though a few hours of buffer before bed still helps.';
+      } else {
+        const hoursNeeded = HALF_LIFE * (Math.log(dose / TARGET) / Math.log(2));
+        const last = bt - hoursNeeded * 60;
+        cutoff.innerHTML = 'To keep it under about ' + TARGET + ' mg by bedtime, have this drink no later than <strong>' + fmt(last) + '</strong> (about ' + hoursNeeded.toFixed(1) + ' hours before bed).';
+      }
+      results.classList.remove('hidden');
+    }
+
+    useNow.addEventListener('click', () => {
+      const d = new Date();
+      drinkTime.value = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+      calculate();
+    });
+    calcBtn.addEventListener('click', calculate);
+    [drink, drinkTime, bedtime].forEach((el) => el.addEventListener('change', calculate));
+
+    calculate();
+  })();
+</script>
