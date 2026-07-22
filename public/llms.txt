@@ -2,6 +2,10 @@
 
 > SleepUpgradeHub publishes science-backed, independently researched guides and honest product reviews to help people fall asleep faster, sleep deeper, and wake up restored. Coverage spans the sleep environment, sleep tools and gadgets, supplements, habits and routines, and sleep trackers. Content is written for real buyers comparing options, with practical recommendations, price ranges, safety notes, and clear affiliate disclosure.
 
+## Free tools
+
+- [Sleep Calculator](https://sleepupgradehub.com/sleep-calculator): Free interactive tool that gives the best bedtime or wake-up times based on 90-minute sleep cycles.
+
 ## Start here (pillar guides)
 
 - [Best Sleep Supplements Guide](https://sleepupgradehub.com/best-sleep-supplements-guide): Evidence-based guide to natural sleep aids (magnesium, L-theanine, glycine, melatonin).

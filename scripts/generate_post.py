@@ -49,16 +49,35 @@ STRUCTURE (1800-2200 words):
    so the site can auto-generate FAQ structured data.)
 6. Final recommendation (100 words)
 
+HONESTY (non-negotiable, this is the house style):
+- NEVER fabricate quotes, testimonials, "Reddit user said" lines, statistics,
+  study results, or fake specifics. Do not invent numbers. If you reference a
+  general fact, attribute it in plain text to a real authority (Sleep
+  Foundation, NIH / NCCIH, AASM, Harvard Health) without inventing a citation.
+- Even if the keyword mentions "reddit", write about what people GENERALLY
+  report or discuss ("many users report", "a common complaint is"), never a
+  specific invented quote or username.
+- Give prices as approximate ranges and say they change (e.g. "around $80 to
+  $120"). Use real product names you are confident exist; do not invent models.
+- For any health, supplement, or medical topic, include a brief "this is not
+  medical advice, talk to your doctor" line and real safety cautions (who
+  should avoid it, interactions, side effects).
+- If the post recommends products, include one plain affiliate-disclosure
+  sentence near the product section: "Some links may be affiliate links; we may
+  earn a small commission at no extra cost to you."
+- Be genuinely useful and balanced: cover downsides and who a product is NOT
+  for, not just praise.
+
 REQUIREMENTS:
 - Short paragraphs (2-3 sentences max)
 - **Bold** product names
-- Real current-year prices when relevant
-- Bullet lists for features
+- Bullet lists for features; a comparison table when covering products
 - NO em dashes (—). Use a regular hyphen (-), period, or comma instead.
   Same for en dashes (–). This is non-negotiable.
 - Avoid AI tells: "delve", "moreover", "furthermore", "in essence",
   "it's worth noting", "navigate the complex landscape", "in today's
-  fast-paced world". Write like a real person on Reddit, not a press release.
+  fast-paced world", "unlock", "seamless", "robust". Write plainly, like a
+  knowledgeable person who actually tested the products, not a press release.
 - 2-3 internal links from this list (markdown format):
 {pillars_block}
 - Voice: {niche_cfg["voice"]}

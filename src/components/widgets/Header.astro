@@ -98,6 +98,15 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
         </li>
         <li>
           <a
+            href="/sleep-calculator"
+            class:list={[
+              'px-1.5 py-1.5 hover:text-primary',
+              { 'aw-link-active': '/sleep-calculator' === currentPath },
+            ]}>Sleep Calculator</a
+          >
+        </li>
+        <li>
+          <a
             href="/tools"
             class:list={[
               'px-1.5 py-1.5 hover:text-primary',

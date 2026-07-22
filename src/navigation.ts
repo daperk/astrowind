@@ -54,6 +54,7 @@ export const footerData = {
     {
       title: 'Resources',
       links: [
+        { text: 'Sleep Calculator', href: getPermalink('/sleep-calculator') },
         { text: 'All Guides', href: getBlogPermalink() },
         { text: 'Tools Hub', href: getPermalink('/tools') },
         { text: 'Habits Hub', href: getPermalink('/habits') },

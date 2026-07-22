@@ -1,0 +1,242 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Schema from '~/components/common/Schema.astro';
+
+const metadata = {
+  title: 'Sleep Calculator: Best Bedtime and Wake-Up Times by Sleep Cycle',
+  description:
+    'Free sleep calculator. Enter your wake-up time or bedtime and get the best times to sleep or wake, based on 90-minute sleep cycles so you wake up refreshed.',
+  ignoreTitleTemplate: true,
+};
+
+const faqs = [
+  {
+    question: 'How does the sleep calculator work?',
+    answer:
+      'It counts backward or forward in 90-minute sleep cycles and adds about 15 minutes to fall asleep. Waking at the end of a cycle, rather than in the middle of deep sleep, tends to leave you feeling more refreshed.',
+  },
+  {
+    question: 'How many sleep cycles do I need?',
+    answer:
+      'Most adults do best with 5 to 6 complete cycles per night, which is about 7.5 to 9 hours of sleep. Four cycles, roughly 6 hours, is a minimum that works in a pinch but is not ideal long term.',
+  },
+  {
+    question: 'How long does it take to fall asleep?',
+    answer:
+      'The average person takes about 15 minutes to fall asleep, so this calculator builds in a 15-minute buffer. If you usually take longer or shorter, adjust your target time a little.',
+  },
+  {
+    question: 'Is waking up between sleep cycles really better?',
+    answer:
+      'For many people, yes. Waking at the end of a cycle, in lighter sleep, feels easier than being pulled out of deep sleep. It is a helpful guide, not a strict rule, since cycle length varies from person to person.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Schema type="faqpage" faqs={faqs} />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-brand-primary">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-3 text-xs font-semibold text-brand-warm uppercase tracking-[0.2em] mb-5">
+          <span class="w-8 h-px bg-brand-warm" aria-hidden="true"></span>
+          Free Sleep Tool
+        </p>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-5 leading-[1.08]">
+          Sleep Calculator
+        </h1>
+        <p class="text-lg md:text-xl text-slate-200/90 leading-relaxed">
+          Find the best time to go to bed or wake up, based on 90-minute sleep cycles, so you
+          wake up between cycles feeling refreshed instead of groggy.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8">
+        <!-- Mode toggle -->
+        <div class="grid grid-cols-2 gap-2 p-1 rounded-full bg-gray-100 mb-6" role="tablist" aria-label="Calculator mode">
+          <button id="mode-wake" type="button" role="tab" aria-selected="true"
+            class="calc-tab rounded-full py-2.5 text-sm font-semibold transition">
+            I want to wake up at
+          </button>
+          <button id="mode-bed" type="button" role="tab" aria-selected="false"
+            class="calc-tab rounded-full py-2.5 text-sm font-semibold transition">
+            I want to go to bed at
+          </button>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-end gap-4">
+          <div class="flex-1">
+            <label for="time-input" id="time-label" class="block text-sm font-medium text-gray-700 mb-1">
+              Wake-up time
+            </label>
+            <input id="time-input" type="time" value="07:00"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </div>
+          <button id="use-now" type="button"
+            class="hidden sm:whitespace-nowrap px-4 py-3 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+            Use current time
+          </button>
+          <button id="calc-btn" type="button"
+            class="px-6 py-3 rounded-full bg-brand-primary text-white font-semibold hover:bg-brand-accent transition">
+            Calculate
+          </button>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="mt-8 hidden">
+          <p id="results-lead" class="text-sm text-gray-600 mb-4"></p>
+          <div id="results-grid" class="grid grid-cols-1 sm:grid-cols-3 gap-3"></div>
+          <p class="text-xs text-gray-500 mt-4">
+            Times assume about 15 minutes to fall asleep. The highlighted options give you 5 to 6 full
+            cycles, the sweet spot for most adults.
+          </p>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-gray-600 mt-6">
+        Want better sleep beyond timing? Start with our
+        <a href="/sleep-habits-and-routines-that-work" class="text-brand-accent font-medium hover:underline">sleep habits guide</a>
+        and
+        <a href="/optimize-bedroom-environment-for-better-sleep" class="text-brand-accent font-medium hover:underline">bedroom setup checklist</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works + FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 prose prose-lg max-w-none
+      prose-headings:font-heading prose-headings:font-semibold prose-headings:text-gray-900
+      prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline">
+      <h2>How the sleep calculator works</h2>
+      <p>
+        Your sleep is not one long block. It moves through repeating cycles of light sleep, deep sleep,
+        and REM, each lasting roughly 90 minutes. Waking up at the end of a cycle, when you are already
+        in lighter sleep, feels far easier than an alarm dragging you out of deep sleep.
+      </p>
+      <p>
+        This calculator counts in 90-minute cycles and adds about 15 minutes to fall asleep. If you tell
+        it when you need to wake up, it shows the bedtimes that land your alarm at the end of a cycle. If
+        you tell it when you are going to bed, it shows the best times to set your alarm.
+      </p>
+      <p>
+        Aim for 5 to 6 full cycles, which is about 7.5 to 9 hours. Cycle length varies from person to
+        person, so treat these times as a strong starting point, not a strict rule. Pair good timing with
+        a consistent schedule and a dark, cool room. Our
+        <a href="/best-sleep-trackers-comparison-guide">sleep trackers guide</a> can help you see which
+        bedtime actually leaves you most rested.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f) => (
+        <>
+          <h3>{f.question}</h3>
+          <p>{f.answer}</p>
+        </>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const CYCLE = 90;
+    const FALL_ASLEEP = 15;
+    const OPTIONS = [6, 5, 4]; // cycles
+
+    let mode = 'wake'; // 'wake' | 'bed'
+    const tabWake = document.getElementById('mode-wake');
+    const tabBed = document.getElementById('mode-bed');
+    const label = document.getElementById('time-label');
+    const input = document.getElementById('time-input');
+    const useNow = document.getElementById('use-now');
+    const calcBtn = document.getElementById('calc-btn');
+    const results = document.getElementById('results');
+    const grid = document.getElementById('results-grid');
+    const lead = document.getElementById('results-lead');
+
+    const ACTIVE = ['bg-white', 'text-brand-primary', 'shadow-sm'];
+    const INACTIVE = ['text-gray-500'];
+
+    function paintTabs() {
+      [tabWake, tabBed].forEach((t) => t.classList.remove(...ACTIVE, ...INACTIVE));
+      (mode === 'wake' ? tabWake : tabBed).classList.add(...ACTIVE);
+      (mode === 'wake' ? tabBed : tabWake).classList.add(...INACTIVE);
+      tabWake.setAttribute('aria-selected', String(mode === 'wake'));
+      tabBed.setAttribute('aria-selected', String(mode === 'bed'));
+      label.textContent = mode === 'wake' ? 'Wake-up time' : 'Bedtime';
+      useNow.classList.toggle('hidden', mode !== 'bed');
+      results.classList.add('hidden');
+    }
+
+    function fmt(mins) {
+      mins = ((mins % 1440) + 1440) % 1440;
+      let h = Math.floor(mins / 60);
+      const m = mins % 60;
+      const ap = h < 12 ? 'AM' : 'PM';
+      h = h % 12;
+      if (h === 0) h = 12;
+      return h + ':' + String(m).padStart(2, '0') + ' ' + ap;
+    }
+
+    function parseInput() {
+      const v = (input.value || '').split(':');
+      if (v.length !== 2) return null;
+      return parseInt(v[0], 10) * 60 + parseInt(v[1], 10);
+    }
+
+    function calculate() {
+      const base = parseInput();
+      if (base === null || isNaN(base)) return;
+      grid.innerHTML = '';
+      const cards = OPTIONS.map((cycles) => {
+        const dur = cycles * CYCLE;
+        const hrs = (dur / 60).toFixed(dur % 60 === 0 ? 0 : 1);
+        let time;
+        if (mode === 'wake') {
+          time = base - dur - FALL_ASLEEP; // bedtime
+        } else {
+          time = base + FALL_ASLEEP + dur; // wake time
+        }
+        return { cycles, hrs, time, best: cycles === 6 || cycles === 5 };
+      });
+
+      lead.textContent =
+        mode === 'wake'
+          ? 'To wake up at ' + fmt(base) + ', head to bed at one of these times:'
+          : 'If you go to bed at ' + fmt(base) + ', set your alarm for one of these times:';
+
+      cards.forEach((c) => {
+        const el = document.createElement('div');
+        el.className =
+          'rounded-xl border p-4 text-center ' +
+          (c.best ? 'border-brand-accent bg-brand-accent/5' : 'border-gray-200 bg-white');
+        el.innerHTML =
+          (c.best ? '<div class="text-[11px] font-semibold uppercase tracking-wide text-brand-accent mb-1">Recommended</div>' : '<div class="mb-1 h-[18px]"></div>') +
+          '<div class="text-2xl font-bold text-gray-900">' + fmt(c.time) + '</div>' +
+          '<div class="text-xs text-gray-500 mt-1">' + c.cycles + ' cycles &middot; ' + c.hrs + ' hrs sleep</div>';
+        grid.appendChild(el);
+      });
+      results.classList.remove('hidden');
+    }
+
+    tabWake.addEventListener('click', () => { mode = 'wake'; paintTabs(); });
+    tabBed.addEventListener('click', () => { mode = 'bed'; paintTabs(); });
+    useNow.addEventListener('click', () => {
+      const d = new Date();
+      input.value = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+      calculate();
+    });
+    calcBtn.addEventListener('click', calculate);
+    input.addEventListener('keydown', (e) => { if (e.key === 'Enter') calculate(); });
+
+    paintTabs();
+    calculate();
+  })();
+</script>

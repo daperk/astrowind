@@ -25,6 +25,7 @@ const WEB3FORMS_KEY =
 
     {WEB3FORMS_KEY ? (
       <form
+        id="contact-form"
         action="https://api.web3forms.com/submit"
         method="POST"
         class="space-y-5"
@@ -32,7 +33,7 @@ const WEB3FORMS_KEY =
         <input type="hidden" name="access_key" value={WEB3FORMS_KEY} />
         <input type="hidden" name="subject" value={`New contact request for ${SITE.name}`} />
         <input type="hidden" name="from_name" value={SITE.name} />
-        <input type="checkbox" name="botcheck" class="hidden" style="display:none" />
+        <input type="checkbox" name="botcheck" class="hidden" style="display:none" tabindex="-1" autocomplete="off" />
 
         <div>
           <label for="name" class="block text-sm font-medium mb-1">Name</label>
@@ -73,11 +74,49 @@ const WEB3FORMS_KEY =
 
         <button
           type="submit"
-          class="px-6 py-3 rounded-full bg-primary text-white font-semibold hover:opacity-90 transition"
+          class="px-6 py-3 rounded-full bg-primary text-white font-semibold hover:opacity-90 transition disabled:opacity-60"
         >
           Send message
         </button>
+
+        <p id="contact-result" role="status" aria-live="polite" class="text-sm mt-2 hidden"></p>
       </form>
+
+      <script is:inline>
+        (() => {
+          const form = document.getElementById('contact-form');
+          if (!form) return;
+          const result = document.getElementById('contact-result');
+          const btn = form.querySelector('button[type="submit"]');
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            result.className = 'text-sm mt-2 text-gray-600';
+            result.textContent = 'Sending...';
+            btn.disabled = true;
+            try {
+              const res = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: { Accept: 'application/json' },
+                body: new FormData(form),
+              });
+              const data = await res.json();
+              if (res.ok && data.success) {
+                form.reset();
+                result.className = 'text-sm mt-2 text-green-600 font-medium';
+                result.textContent = 'Thanks, your message was sent. We reply within 1 to 2 business days.';
+              } else {
+                result.className = 'text-sm mt-2 text-red-600 font-medium';
+                result.textContent = 'Something went wrong. Please email us directly instead.';
+              }
+            } catch {
+              result.className = 'text-sm mt-2 text-red-600 font-medium';
+              result.textContent = 'Network error. Please try again or email us directly.';
+            } finally {
+              btn.disabled = false;
+            }
+          });
+        })();
+      </script>
     ) : (
       <div class="p-6 rounded-lg border border-amber-300 bg-amber-50">
         <p class="text-sm text-gray-900">
