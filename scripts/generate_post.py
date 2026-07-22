@@ -42,7 +42,11 @@ STRUCTURE (1800-2200 words):
 2. Quick verdict / TL;DR (100 words)
 3. 4-6 H2 sections (300-400 words each, distinct angles)
 4. Comparison table if products
-5. FAQ block (3-5 questions)
+5. FAQ block: a heading written exactly as "## Frequently Asked Questions",
+   then 4-5 Q&A pairs. Each question MUST be a single fully-bold line in the
+   form "**Q: the question?**" and the answer on the next line as plain text
+   (not bold). Leave a blank line between pairs. (This exact format is required
+   so the site can auto-generate FAQ structured data.)
 6. Final recommendation (100 words)
 
 REQUIREMENTS:
