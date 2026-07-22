@@ -13,7 +13,7 @@
 import { SITE, METADATA } from 'astrowind:config';
 
 export interface Props {
-  type: 'website' | 'organization' | 'article' | 'faqpage';
+  type?: 'website' | 'organization' | 'article' | 'faqpage';
   // Article-specific props
   article?: {
     headline: string;
@@ -29,9 +29,14 @@ export interface Props {
     question: string;
     answer: string;
   }>;
+  // Breadcrumb trail (Home > Category > Page). Emitted alongside any type.
+  breadcrumbs?: Array<{
+    name: string;
+    url: string;
+  }>;
 }
 
-const { type, article, faqs } = Astro.props;
+const { type, article, faqs, breadcrumbs } = Astro.props;
 
 const siteUrl = SITE?.site || 'https://sleepupgradehub.com';
 const siteName = SITE?.name || 'SleepUpgradeHub';
@@ -48,7 +53,7 @@ const websiteSchema = {
     '@type': 'SearchAction',
     target: {
       '@type': 'EntryPoint',
-      urlTemplate: `${siteUrl}/blog?q={search_term_string}`
+      urlTemplate: `${siteUrl}/search?q={search_term_string}`
     },
     'query-input': 'required name=search_term_string'
   }
@@ -118,6 +123,18 @@ const faqSchema = faqs && faqs.length > 0 ? {
   }))
 } : null;
 
+// BreadcrumbList Schema - shows the site path in search results
+const breadcrumbSchema = breadcrumbs && breadcrumbs.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: breadcrumbs.map((b, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: b.name,
+    item: b.url,
+  })),
+} : null;
+
 // Select the appropriate schema(s) based on type
 let schemas: any[] = [];
 
@@ -138,6 +155,11 @@ switch (type) {
       schemas = [faqSchema];
     }
     break;
+}
+
+// Breadcrumbs can accompany any page type.
+if (breadcrumbSchema) {
+  schemas.push(breadcrumbSchema);
 }
 ---
 
