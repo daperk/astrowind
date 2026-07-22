@@ -40,9 +40,52 @@ const generatePermalink = async ({
     .join('/');
 };
 
+// Extract FAQ question/answer pairs from a post's raw markdown body.
+// Recognizes a "## FAQ" / "## Frequently Asked Questions" / "## Common Questions"
+// section and reads bold-line questions (with optional "Q:" prefix) followed by
+// their answer text. Used to emit FAQPage structured data for AI + search engines.
+const extractFaqs = (body?: string): Array<{ question: string; answer: string }> => {
+  if (!body) return [];
+  const lines = body.split('\n');
+  let start = -1;
+  for (let i = 0; i < lines.length; i++) {
+    if (/^##\s+(FAQ|Frequently Asked Questions|Common Questions)/i.test(lines[i].trim())) {
+      start = i + 1;
+      break;
+    }
+  }
+  if (start === -1) return [];
+
+  const faqs: Array<{ question: string; answer: string }> = [];
+  let question: string | null = null;
+  let answer: string[] = [];
+  const flush = () => {
+    if (question && answer.length) {
+      const text = answer.join(' ').replace(/\s+/g, ' ').trim();
+      if (text) faqs.push({ question, answer: text });
+    }
+    answer = [];
+  };
+
+  for (let i = start; i < lines.length; i++) {
+    const t = lines[i].trim();
+    if (/^#{1,3}\s/.test(t)) break; // next heading ends the FAQ block
+    const qMatch = t.match(/^\*\*\s*(?:Q[:.)]?\s*)?(.+?)\s*\*\*\s*:?\s*$/);
+    if (qMatch) {
+      flush();
+      question = qMatch[1].replace(/\*\*/g, '').trim();
+    } else if (question && t) {
+      answer.push(t.replace(/^\**\s*A[:.)]\s*/i, '').replace(/^[-*]\s+/, '').replace(/\*\*/g, ''));
+    }
+  }
+  flush();
+  return faqs.filter((f) => f.question && f.answer).slice(0, 12);
+};
+
 const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
   const { id, data } = post;
   const { Content, remarkPluginFrontmatter } = await render(post);
+  const faqs = extractFaqs(post.body);
 
   const {
     publishDate: rawPublishDate = new Date(),
@@ -98,6 +141,8 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
 
     Content: Content,
     // or 'content' in case you consume from API
+
+    faqs: faqs,
 
     readingTime: remarkPluginFrontmatter?.readingTime,
   };

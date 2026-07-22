@@ -40,6 +40,9 @@ export interface Post {
   Content?: AstroComponentFactory;
   content?: string;
 
+  /** Parsed FAQ question/answer pairs extracted from the post body (used for FAQPage schema). */
+  faqs?: Array<{ question: string; answer: string }>;
+
   /**  */
   readingTime?: number;
 }
