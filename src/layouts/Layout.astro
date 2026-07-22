@@ -13,6 +13,7 @@ import BasicScripts from '~/components/common/BasicScripts.astro';
 import Schema from '~/components/common/Schema.astro';
 import AdSenseScript from '~/components/common/AdSenseScript.astro';
 import CookieConsent from '~/components/common/CookieConsent.astro';
+import StickyCalcButton from '~/components/common/StickyCalcButton.astro';
 
 // Comment the line below to disable View Transitions
 import { ClientRouter } from 'astro:transitions';
@@ -58,6 +59,8 @@ const { language, textDirection } = I18N;
 
   <body class="antialiased text-default bg-page tracking-tight">
     <slot />
+
+    <StickyCalcButton />
 
     <BasicScripts />
     <Analytics />

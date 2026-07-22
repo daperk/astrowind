@@ -1,0 +1,22 @@
+---
+import { Icon } from 'astro-icon/components';
+import { trimSlash } from '~/utils/permalinks';
+
+// Global floating "Calculator" tab pinned to the right edge on every page.
+// Hidden on the calculator pages themselves to avoid redundancy.
+const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
+const hide = currentPath === '/sleep-calculator' || currentPath === '/caffeine-calculator';
+---
+
+{
+  !hide && (
+    <a
+      href="/sleep-calculator"
+      aria-label="Open the free Sleep Calculator"
+      class="fixed right-0 top-1/2 -translate-y-1/2 z-40 flex items-center gap-2 rounded-l-xl bg-brand-primary py-3 pl-3 pr-3.5 text-white shadow-lg ring-1 ring-black/10 transition-colors hover:bg-brand-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent-light"
+    >
+      <Icon name="tabler:calculator" class="h-5 w-5 shrink-0" />
+      <span class="text-sm font-semibold tracking-tight">Calculator</span>
+    </a>
+  )
+}
