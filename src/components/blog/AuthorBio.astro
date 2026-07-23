@@ -1,6 +1,7 @@
 ---
 /**
- * Author bio block - Healthline style (end of article)
+ * Author bio block (end of article). Honest brand-persona byline: no fabricated
+ * credentials, links to the About/editorial page for E-E-A-T.
  */
 import { Icon } from 'astro-icon/components';
 
@@ -10,8 +11,8 @@ export interface Props {
 }
 
 const {
-  author = 'SleepUpgradeHub Team',
-  bio = 'Our team combines sleep science expertise, product testing, and real-world experience to bring you evidence-based sleep optimization strategies that actually work.'
+  author = 'The SleepUpgradeHub Editorial Team',
+  bio = 'We are an independent team that researches sleep products and the science behind them, then writes honest, practical guides. We are not doctors, and our content is general information, not medical advice.',
 } = Astro.props;
 ---
 
@@ -19,28 +20,30 @@ const {
   <div class="flex items-start gap-5 bg-gray-50 rounded-xl p-6 md:p-8">
     <div class="flex-shrink-0">
       <div class="w-16 h-16 md:w-20 md:h-20 rounded-full bg-gradient-to-br from-brand-primary to-brand-accent text-white flex items-center justify-center text-2xl md:text-3xl font-bold shadow-lg">
-        {author.charAt(0).toUpperCase()}
+        S
       </div>
     </div>
     <div class="flex-1">
-      <div class="flex items-center gap-2 mb-2">
-        <h3 class="text-lg md:text-xl font-bold text-gray-900">
-          {author}
-        </h3>
-        <Icon name="tabler:circle-check" class="w-5 h-5 text-brand-accent" />
-      </div>
+      <p class="text-xs font-semibold uppercase tracking-wide text-brand-accent mb-1">Written by</p>
+      <h3 class="font-heading text-lg md:text-xl font-semibold text-gray-900 mb-2">
+        {author}
+      </h3>
       <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-3">
         {bio}
       </p>
-      <div class="flex items-center gap-4 text-xs text-gray-500">
+      <div class="flex flex-wrap items-center gap-4 text-xs text-gray-500">
         <span class="flex items-center gap-1">
-          <Icon name="tabler:article" class="w-4 h-4" />
-          Sleep Expert
+          <Icon name="tabler:search" class="w-4 h-4" />
+          Independent research
         </span>
         <span class="flex items-center gap-1">
-          <Icon name="tabler:certificate" class="w-4 h-4" />
-          Verified Author
+          <Icon name="tabler:shield-check" class="w-4 h-4" />
+          No sponsored reviews
         </span>
+        <a href="/about" class="flex items-center gap-1 text-brand-accent hover:underline">
+          <Icon name="tabler:info-circle" class="w-4 h-4" />
+          About our process
+        </a>
       </div>
     </div>
   </div>
