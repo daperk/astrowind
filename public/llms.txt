@@ -6,6 +6,7 @@
 
 - [Sleep Calculator](https://sleepupgradehub.com/sleep-calculator): Free interactive tool that gives the best bedtime or wake-up times based on 90-minute sleep cycles.
 - [Caffeine Calculator](https://sleepupgradehub.com/caffeine-calculator): Free interactive tool that estimates caffeine left in your system at bedtime and the latest time for your last coffee.
+- [Sleep Quiz](https://sleepupgradehub.com/sleep-quiz): Free 2-question quiz that matches your specific sleep problem to the right guides, tools, and products.
 
 ## Start here (pillar guides)
 

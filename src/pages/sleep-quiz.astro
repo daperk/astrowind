@@ -1,0 +1,224 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Schema from '~/components/common/Schema.astro';
+
+const metadata = {
+  title: 'Sleep Quiz: Find What Is Keeping You Up and How to Fix It',
+  description:
+    'Take our free 2-question sleep quiz and get personalized recommendations, the exact guides, tools, and products for your specific sleep problem.',
+  ignoreTitleTemplate: true,
+};
+
+const faqs = [
+  {
+    question: 'How does the sleep quiz work?',
+    answer:
+      'You answer two quick questions about your main sleep problem and how you prefer to fix it. The quiz then points you to the guides, free tools, and products best matched to your situation. It runs entirely in your browser and collects no personal data.',
+  },
+  {
+    question: 'Is the sleep quiz free?',
+    answer:
+      'Yes, it is completely free and does not require an email or sign-up. It is a quick way to find the right starting point instead of guessing.',
+  },
+  {
+    question: 'Can a quiz really fix my sleep?',
+    answer:
+      'A quiz cannot diagnose anything, but it can save you time by matching your specific problem to proven fixes. If your problem is severe or ongoing, such as loud snoring with gasping or long-term insomnia, see a doctor.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Schema type="faqpage" faqs={faqs} />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-brand-primary">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-3 text-xs font-semibold text-brand-warm uppercase tracking-[0.2em] mb-5">
+          <span class="w-8 h-px bg-brand-warm" aria-hidden="true"></span>
+          Free Sleep Tool
+        </p>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-5 leading-[1.08]">
+          What Is Keeping You Up?
+        </h1>
+        <p class="text-lg md:text-xl text-slate-200/90 leading-relaxed">
+          Answer two quick questions and get a personalized plan: the exact guides, free tools, and
+          products matched to your specific sleep problem.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quiz -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8 min-h-[22rem]">
+        <!-- Progress -->
+        <div id="progress" class="flex items-center gap-2 mb-6">
+          <span class="quiz-dot h-2 w-8 rounded-full bg-brand-accent"></span>
+          <span class="quiz-dot h-2 w-8 rounded-full bg-gray-200"></span>
+        </div>
+
+        <div id="quiz-stage"></div>
+      </div>
+
+      <p class="text-center text-sm text-gray-600 mt-6">
+        Prefer to browse? See
+        <a href="/blog" class="text-brand-accent font-medium hover:underline">all guides</a>,
+        or try the
+        <a href="/sleep-calculator" class="text-brand-accent font-medium hover:underline">Sleep Calculator</a>
+        and
+        <a href="/caffeine-calculator" class="text-brand-accent font-medium hover:underline">Caffeine Calculator</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 prose prose-lg max-w-none
+      prose-headings:font-heading prose-headings:font-semibold prose-headings:text-gray-900
+      prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline">
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f) => (
+        <>
+          <h3>{f.question}</h3>
+          <p>{f.answer}</p>
+        </>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const stage = document.getElementById('quiz-stage');
+    const dots = document.querySelectorAll('.quiz-dot');
+
+    const PROBLEMS = [
+      { v: 'racing', label: 'I lie awake with a racing mind' },
+      { v: 'night', label: 'I wake up during the night' },
+      { v: 'tired', label: 'I sleep enough hours but wake up tired' },
+      { v: 'hot', label: 'I get too hot at night' },
+      { v: 'noise', label: 'Noise or light keeps waking me' },
+      { v: 'snore', label: 'I snore or wake up gasping' },
+    ];
+
+    const REC = {
+      racing: [
+        { t: 'Sleep Habits & Routines', b: 'A 90-minute wind-down that quiets a busy mind.', h: '/sleep-habits-and-routines-that-work', k: 'routine' },
+        { t: 'L-Theanine for Sleep', b: 'A calming amino acid that helps you switch off, without sedation.', h: '/l-theanine-for-sleep-does-it-work-and-how-to-use-it-6107', k: 'product' },
+        { t: 'Ashwagandha for Sleep', b: 'Best if stress is what keeps you up.', h: '/ashwagandha-for-sleep-does-it-work-and-how-to-use-it-6104', k: 'product' },
+        { t: 'Caffeine Calculator', b: 'Check if late caffeine is the hidden culprit.', h: '/caffeine-calculator', k: 'tool' },
+      ],
+      night: [
+        { t: 'Optimize Your Bedroom', b: 'Light, noise, and temperature fixes that stop night wakings.', h: '/optimize-bedroom-environment-for-better-sleep', k: 'routine' },
+        { t: 'White Noise Machines', b: 'Mask the sounds that jolt you awake.', h: '/best-white-noise-machines-for-sleep', k: 'product' },
+        { t: 'Blackout Curtains', b: 'Block the light that lightens your sleep.', h: '/best-blackout-curtains-for-sleep-2026-top-picks-6109', k: 'product' },
+      ],
+      tired: [
+        { t: 'Sleep Calculator', b: 'You may be waking mid-cycle. Find better wake times.', h: '/sleep-calculator', k: 'tool' },
+        { t: 'Sleep Trackers Compared', b: 'See which bedtime actually leaves you rested.', h: '/best-sleep-trackers-comparison-guide', k: 'product' },
+        { t: 'Sleep Habits & Routines', b: 'Consistency is the fix most tired people skip.', h: '/sleep-habits-and-routines-that-work', k: 'routine' },
+      ],
+      hot: [
+        { t: 'Optimize Your Bedroom', b: 'A cooler room is the biggest lever for hot sleepers.', h: '/optimize-bedroom-environment-for-better-sleep', k: 'routine' },
+        { t: 'Best Cooling Mattress Picks', b: 'Top mattresses for people who sleep hot.', h: '/best-cooling-mattress-reddit-top-picks-for-hot-sle-103128', k: 'product' },
+        { t: 'Best Weighted Blanket', b: 'Want weight without heat? Pick a breathable knit.', h: '/best-weighted-blanket-2026-what-actually-helps-you-sleep-6101', k: 'product' },
+      ],
+      noise: [
+        { t: 'White Noise Machines', b: 'Steady sound that covers disruptive noise.', h: '/best-white-noise-machines-for-sleep', k: 'product' },
+        { t: 'Best Earplugs for Sleeping', b: 'Block noise right at the source.', h: '/best-earplugs-for-sleeping-2026-block-out-noise-6106', k: 'product' },
+        { t: 'Blackout Curtains', b: 'Get the room genuinely dark.', h: '/best-blackout-curtains-for-sleep-2026-top-picks-6109', k: 'product' },
+        { t: 'Optimize Your Bedroom', b: 'The full light-and-noise checklist.', h: '/optimize-bedroom-environment-for-better-sleep', k: 'routine' },
+      ],
+      snore: [
+        { t: 'Mouth Tape for Sleep', b: 'May reduce snoring from mouth breathing. Not a fix for apnea.', h: '/mouth-tape-for-sleep-does-it-actually-work-in-2026-6102', k: 'product' },
+        { t: 'Best Adjustable Beds', b: 'Raising the head can ease snoring and reflux.', h: '/best-adjustable-beds-2026-are-they-worth-it-6110', k: 'product' },
+        { t: 'Optimize Your Bedroom', b: 'Side sleeping and setup tweaks that help.', h: '/optimize-bedroom-environment-for-better-sleep', k: 'routine' },
+      ],
+    };
+
+    const answers = { problem: null, pref: null };
+
+    function setDots(step) {
+      dots.forEach((d, i) => {
+        d.className = 'quiz-dot h-2 w-8 rounded-full ' + (i <= step ? 'bg-brand-accent' : 'bg-gray-200');
+      });
+    }
+
+    function optionBtn(label, onClick) {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className =
+        'w-full text-left px-5 py-4 rounded-xl border border-gray-200 bg-white hover:border-brand-accent hover:bg-brand-accent/5 transition font-medium text-gray-800';
+      b.textContent = label;
+      b.addEventListener('click', onClick);
+      return b;
+    }
+
+    function renderQ1() {
+      setDots(0);
+      stage.innerHTML = '<h2 class="font-heading text-2xl font-semibold text-gray-900 mb-1">What is your biggest sleep problem right now?</h2><p class="text-sm text-gray-500 mb-5">Pick the one that bothers you most.</p>';
+      const wrap = document.createElement('div');
+      wrap.className = 'space-y-3';
+      PROBLEMS.forEach((p) => wrap.appendChild(optionBtn(p.label, () => { answers.problem = p.v; renderQ2(); })));
+      stage.appendChild(wrap);
+    }
+
+    function renderQ2() {
+      setDots(1);
+      stage.innerHTML = '<button id="back" type="button" class="text-sm text-gray-500 hover:text-brand-accent mb-4">&larr; Back</button><h2 class="font-heading text-2xl font-semibold text-gray-900 mb-1">How would you rather fix it?</h2><p class="text-sm text-gray-500 mb-5">We will match the recommendations to your style.</p>';
+      const wrap = document.createElement('div');
+      wrap.className = 'space-y-3';
+      [
+        { v: 'routine', label: 'A free routine or habit change' },
+        { v: 'product', label: 'A product or gadget that helps' },
+        { v: 'both', label: 'Show me both' },
+      ].forEach((o) => wrap.appendChild(optionBtn(o.label, () => { answers.pref = o.v; renderResult(); })));
+      stage.appendChild(wrap);
+      document.getElementById('back').addEventListener('click', renderQ1);
+    }
+
+    function renderResult() {
+      setDots(1);
+      let items = REC[answers.problem] || [];
+      if (answers.pref === 'routine') items = items.filter((i) => i.k === 'routine' || i.k === 'tool');
+      else if (answers.pref === 'product') items = items.filter((i) => i.k === 'product' || i.k === 'tool');
+      if (!items.length) items = REC[answers.problem];
+      items = items.slice(0, 4);
+
+      const tagLabel = { routine: 'Free guide', product: 'Product pick', tool: 'Free tool' };
+      const tagCls = {
+        routine: 'bg-green-100 text-green-700',
+        product: 'bg-brand-accent/10 text-brand-accent',
+        tool: 'bg-brand-warm/15 text-amber-700',
+      };
+
+      let html =
+        '<h2 class="font-heading text-2xl font-semibold text-gray-900 mb-1">Your personalized sleep plan</h2>' +
+        '<p class="text-sm text-gray-500 mb-5">Start at the top and work down. These are matched to your answers.</p>';
+      if (answers.problem === 'snore') {
+        html +=
+          '<div class="rounded-lg border border-amber-300 bg-amber-50 text-amber-800 text-sm px-4 py-3 mb-5">If your snoring comes with gasping, choking, or daytime exhaustion, that can be a sign of sleep apnea. Please see a doctor, since no product replaces a proper evaluation.</div>';
+      }
+      html += '<div class="space-y-3">';
+      items.forEach((i) => {
+        html +=
+          '<a href="' + i.h + '" class="block rounded-xl border border-gray-200 p-4 hover:border-brand-accent hover:shadow-sm transition">' +
+          '<div class="flex items-center gap-2 mb-1">' +
+          '<span class="text-[11px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full ' + tagCls[i.k] + '">' + tagLabel[i.k] + '</span>' +
+          '</div>' +
+          '<div class="font-semibold text-gray-900">' + i.t + '</div>' +
+          '<div class="text-sm text-gray-600 mt-0.5">' + i.b + '</div>' +
+          '</a>';
+      });
+      html += '</div>';
+      html += '<button id="restart" type="button" class="mt-6 text-sm font-medium text-brand-accent hover:underline">&#8635; Start over</button>';
+      stage.innerHTML = html;
+      document.getElementById('restart').addEventListener('click', () => { answers.problem = null; answers.pref = null; renderQ1(); });
+    }
+
+    renderQ1();
+  })();
+</script>
