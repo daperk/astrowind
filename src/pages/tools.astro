@@ -6,6 +6,34 @@ import FAQs from '~/components/widgets/FAQs.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Schema from '~/components/common/Schema.astro';
+import { Icon } from 'astro-icon/components';
+
+const interactiveTools = [
+  {
+    title: 'Sleep Calculator',
+    desc: 'Best bedtimes and wake-up times based on 90-minute sleep cycles.',
+    href: '/sleep-calculator',
+    icon: 'tabler:calculator',
+  },
+  {
+    title: 'Caffeine Calculator',
+    desc: 'See how much caffeine is left at bedtime and your last-call time.',
+    href: '/caffeine-calculator',
+    icon: 'tabler:coffee',
+  },
+  {
+    title: 'Sleep Quiz',
+    desc: 'Answer 2 questions and get a personalized plan for your sleep problem.',
+    href: '/sleep-quiz',
+    icon: 'tabler:list-check',
+  },
+  {
+    title: 'Sleep Sounds',
+    desc: 'White, pink, and brown noise in your browser, with a sleep timer.',
+    href: '/sleep-sounds',
+    icon: 'tabler:wave-sine',
+  },
+];
 
 const metadata = {
   title: 'Sleep Tools & Gadgets: Reviews & Recommendations | SleepUpgradeHub',
@@ -70,6 +98,35 @@ const faqItems = [
       Honest reviews and science-backed recommendations for sleep trackers, white noise machines, smart lights, and bedroom optimization tools that actually work.
     </Fragment>
   </Hero>
+
+  <!-- Free Interactive Tools -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-brand-warm mb-2">Free Interactive Tools</p>
+        <h2 class="font-heading text-3xl md:text-4xl font-semibold text-gray-900">Try Our Free Sleep Tools</h2>
+        <p class="text-gray-600 mt-3">No sign-up and no download. Use them right in your browser.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {interactiveTools.map((tool) => (
+          <a
+            href={tool.href}
+            class="group flex flex-col bg-white rounded-2xl border border-gray-200 p-6 hover:shadow-xl hover:border-brand-accent transition-all duration-300"
+          >
+            <div class="w-12 h-12 rounded-full bg-brand-accent/10 flex items-center justify-center mb-4 group-hover:bg-brand-accent transition">
+              <Icon name={tool.icon} class="w-6 h-6 text-brand-accent group-hover:text-white" />
+            </div>
+            <h3 class="font-heading text-lg font-semibold text-gray-900 mb-1">{tool.title}</h3>
+            <p class="text-sm text-gray-600 flex-1">{tool.desc}</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-brand-accent group-hover:gap-2 transition-all">
+              Open tool
+              <span aria-hidden="true">&rarr;</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <!-- Overview -->
   <Content
