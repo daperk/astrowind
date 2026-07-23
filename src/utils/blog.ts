@@ -84,7 +84,7 @@ const extractFaqs = (body?: string): Array<{ question: string; answer: string }>
 
 const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
   const { id, data } = post;
-  const { Content, remarkPluginFrontmatter } = await render(post);
+  const { Content, headings, remarkPluginFrontmatter } = await render(post);
   const faqs = extractFaqs(post.body);
 
   const {
@@ -143,6 +143,7 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
     // or 'content' in case you consume from API
 
     faqs: faqs,
+    headings: headings,
 
     readingTime: remarkPluginFrontmatter?.readingTime,
   };

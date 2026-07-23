@@ -43,6 +43,9 @@ export interface Post {
   /** Parsed FAQ question/answer pairs extracted from the post body (used for FAQPage schema). */
   faqs?: Array<{ question: string; answer: string }>;
 
+  /** Rendered heading outline, used to build the article table of contents. */
+  headings?: Array<{ depth: number; slug: string; text: string }>;
+
   /**  */
   readingTime?: number;
 }
