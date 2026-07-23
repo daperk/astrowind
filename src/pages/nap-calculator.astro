@@ -1,0 +1,199 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Schema from '~/components/common/Schema.astro';
+
+const metadata = {
+  title: 'Nap Calculator: How Long Should You Nap and When to Wake Up',
+  description:
+    'Free nap calculator. Enter when you are lying down and see the best nap lengths, a power nap or a full cycle, plus the groggy window to avoid so you wake up refreshed.',
+  ignoreTitleTemplate: true,
+};
+
+const faqs = [
+  {
+    question: 'How long should a nap be?',
+    answer:
+      'For a quick alertness boost, keep it to about 10 to 20 minutes so you stay in light sleep. For deeper recovery, a full 90-minute cycle lets you wake at the end of a cycle. Naps of roughly 30 to 60 minutes are the ones most likely to leave you groggy.',
+  },
+  {
+    question: 'Why do I feel groggy after a nap?',
+    answer:
+      'That heavy, foggy feeling is called sleep inertia. It happens when your alarm pulls you out of deep sleep partway through a cycle. Keeping naps short, around 20 minutes, or long enough for a full 90-minute cycle usually avoids it.',
+  },
+  {
+    question: 'When is the best time to nap?',
+    answer:
+      'Early to mid afternoon, roughly between 1pm and 3pm, works best for most people. Napping too late in the day can make it harder to fall asleep at night.',
+  },
+  {
+    question: 'Are naps good or bad for you?',
+    answer:
+      'Short naps can boost alertness and mood for most people. Long or late naps can interfere with nighttime sleep, so they are not ideal for everyone, especially if you already struggle to fall asleep at night.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Schema type="faqpage" faqs={faqs} />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-brand-primary">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-3 text-xs font-semibold text-brand-warm uppercase tracking-[0.2em] mb-5">
+          <span class="w-8 h-px bg-brand-warm" aria-hidden="true"></span>
+          Free Sleep Tool
+        </p>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-5 leading-[1.08]">
+          Nap Calculator
+        </h1>
+        <p class="text-lg md:text-xl text-slate-200/90 leading-relaxed">
+          Find the best time to set your alarm so you wake up refreshed, not groggy. Enter when you are
+          lying down and see the ideal nap lengths.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Calculator -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8">
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-end gap-4">
+          <div class="flex-1">
+            <label for="nap-time" class="block text-sm font-medium text-gray-700 mb-1">
+              When are you lying down?
+            </label>
+            <input id="nap-time" type="time"
+              class="w-full px-4 py-3 rounded-lg border border-gray-300 text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-brand-accent" />
+          </div>
+          <button id="use-now" type="button"
+            class="px-4 py-3 rounded-lg border border-gray-300 text-sm font-medium text-gray-700 hover:bg-gray-50 transition">
+            Now
+          </button>
+          <button id="calc-btn" type="button"
+            class="px-6 py-3 rounded-full bg-brand-primary text-white font-semibold hover:bg-brand-accent transition">
+            Calculate
+          </button>
+        </div>
+
+        <div id="results" class="mt-8 hidden">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="rounded-xl border border-brand-accent bg-brand-accent/5 p-5 text-center">
+              <div class="text-[11px] font-semibold uppercase tracking-wide text-brand-accent mb-1">Power nap</div>
+              <div id="power-time" class="text-2xl font-bold text-gray-900"></div>
+              <div class="text-xs text-gray-500 mt-1">about 20 minutes, quick alertness boost</div>
+            </div>
+            <div class="rounded-xl border border-brand-accent bg-brand-accent/5 p-5 text-center">
+              <div class="text-[11px] font-semibold uppercase tracking-wide text-brand-accent mb-1">Full cycle</div>
+              <div id="cycle-time" class="text-2xl font-bold text-gray-900"></div>
+              <div class="text-xs text-gray-500 mt-1">about 90 minutes, deeper recovery</div>
+            </div>
+          </div>
+          <div id="groggy" class="mt-4 rounded-lg border border-amber-300 bg-amber-50 text-amber-800 text-sm px-4 py-3"></div>
+          <div id="late" class="mt-3 rounded-lg border border-red-300 bg-red-50 text-red-800 text-sm px-4 py-3 hidden"></div>
+          <p class="text-xs text-gray-500 mt-4">Assumes about 5 minutes to fall asleep. Set your alarm for one of the two times above.</p>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-gray-600 mt-6">
+        For night sleep, try the
+        <a href="/sleep-calculator" class="text-brand-accent font-medium hover:underline">Sleep Calculator</a>.
+        Feeling wired? Check the
+        <a href="/caffeine-calculator" class="text-brand-accent font-medium hover:underline">Caffeine Calculator</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works + FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 prose prose-lg max-w-none
+      prose-headings:font-heading prose-headings:font-semibold prose-headings:text-gray-900
+      prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline">
+      <h2>How long should you nap?</h2>
+      <p>
+        The best nap length depends on your goal. A short <strong>power nap of about 20 minutes</strong> keeps you
+        in light sleep, so you wake up alert without the fog. A <strong>full 90-minute cycle</strong> takes you
+        through deep sleep and REM and lets you wake at the end of a cycle, which is better for memory and
+        recovery when you have the time.
+      </p>
+      <p>
+        The window to avoid is roughly <strong>30 to 60 minutes</strong>. An alarm there often pulls you out of
+        deep sleep and leaves you groggy, a feeling called sleep inertia. This calculator shows both good options
+        and flags the groggy window so you can set your alarm with confidence.
+      </p>
+      <p>
+        Keep naps to the early or mid afternoon. Napping too late can make it harder to fall asleep at night. If
+        that is a struggle for you, our <a href="/sleep-habits-and-routines-that-work">sleep habits guide</a> and
+        <a href="/optimize-bedroom-environment-for-better-sleep">bedroom setup guide</a> can help.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f) => (
+        <>
+          <h3>{f.question}</h3>
+          <p>{f.answer}</p>
+        </>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (() => {
+    const FALL = 5;
+    const napTime = document.getElementById('nap-time');
+    const useNow = document.getElementById('use-now');
+    const calcBtn = document.getElementById('calc-btn');
+    const results = document.getElementById('results');
+    const powerEl = document.getElementById('power-time');
+    const cycleEl = document.getElementById('cycle-time');
+    const groggy = document.getElementById('groggy');
+    const late = document.getElementById('late');
+
+    function setNow() {
+      const d = new Date();
+      napTime.value = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+    }
+    function toMin(v) {
+      const p = (v || '').split(':');
+      if (p.length !== 2) return null;
+      return parseInt(p[0], 10) * 60 + parseInt(p[1], 10);
+    }
+    function fmt(mins) {
+      mins = ((Math.round(mins) % 1440) + 1440) % 1440;
+      let h = Math.floor(mins / 60);
+      const m = mins % 60;
+      const ap = h < 12 ? 'AM' : 'PM';
+      h = h % 12; if (h === 0) h = 12;
+      return h + ':' + String(m).padStart(2, '0') + ' ' + ap;
+    }
+
+    function calculate() {
+      const start = toMin(napTime.value);
+      if (start === null || isNaN(start)) return;
+      const asleep = start + FALL;
+      powerEl.textContent = fmt(asleep + 20);
+      cycleEl.textContent = fmt(asleep + 90);
+      groggy.textContent =
+        'Try not to wake between ' + fmt(asleep + 30) + ' and ' + fmt(asleep + 75) +
+        '. Waking in that window often leaves you groggy.';
+      const hour = Math.floor(start / 60);
+      if (hour >= 15 || hour < 5) {
+        late.textContent =
+          'Heads up: napping this late can make it harder to fall asleep tonight. Keep it short if you can.';
+        late.classList.remove('hidden');
+      } else {
+        late.classList.add('hidden');
+      }
+      results.classList.remove('hidden');
+    }
+
+    useNow.addEventListener('click', () => { setNow(); calculate(); });
+    calcBtn.addEventListener('click', calculate);
+    napTime.addEventListener('keydown', (e) => { if (e.key === 'Enter') calculate(); });
+
+    setNow();
+    calculate();
+  })();
+</script>

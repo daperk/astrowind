@@ -8,6 +8,7 @@
 - [Caffeine Calculator](https://sleepupgradehub.com/caffeine-calculator): Free interactive tool that estimates caffeine left in your system at bedtime and the latest time for your last coffee.
 - [Sleep Quiz](https://sleepupgradehub.com/sleep-quiz): Free 2-question quiz that matches your specific sleep problem to the right guides, tools, and products.
 - [Sleep Sounds](https://sleepupgradehub.com/sleep-sounds): Free in-browser white, pink, and brown noise generator with volume control and a sleep timer.
+- [Nap Calculator](https://sleepupgradehub.com/nap-calculator): Free tool that gives the best nap length and wake-up time, and flags the groggy window to avoid.
 
 ## Start here (pillar guides)
 
