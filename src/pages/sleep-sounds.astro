@@ -1,0 +1,304 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Schema from '~/components/common/Schema.astro';
+
+const metadata = {
+  title: 'Sleep Sounds: Free White, Pink & Brown Noise Generator',
+  description:
+    'Free in-browser white, pink, and brown noise generator to help you sleep, focus, or block noise. Volume control and a sleep timer, no download or sign-up.',
+  ignoreTitleTemplate: true,
+};
+
+const faqs = [
+  {
+    question: 'What is the difference between white, pink, and brown noise?',
+    answer:
+      'White noise is bright and even across all frequencies, like static or a fan. Pink noise is deeper and more balanced, like steady rain. Brown noise is the deepest and softest on the ears, like a low waterfall or distant thunder. Many people find pink or brown noise more soothing for sleep.',
+  },
+  {
+    question: 'Does noise really help you sleep?',
+    answer:
+      'For many people, yes. A steady sound masks the sudden noises that jolt you awake, which is especially helpful for light sleepers, shift workers, and people in noisy areas. It is a helpful tool, not a cure for insomnia.',
+  },
+  {
+    question: 'Is it safe to play noise all night?',
+    answer:
+      'Keep the volume moderate, roughly the level of a soft fan, not loud. Prolonged loud sound can be hard on your ears, so lower is better. If you use earbuds, be extra careful with volume.',
+  },
+  {
+    question: 'Will it keep playing if my screen turns off?',
+    answer:
+      'Not always. Phones and browsers often pause audio when the screen locks or the tab is in the background, especially on mobile. For reliable all-night sound, a dedicated white noise machine is the better choice. This tool is great for winding down, napping, or focus.',
+  },
+];
+---
+
+<Layout metadata={metadata}>
+  <Schema type="faqpage" faqs={faqs} />
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-brand-primary">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-14 md:py-20">
+      <div class="max-w-2xl">
+        <p class="inline-flex items-center gap-3 text-xs font-semibold text-brand-warm uppercase tracking-[0.2em] mb-5">
+          <span class="w-8 h-px bg-brand-warm" aria-hidden="true"></span>
+          Free Sleep Tool
+        </p>
+        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-5 leading-[1.08]">
+          Sleep Sounds
+        </h1>
+        <p class="text-lg md:text-xl text-slate-200/90 leading-relaxed">
+          White, pink, and brown noise to help you fall asleep, focus, or block out a noisy world.
+          It plays right in your browser, with a volume control and a sleep timer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Player -->
+  <section class="py-12 md:py-16 bg-gray-50">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8">
+        <!-- Noise type -->
+        <div class="grid grid-cols-3 gap-2 p-1 rounded-full bg-gray-100 mb-8" role="tablist" aria-label="Noise type">
+          <button data-type="white" class="noise-tab rounded-full py-2.5 text-sm font-semibold transition" aria-selected="true">White</button>
+          <button data-type="pink" class="noise-tab rounded-full py-2.5 text-sm font-semibold transition" aria-selected="false">Pink</button>
+          <button data-type="brown" class="noise-tab rounded-full py-2.5 text-sm font-semibold transition" aria-selected="false">Brown</button>
+        </div>
+
+        <!-- Play button -->
+        <div class="flex flex-col items-center">
+          <button id="play-btn" type="button" aria-label="Play"
+            class="flex items-center justify-center w-24 h-24 rounded-full bg-brand-primary text-white shadow-lg hover:bg-brand-accent transition focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent">
+            <svg id="icon-play" class="w-10 h-10 ml-1" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            <svg id="icon-pause" class="w-10 h-10 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+          </button>
+          <p id="status" class="text-sm text-gray-500 mt-3">Paused</p>
+        </div>
+
+        <!-- Volume -->
+        <div class="mt-8">
+          <label for="volume" class="flex items-center justify-between text-sm font-medium text-gray-700 mb-2">
+            <span>Volume</span>
+            <span id="vol-val" class="text-gray-500">50%</span>
+          </label>
+          <input id="volume" type="range" min="0" max="100" value="50"
+            class="w-full accent-brand-accent" />
+        </div>
+
+        <!-- Sleep timer -->
+        <div class="mt-6">
+          <p class="text-sm font-medium text-gray-700 mb-2">Sleep timer</p>
+          <div class="flex flex-wrap gap-2">
+            <button data-min="0" class="timer-tab px-4 py-2 rounded-full border text-sm font-medium transition" aria-selected="true">Off</button>
+            <button data-min="15" class="timer-tab px-4 py-2 rounded-full border text-sm font-medium transition" aria-selected="false">15 min</button>
+            <button data-min="30" class="timer-tab px-4 py-2 rounded-full border text-sm font-medium transition" aria-selected="false">30 min</button>
+            <button data-min="45" class="timer-tab px-4 py-2 rounded-full border text-sm font-medium transition" aria-selected="false">45 min</button>
+            <button data-min="60" class="timer-tab px-4 py-2 rounded-full border text-sm font-medium transition" aria-selected="false">60 min</button>
+          </div>
+          <p id="timer-status" class="text-xs text-gray-500 mt-2 hidden"></p>
+        </div>
+      </div>
+
+      <p class="text-center text-sm text-gray-600 mt-6">
+        Want a dedicated device for all-night use? See our
+        <a href="/best-white-noise-machines-for-sleep" class="text-brand-accent font-medium hover:underline">white noise machines guide</a>.
+        Also try the
+        <a href="/sleep-calculator" class="text-brand-accent font-medium hover:underline">Sleep Calculator</a>
+        and
+        <a href="/sleep-quiz" class="text-brand-accent font-medium hover:underline">Sleep Quiz</a>.
+      </p>
+    </div>
+  </section>
+
+  <!-- How it works + FAQ -->
+  <section class="py-12 md:py-16 bg-white">
+    <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:px-8 prose prose-lg max-w-none
+      prose-headings:font-heading prose-headings:font-semibold prose-headings:text-gray-900
+      prose-a:text-brand-accent prose-a:no-underline hover:prose-a:underline">
+      <h2>White vs pink vs brown noise</h2>
+      <p>
+        All three are steady, broadband sounds that mask disruptive noise, but they differ in tone.
+        <strong>White noise</strong> is bright and hissy, like TV static or a fan, and is great at covering
+        sharp sounds. <strong>Pink noise</strong> is deeper and more balanced, like steady rain, and many
+        people find it more natural to fall asleep to. <strong>Brown noise</strong> is deeper still and the
+        softest on the ears, like a low rumble or distant waterfall.
+      </p>
+      <p>
+        There is no single best choice. Start with pink or brown for sleep, and use white if you need to
+        cover louder, sharper noises. Keep the volume around the level of a soft fan. For all-night use, a
+        <a href="/best-white-noise-machines-for-sleep">dedicated white noise machine</a> is more reliable
+        than a phone, since browsers often pause audio when the screen locks.
+      </p>
+
+      <h2>Frequently Asked Questions</h2>
+      {faqs.map((f) => (
+        <>
+          <h3>{f.question}</h3>
+          <p>{f.answer}</p>
+        </>
+      ))}
+    </div>
+  </section>
+</Layout>
+
+<script is:inline>
+  (() => {
+    let ctx = null;
+    let gain = null;
+    let source = null;
+    let playing = false;
+    let type = 'white';
+    let timerId = null;
+    let fadeId = null;
+
+    const playBtn = document.getElementById('play-btn');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    const status = document.getElementById('status');
+    const volume = document.getElementById('volume');
+    const volVal = document.getElementById('vol-val');
+    const timerStatus = document.getElementById('timer-status');
+    const noiseTabs = [...document.querySelectorAll('.noise-tab')];
+    const timerTabs = [...document.querySelectorAll('.timer-tab')];
+
+    const NOISE_ACTIVE = ['bg-white', 'text-brand-primary', 'shadow-sm'];
+    const NOISE_INACTIVE = ['text-gray-500'];
+
+    function volScaled() {
+      // scale 0..1 slider to a safe gain (max ~0.6 to avoid harsh loudness)
+      return (parseInt(volume.value, 10) / 100) * 0.6;
+    }
+
+    function makeBuffer() {
+      const seconds = 4;
+      const len = ctx.sampleRate * seconds;
+      const buffer = ctx.createBuffer(1, len, ctx.sampleRate);
+      const out = buffer.getChannelData(0);
+      if (type === 'white') {
+        for (let i = 0; i < len; i++) out[i] = (Math.random() * 2 - 1) * 0.5;
+      } else if (type === 'pink') {
+        let b0 = 0, b1 = 0, b2 = 0, b3 = 0, b4 = 0, b5 = 0, b6 = 0;
+        for (let i = 0; i < len; i++) {
+          const w = Math.random() * 2 - 1;
+          b0 = 0.99886 * b0 + w * 0.0555179;
+          b1 = 0.99332 * b1 + w * 0.0750759;
+          b2 = 0.96900 * b2 + w * 0.1538520;
+          b3 = 0.86650 * b3 + w * 0.3104856;
+          b4 = 0.55000 * b4 + w * 0.5329522;
+          b5 = -0.7616 * b5 - w * 0.0168980;
+          out[i] = (b0 + b1 + b2 + b3 + b4 + b5 + b6 + w * 0.5362) * 0.11;
+          b6 = w * 0.115926;
+        }
+      } else {
+        let last = 0;
+        for (let i = 0; i < len; i++) {
+          const w = Math.random() * 2 - 1;
+          last = (last + 0.02 * w) / 1.02;
+          out[i] = last * 3.5;
+        }
+      }
+      return buffer;
+    }
+
+    function startSource() {
+      if (source) { try { source.stop(); } catch (e) {} source.disconnect(); }
+      source = ctx.createBufferSource();
+      source.buffer = makeBuffer();
+      source.loop = true;
+      source.connect(gain);
+      source.start();
+    }
+
+    function ensureAudio() {
+      if (ctx) return;
+      const AC = window.AudioContext || window.webkitAudioContext;
+      ctx = new AC();
+      gain = ctx.createGain();
+      gain.gain.value = volScaled();
+      gain.connect(ctx.destination);
+    }
+
+    function play() {
+      ensureAudio();
+      if (ctx.state === 'suspended') ctx.resume();
+      if (!source) startSource();
+      gain.gain.value = volScaled();
+      playing = true;
+      iconPlay.classList.add('hidden');
+      iconPause.classList.remove('hidden');
+      playBtn.setAttribute('aria-label', 'Pause');
+      status.textContent = 'Playing ' + type + ' noise';
+    }
+
+    function pause() {
+      if (ctx) ctx.suspend();
+      playing = false;
+      iconPause.classList.add('hidden');
+      iconPlay.classList.remove('hidden');
+      playBtn.setAttribute('aria-label', 'Play');
+      status.textContent = 'Paused';
+    }
+
+    playBtn.addEventListener('click', () => (playing ? pause() : play()));
+
+    noiseTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        type = tab.dataset.type;
+        noiseTabs.forEach((t) => {
+          t.classList.remove(...NOISE_ACTIVE, ...NOISE_INACTIVE);
+          t.setAttribute('aria-selected', String(t === tab));
+          t.classList.add(...(t === tab ? NOISE_ACTIVE : NOISE_INACTIVE));
+        });
+        if (ctx && playing) { startSource(); status.textContent = 'Playing ' + type + ' noise'; }
+      });
+    });
+
+    volume.addEventListener('input', () => {
+      volVal.textContent = volume.value + '%';
+      if (gain) { if (fadeId) { clearInterval(fadeId); fadeId = null; } gain.gain.value = volScaled(); }
+    });
+
+    function clearTimer() {
+      if (timerId) { clearTimeout(timerId); timerId = null; }
+      if (fadeId) { clearInterval(fadeId); fadeId = null; }
+      timerStatus.classList.add('hidden');
+    }
+
+    function fadeAndStop() {
+      if (!gain) { pause(); return; }
+      let g = gain.gain.value;
+      fadeId = setInterval(() => {
+        g -= 0.03;
+        if (g <= 0) { clearInterval(fadeId); fadeId = null; gain.gain.value = 0; pause(); gain.gain.value = volScaled(); }
+        else gain.gain.value = g;
+      }, 150);
+    }
+
+    timerTabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        timerTabs.forEach((t) => {
+          t.setAttribute('aria-selected', String(t === tab));
+          t.classList.toggle('border-brand-accent', t === tab);
+          t.classList.toggle('bg-brand-accent/5', t === tab);
+          t.classList.toggle('text-brand-accent', t === tab);
+          t.classList.toggle('border-gray-200', t !== tab);
+          t.classList.toggle('text-gray-700', t !== tab);
+        });
+        clearTimer();
+        const mins = parseInt(tab.dataset.min, 10);
+        if (mins > 0) {
+          timerId = setTimeout(fadeAndStop, mins * 60 * 1000);
+          timerStatus.textContent = 'Sound will fade out and stop in ' + mins + ' minutes.';
+          timerStatus.classList.remove('hidden');
+        }
+      });
+    });
+
+    // init default active states
+    noiseTabs[0].classList.add(...NOISE_ACTIVE);
+    noiseTabs.slice(1).forEach((t) => t.classList.add(...NOISE_INACTIVE));
+    timerTabs[0].classList.add('border-brand-accent', 'bg-brand-accent/5', 'text-brand-accent');
+    timerTabs.slice(1).forEach((t) => t.classList.add('border-gray-200', 'text-gray-700'));
+  })();
+</script>
