@@ -60,6 +60,12 @@ const metadata = merge(
 <Layout metadata={metadata}>
   {post.faqs && post.faqs.length > 0 && <Schema type="faqpage" faqs={post.faqs} />}
   <Schema breadcrumbs={breadcrumbs} />
+  {post.howToSteps && post.howToSteps.length > 0 && (
+    <Schema howTo={{ name: post.title, description: post.excerpt, steps: post.howToSteps }} />
+  )}
+  {post.listItems && post.listItems.length > 0 && (
+    <Schema itemList={{ name: post.title, items: post.listItems }} />
+  )}
 
   <!-- Article Content (Healthline-style layout) -->
   <EnhancedSinglePost post={{ ...post, image: image }} url={url}>

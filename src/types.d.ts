@@ -46,6 +46,12 @@ export interface Post {
   /** Rendered heading outline, used to build the article table of contents. */
   headings?: Array<{ depth: number; slug: string; text: string }>;
 
+  /** Ordered how-to steps parsed from the body (for HowTo structured data). */
+  howToSteps?: Array<string>;
+
+  /** Product/item names from a "best of" roundup (for ItemList structured data). */
+  listItems?: Array<string>;
+
   /**  */
   readingTime?: number;
 }

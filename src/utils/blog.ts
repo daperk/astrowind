@@ -82,10 +82,54 @@ const extractFaqs = (body?: string): Array<{ question: string; answer: string }>
   return faqs.filter((f) => f.question && f.answer).slice(0, 12);
 };
 
+const cleanInline = (s: string): string =>
+  s
+    .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1') // markdown links -> text
+    .replace(/\*\*/g, '')
+    .replace(/`/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+// HowTo steps: only for "How to ..." titles, using the longest contiguous
+// numbered list in the body as the steps (>= 3). Returns null otherwise.
+const extractHowTo = (body: string, title: string): string[] | null => {
+  if (!/^how to\b/i.test(title.trim())) return null;
+  const lines = body.split('\n');
+  let run: string[] = [];
+  let best: string[] = [];
+  for (const line of lines) {
+    const m = line.trim().match(/^\d+[.)]\s+(.+)/);
+    if (m) run.push(cleanInline(m[1]));
+    else {
+      if (run.length > best.length) best = run;
+      run = [];
+    }
+  }
+  if (run.length > best.length) best = run;
+  return best.length >= 3 ? best.slice(0, 15).filter(Boolean) : null;
+};
+
+// ItemList for "best/top" roundups: the bold-numbered product names
+// (e.g. "**1. Saatva Base Plus (around $1,300)**" -> "Saatva Base Plus").
+const extractItemList = (body: string, title: string): string[] | null => {
+  if (!/\b(best|top)\b/i.test(title)) return null;
+  const items: string[] = [];
+  for (const line of body.split('\n')) {
+    const m = line.trim().match(/^\*\*\s*\d+[.)]\s*(.+?)\s*\*\*\s*$/);
+    if (m) {
+      const name = cleanInline(m[1]).replace(/\s*\(.*?\)\s*$/, '').trim();
+      if (name && name.length <= 80) items.push(name);
+    }
+  }
+  return items.length >= 3 ? items.slice(0, 15) : null;
+};
+
 const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> => {
   const { id, data } = post;
   const { Content, headings, remarkPluginFrontmatter } = await render(post);
   const faqs = extractFaqs(post.body);
+  const howToSteps = extractHowTo(post.body ?? '', data.title ?? '');
+  const listItems = extractItemList(post.body ?? '', data.title ?? '');
 
   const {
     publishDate: rawPublishDate = new Date(),
@@ -144,6 +188,8 @@ const getNormalizedPost = async (post: CollectionEntry<'post'>): Promise<Post> =
 
     faqs: faqs,
     headings: headings,
+    howToSteps: howToSteps ?? undefined,
+    listItems: listItems ?? undefined,
 
     readingTime: remarkPluginFrontmatter?.readingTime,
   };

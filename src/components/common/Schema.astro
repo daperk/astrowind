@@ -34,9 +34,20 @@ export interface Props {
     name: string;
     url: string;
   }>;
+  // HowTo (ordered steps) — emitted alongside any type when provided.
+  howTo?: {
+    name: string;
+    description?: string;
+    steps: string[];
+  };
+  // ItemList (e.g. a "best of" roundup) — emitted alongside any type when provided.
+  itemList?: {
+    name: string;
+    items: string[];
+  };
 }
 
-const { type, article, faqs, breadcrumbs } = Astro.props;
+const { type, article, faqs, breadcrumbs, howTo, itemList } = Astro.props;
 
 const siteUrl = SITE?.site || 'https://sleepupgradehub.com';
 const siteName = SITE?.name || 'SleepUpgradeHub';
@@ -157,9 +168,41 @@ switch (type) {
     break;
 }
 
-// Breadcrumbs can accompany any page type.
+// HowTo Schema - for how-to posts with ordered steps
+const howToSchema = howTo && howTo.steps && howTo.steps.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: howTo.name,
+  ...(howTo.description ? { description: howTo.description } : {}),
+  step: howTo.steps.map((s, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: s.length > 70 ? s.slice(0, 67) + '...' : s,
+    text: s,
+  })),
+} : null;
+
+// ItemList Schema - for "best of" roundups (list of items covered, no ratings)
+const itemListSchema = itemList && itemList.items && itemList.items.length > 0 ? {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: itemList.name,
+  itemListElement: itemList.items.map((it, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: it,
+  })),
+} : null;
+
+// Breadcrumbs and list/how-to schemas can accompany any page type.
 if (breadcrumbSchema) {
   schemas.push(breadcrumbSchema);
+}
+if (howToSchema) {
+  schemas.push(howToSchema);
+}
+if (itemListSchema) {
+  schemas.push(itemListSchema);
 }
 ---
 
