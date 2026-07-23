@@ -27,9 +27,9 @@ The **Eight Sleep Pod 4** is genuinely impressive sleep technology, but it is no
 
 ## What Reddit Gets Right About the Eight Sleep Pod 4
 
-The most common thread you will find on Reddit is people being genuinely surprised by how well the temperature regulation works. Not lukewarm surprised. "I sleep through the night for the first time in years" surprised.
+The most common thread you will find on Reddit is people being genuinely surprised by how well the temperature regulation works. Not lukewarm surprised. More like sleeping through the night for the first time in years surprised.
 
-A user in r/sleep posted in early 2026: "I was a total skeptic. Thought it was gimmicky. Three months in and my Oura ring shows I'm getting 40 more minutes of deep sleep per night. The cooling is real."
+A common theme in these discussions is people who went in as skeptics reporting real gains, with some saying their sleep tracker showed noticeably more deep sleep after a few months and that the cooling genuinely works.
 
 That tracks with what many owners report:
 
@@ -45,7 +45,7 @@ The sleep tracking data is also a real selling point. Reddit users who are alrea
 
 Here is where things get interesting, because the negative Reddit threads are just as consistent as the positive ones.
 
-**The hub noise is a real issue.** Multiple threads from 2026 mention the water-pumping hub making a gurgling or humming noise that light sleepers find disruptive. One r/mattresses user wrote: "My wife can hear it from across the room. It's not loud, but it's constant and rhythmic. She hates it."
+**The hub noise is a real issue.** Multiple threads from 2026 mention the water-pumping hub making a gurgling or humming noise that light sleepers find disruptive. A frequent complaint is that a partner can hear the hub from across the room. Users describe it as not loud, but constant and rhythmic enough to bother a light sleeper.
 
 **The subscription model frustrates people.** The **Eight Sleep** membership is $19/month (or $189/year as of 2026). Without it, you lose autopilot temperature scheduling, advanced sleep tracking, and most of the smart features. A lot of Reddit users feel like they are paying $2,000+ for hardware that is then held hostage by a recurring fee.
 
@@ -94,9 +94,9 @@ Over five years, you are looking at roughly $945 in subscription fees on top of 
 **Arguments against:**
 - You bought the hardware. Locking key features behind a subscription feels unfair.
 - If the company ever shuts down or changes pricing, your expensive mattress cover becomes limited.
-- Some users reported the free tier is "basically useless."
+- Some users report the free tier feels basically useless.
 
-One well-upvoted comment from r/sleep in 2026 put it bluntly: "It's a subscription tax on your bed. I pay it because the product works for me, but I'd be lying if I said it didn't bother me every month."
+A frequently repeated sentiment is that the membership feels like a subscription tax on your bed. Many users say they pay it because the product works for them, but the recurring cost still bothers them every month.
 
 ---
 
