@@ -1,0 +1,65 @@
+---
+/**
+ * "Where to buy" block. Renders one row per product covered in the post with
+ * affiliate buttons (a direct-brand button when configured, plus an Amazon
+ * button when PUBLIC_AMAZON_TAG is set). Hidden entirely until affiliates are
+ * configured, so it is safe to ship before any program is live.
+ */
+import { AMAZON_TAG, AFFILIATE_REL, amazonSearchUrl, brandLinkFor } from '~/utils/affiliate';
+
+export interface Props {
+  products?: string[];
+}
+
+const { products = [] } = Astro.props;
+
+const items = (products || []).slice(0, 8).map((name) => ({
+  name,
+  brand: brandLinkFor(name),
+  amazon: AMAZON_TAG ? amazonSearchUrl(name) : null,
+}));
+
+const show = items.length > 0 && items.some((i) => i.brand || i.amazon);
+---
+
+{
+  show && (
+    <section class="my-10 rounded-2xl border border-gray-200 bg-gray-50 p-6" aria-label="Where to buy">
+      <h2 class="font-heading text-xl font-semibold text-gray-900 mb-1">Where to buy today's picks</h2>
+      <p class="text-sm text-gray-600 mb-4">Prices change often. Check the current price before you buy.</p>
+      <ul class="space-y-2.5">
+        {items.map((item) => (
+          <li class="flex flex-wrap items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-3">
+            <span class="font-medium text-gray-900">{item.name}</span>
+            <span class="flex flex-wrap gap-2">
+              {item.brand && (
+                <a
+                  href={item.brand}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  class="inline-flex items-center rounded-full bg-brand-primary px-4 py-1.5 text-sm font-semibold text-white hover:bg-brand-accent transition"
+                >
+                  Check price
+                </a>
+              )}
+              {item.amazon && (
+                <a
+                  href={item.amazon}
+                  target="_blank"
+                  rel={AFFILIATE_REL}
+                  class="inline-flex items-center rounded-full border border-brand-primary px-4 py-1.5 text-sm font-semibold text-brand-primary hover:bg-brand-primary hover:text-white transition"
+                >
+                  On Amazon
+                </a>
+              )}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p class="text-xs text-gray-500 mt-4">
+        As an Amazon Associate we earn from qualifying purchases. Some links are affiliate links, at no
+        extra cost to you. See our <a href="/disclosure" class="underline">full disclosure</a>.
+      </p>
+    </section>
+  )
+}

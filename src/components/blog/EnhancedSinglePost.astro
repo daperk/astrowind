@@ -6,6 +6,7 @@ import PostTags from '~/components/blog/Tags.astro';
 import SocialShare from '~/components/common/SocialShare.astro';
 import Schema from '~/components/common/Schema.astro';
 import TOC from '~/components/blog/TOC.astro';
+import BuyButtons from '~/components/blog/BuyButtons.astro';
 import AuthorBio from '~/components/blog/AuthorBio.astro';
 import AdSlot from '~/components/common/AdSlot.astro';
 import { SITE } from 'astrowind:config';
@@ -147,6 +148,9 @@ const articleSchema = {
             >
               <slot />
             </div>
+
+            <!-- Where to buy (affiliate buttons; hidden until affiliates configured) -->
+            <BuyButtons products={post.listItems} />
 
             <!-- Bottom of article ad slot (no-op until AdSense enabled) -->
             <AdSlot slot="article-bottom" format="auto" className="my-8" />
