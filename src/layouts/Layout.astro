@@ -46,14 +46,23 @@ const { language, textDirection } = I18N;
     <!-- Comment the line below to disable View Transitions -->
     <ClientRouter fallback="swap" />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KM0CE7Z41P"></script>
+    <!-- Google tag (gtag.js) - skipped on localhost and for automated (bot) browsers -->
     <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-KM0CE7Z41P');
+      (function () {
+        var h = location.hostname;
+        var isLocal = h === 'localhost' || h === '127.0.0.1' || h.endsWith('.local');
+        var isAutomated = navigator.webdriver === true || /HeadlessChrome/.test(navigator.userAgent);
+        if (isLocal || isAutomated) return;
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-KM0CE7Z41P');
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-KM0CE7Z41P';
+        document.head.appendChild(s);
+      })();
     </script>
   </head>
 
